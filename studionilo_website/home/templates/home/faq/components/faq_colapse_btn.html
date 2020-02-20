@@ -1,0 +1,11 @@
+{% load static %}
+{% block faq_colapse_btn %}
+<td valign="top" class="nilo-table-collapse-btn {% if class %}{{ class }}{% endif %} {% if column %}{{ column }}{% endif %}" {% if target %} data-target="{{ target }}" {% endif %}>
+    <div style="width: 100%;">
+        {{ question }}
+    </div>
+    <div class="ml-3">
+        <img src="{% static 'home/freccina_accordion_cosa_otterro.svg' %}">
+    </div>
+</td>
+{% endblock faq_colapse_btn %}

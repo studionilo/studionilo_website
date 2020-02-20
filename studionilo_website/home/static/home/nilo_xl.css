@@ -1,0 +1,49 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .nilo-nav-item {
+        display: block;
+    }
+    .nilo-nav {
+        position: fixed;
+    }
+    .nilo-lead-paragraph {
+        font-size: 40px;
+    }
+    .nilo-mobile {
+        display: none;
+    }
+    .nilo-desktop {
+        display: block;
+    }
+    .nilo-jumbo-container.nilo-desktop {
+        display: flex;
+    }
+    .nilo-container {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    table.nilo-table {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    #nilo-reference {
+        width: 40%;
+    }
+    #x-large {
+        top: 20px;
+        display: block;
+    }
+    .nilo-test-size {
+        background-color: #ff5100;
+    }
+    .nilo-popup-monkey {
+        display: flex;
+    }
+    .nilo-card-2 {
+        width: 50%;
+    }
+    .nilo-button-pay-method>img {
+        width: 60%;
+    }
+}

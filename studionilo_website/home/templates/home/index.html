@@ -1,0 +1,181 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Studionilo">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Studionilo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery core CSS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Stripe -->
+    <!-- <script src="https://js.stripe.com/v3/"></script> -->
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo_xs.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo_s.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo_m.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo_l.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/nilo_xl.css' %}">
+</head>
+
+<body>
+
+    <!-- <div class="nilo-test-size" id="default">default</div>
+    <div class="nilo-test-size" id="x-large">min-width: 1200px</div>
+    <div class="nilo-test-size" id="large">min-width: 992px</div>
+    <div class="nilo-test-size" id="medium">min-width: 768px</div>
+    <div class="nilo-test-size" id="small">min-width: 600px</div>
+    <div class="nilo-test-size" id="x-small">max-width: 600px</div> -->
+
+    <!-- Popup -->
+    {% include 'home/popup/popup.html' %}
+
+    <!-- NavBar -->
+    <ul class="m-3 nilo-nav">
+        <li class="mb-3 nilo-nav-item-logo">
+            <span>Studio<strong>nilo</strong></span>
+        </li>
+        <li class="my-1 nilo-nav-item">
+            <a href="#presenza_digitale">contattaci</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
+                <title>freccina_contact_piani_su_misura</title>
+                <g id="Livello_2" data-name="Livello 2">
+                    <g id="Livello_2-2" data-name="Livello 2">
+                        <polygon
+                            points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
+                    </g>
+                </g>
+            </svg>
+        </li>
+        <li class="my-1 nilo-nav-item">
+            <a href="#contattaci">piani su misura</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
+                <title>freccina_contact_piani_su_misura</title>
+                <g id="Livello_2" data-name="Livello 2">
+                    <g id="Livello_2-2" data-name="Livello 2">
+                        <polygon
+                            points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
+                    </g>
+                </g>
+            </svg>
+        </li>
+    </ul>
+
+    <!-- Splash screen -->
+    <div class="nilo-jumbo-container nilo-blue-bg">
+        <div class="nilo-container">
+            <p class="nilo-lead-paragraph">Siamo Nicola e Lorenzo, possiamo aiutarti a consolidare la tua
+                <strong>strategia comunicativa</strong> per garantirti una <strong>presenza digitale</strong> efficace.
+            </p>
+            <button class="nilo-more-services" onclick="window.location.href = '#payment';" type="button">Scopri i nostri servizi</button>
+        </div>
+        <div class="nilo-scroll-down-arrow">
+            <a href="#presenza_digitale">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 35.3714 8.0029">
+                    <title>freccia_giu_hero</title>
+                    <g id="Livello_2" data-name="Livello 2">
+                        <g id="Livello_2-2" data-name="Livello 2">
+                            <polygon
+                                points="17.686 8.003 0 0.929 0.371 0 17.686 6.926 35 0 35.371 0.929 17.686 8.003" />
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Presenza digitale -->
+    <a id="presenza_digitale"></a>
+    <!-- Mobile version -->
+    {% include 'home/digital_presence/digital_presence_mobile.html' %}
+    <!-- Desktop version -->
+    {% include 'home/digital_presence/digital_presence_desktop.html' %}
+
+
+    <!-- Text middle -->
+    <div class="nilo-jumbo-container nilo-red-bg">
+        <div class="nilo-container nilo-center-vertically">
+            <p class="nilo-lead-paragraph">Spesso, azzeccare alcune scelte comunicative può fare la differenza. Abbiamo
+                pensato un sistema di <strong>consulenza veloce</strong> adatto a chi comprende l’importanza del sapersi comunicare e sta
+                cercando qualche consiglio per farlo al meglio.</p>
+        </div>
+    </div>
+
+    <!-- Payment cards -->
+    <div class="nilo-container nilo-pt-spacer">
+        <a id="payment"></a>
+        <p>Scegli il piano che fa per te:</p>
+        <!-- Mobile version -->
+        {% include 'home/pay_cards/pay_card_mobile.html' %}
+        <!-- Desktop version -->
+        {% include 'home/pay_cards/pay_card_desktop.html' %}
+    </div>
+
+    <!-- FAQ -->
+    <div class="nilo-container nilo-pt-spacer">
+        <a id="faq"></a>
+        <p>Segue una lista di domande frequenti.<br>Contattaci pure per qualsiasi altra informazione.</p>
+        {% include 'home/faq/faq.html' %}
+    </div>
+
+
+    <!-- <div class="nilo-container mt-5" id="nilo-reference">
+        <p>
+            *Ci teniamo a specificare che il nostro intento è quello di fornirti il nostro punto di vista professionale
+            senza secondi fini. Cerchiamo di offrire un punto di partenza per migliorare la qualità della tua
+            comunicazione, senza pregiudizi sulle possibili
+            soluzioni.
+        </p>
+    </div> -->
+
+    <footer class="text-center">
+        <div class="nilo-center-vertically">
+            <p>Studio Nilo 2019 - All rights reserved - Privacy policy - Cookie policy</p>
+        </div>
+    </footer>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="{% static 'home/nilo.js' %}"></script>
+    <!-- <script src="{% static 'home/stripe.js' %}"></script> -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+    <script>
+        Holder.addTheme('thumb', {
+            bg: '#55595c',
+            fg: '#eceeef',
+            text: 'Thumbnail'
+        });
+    </script>
+    
+    {% if awesome %}
+    <script>
+        popupTarget = '{{ awesome }}'
+        open_popup()
+        tabBodySelector('popup_pay_tab_awesome')
+    </script>
+    {% endif %}
+    
+    {% if reject %}
+        
+    {% endif %}
+        
+</body>
+
+</html>

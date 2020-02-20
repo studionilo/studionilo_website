@@ -1,0 +1,66 @@
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .nilo-lead-paragraph {
+        font-size: 36px;
+    }
+    .nilo-mobile {
+        display: none;
+    }
+    .nilo-desktop {
+        display: block;
+    }
+    .nilo-jumbo-container.nilo-desktop {
+        display: flex;
+    }
+    .nilo-container {
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+    table.nilo-table {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    #nilo-reference {
+        width: 40%;
+    }
+    #large {
+        top: 40px;
+        display: block;
+    }
+    .nilo-test-size {
+        background-color: #ffae00;
+    }
+    .nilo-popup-footer button {
+        width: 30%;
+    }
+    .nilo-popup-monkey {
+        display: flex;
+    }
+    .nilo-card-2 {
+        width: 50%;
+    }
+    .nilo-button-pay-method>img {
+        width: 70%;
+    }
+    tr.nilo-table-title>th {
+        padding-bottom: 0%;
+        padding-top: 2%;
+    }
+    table.nilo-table td {
+        padding-bottom: 0%;
+    }
+    .nilo-pt-spacer {
+        padding-top: 7em;
+    }
+    .nilo-pt-spacer-bottom {
+        padding-bottom: 7em;
+    }
+    .nilo-flex-footer-order {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .nilo-more-services {
+        width: auto;
+    }
+}

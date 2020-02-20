@@ -1,0 +1,41 @@
+{% block pay_card_mobile_table_3 %}
+<!-- Piano su misura -->
+<table valign="bottom" class="nilo-table">
+    <!-- Title -->
+    <tr class="nilo-table-title">
+        {% include 'home/pay_cards/components/pay_row_title_3.html' with column=''%}
+    </tr>
+    <!-- Separator -->
+    {% include 'home/pay_cards/components/pay_row_separator_single.html'%}
+    <!-- Prices -->
+    <tr class="nilo-table-price">
+        {% include 'home/pay_cards/components/pay_row_price_3.html' with column=''%}
+    </tr>
+    <!-- Muted text -->
+    <tr class="nilo-table-muted">
+        {% include 'home/pay_cards/components/pay_row_recurrent_payment.html' with column=''%}
+    </tr>
+    <!-- Monkey images -->
+    <tr class="nilo-table-images">
+        {% include 'home/pay_cards/components/pay_row_monkey_3.html' with column=''%}
+    </tr>
+    <!-- Content -->
+    <tr class="nilo-table-body">
+        {% include 'home/pay_cards/components/pay_row_content_3.html' with column=''%}
+    </tr>
+    <!-- Separator -->
+    {% include 'home/pay_cards/components/pay_row_separator_single.html'%}
+    <!-- Title button -->
+    <tr class="nilo-table-bold">
+        {% include 'home/pay_cards/components/pay_row_colapse_btn.html' with column=''%}
+    </tr>
+    <!-- Collapsable gains -->
+    <tr class="nilo-table-gains">
+        {% include 'home/pay_cards/components/pay_row_collapsable_gain_3.html' with column=''%}
+    </tr>
+    <!-- Buttons -->
+    <tr class="nilo-table-btn">
+        {% include 'home/pay_cards/components/pay_row_button_3.html' with column=''%}
+    </tr>
+</table>
+{% endblock pay_card_mobile_table_3 %}

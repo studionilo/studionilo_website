@@ -1,0 +1,46 @@
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .nilo-lead-paragraph {
+        font-size: 32px;
+    }
+    #medium {
+        top: 60px;
+        display: block;
+    }
+    .nilo-test-size {
+        background-color: #fbff00;
+    }
+    .nilo-popup-monkey {
+        display: flex;
+    }
+    .nilo-card-2 {
+        width: 50%;
+    }
+    .nilo-button-pay-method>img {
+        width: 75%;
+    }
+    table.nilo-table.top {
+        margin-top: 16%;
+        margin-bottom: 10%;
+    }
+    table.nilo-table.bottom {
+        margin-top: 10%;
+        margin-bottom: 16%;
+    }
+    .nilo-flex-footer-order {
+        flex-direction: row;
+    }
+    .nilo-button-pay-method.paypal {
+        background-size: 50%;
+    }
+    .nilo-button-pay-method.paypal:hover, .nilo-button-pay-method.paypal:focus, .nilo-button-pay-method.paypal.active {
+        background-size: 50%;
+    }
+    .nilo-button-pay-method.carta {
+        background-size: 50%;
+    }
+    .nilo-button-pay-method.carta:hover, .nilo-button-pay-method.carta:focus, .nilo-button-pay-method.carta.active {
+        background-size: 50%;
+    }
+}
