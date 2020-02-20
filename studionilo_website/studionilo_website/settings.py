@@ -25,7 +25,9 @@ SECRET_KEY = 'n1%t*=vrq*253c)1snfh2a98zj5phr2y9%jzzjwwo5bs69nwj5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'www.studionilo.it',
+]
 
 
 # Application definition
