@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from ..keychain import pythonanywhere as PA
+from ..keychain import django as DJ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n1%t*=vrq*253c)1snfh2a98zj5phr2y9%jzzjwwo5bs69nwj5'
+SECRET_KEY = DJ.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'studionilo_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '{}${}'.format(PA.USERNAME, PA.DB_NAME),
+        'USER': PA.USERNAME,
+        'PASSWORD': PA.DB_PASS,
+        'HOST': PA.DB_HOSTNAME,
     }
 }
 
