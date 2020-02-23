@@ -1,4 +1,3 @@
 venv
 .vscode
-studionilo_website/de.sqlite3
-studionilo_website/keychain.py
+studionilo_website/studionilo_website/keychain.py
