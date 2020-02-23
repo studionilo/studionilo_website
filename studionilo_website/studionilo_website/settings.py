@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'www.studionilo.it',
+    'studionilo.it',
 ]
 
 
