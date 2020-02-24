@@ -21,7 +21,7 @@ class PaymentIntent(models.Model):
     sn_snapchat = models.BooleanField(default=False)
     sn_pinterest = models.BooleanField(default=False)
     # sn_other = models.CharField(max_length=256, default='')
-    payment_intent_id = models.CharField(max_length=256, default='', unique=True)
+    payment_intent_id = models.CharField(max_length=128, default='', unique=True)
     purchased = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
 
@@ -50,7 +50,7 @@ class Payment(models.Model):
     payer_status = models.CharField(max_length=256)
     first_name = models.CharField(max_length=256)
     last_name = models.CharField(max_length=256)
-    txn_id = models.CharField(max_length=256, unique=True)
+    txn_id = models.CharField(max_length=64, unique=True)
     txn_type = models.CharField(max_length=256)
     mc_currency = models.CharField(max_length=256)
     payment_fee = models.FloatField()
