@@ -434,9 +434,8 @@ table.nilo-table.bottom {
     margin-bottom: 20%;
 }
 
-td.nilo-table-collapse-btn {
+td.nilo-table-collapse-btn>div {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 

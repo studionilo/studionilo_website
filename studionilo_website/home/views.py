@@ -1,33 +1,69 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import PaymentIntent
+from .models import PaymentIntent, Payment
 import os
+from user_agents import parse
+import traceback
+from datetime import datetime
+import hashlib
 
-# stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
-# stripe.api_version = os.getenv('STRIPE_API_VERSION')
+def hash(value):
+    return hashlib.sha256(value.encode('utf-8')).hexdigest()
 
 def home(request):
     return render(request, 'home/index.html')
 
+@csrf_exempt
 def awesome(request):
-    payIntent = PaymentIntent.objects.filter(session_key=request.session.session_key).first()
-    if not payIntent is None:
-        payIntent.purchased = True
-        payIntent.save()
-    return render(request, 'home/index.html', context={'awesome':'popup_pay_1'})
+    if request.method == 'POST':
+        try:
+            payment = Payment()
+            payment.payer_email = request.POST['payer_email']
+            payment.payer_id = request.POST['payer_id']
+            payment.payer_status = request.POST['payer_status']
+            payment.first_name = request.POST['first_name']
+            payment.last_name = request.POST['last_name']
+            payment.txn_id = request.POST['txn_id']
+            payment.txn_type = request.POST['txn_type']
+            payment.mc_currency = request.POST['mc_currency']
+            payment.payment_fee = float(request.POST['payment_fee'])
+            payment.payment_gross = float(request.POST['payment_gross'])
+            payment.payment_revenue = payment.payment_gross - payment.payment_fee
+            payment.payment_status = request.POST['payment_status']
+            payment.payment_type = request.POST['payment_type']
+            payment.item_name = request.POST['item_name']
+            payment.payment_date = datetime.strptime(request.POST['payment_date'], '%Y-%m-%dT%H:%M:%SZ')
+            payment.verify_sign = request.POST['verify_sign']
+
+            payIntent = PaymentIntent.objects.filter(payment_intent_id=request.POST['custom']).first()
+            payIntent.purchased = True
+            payIntent.save()
+
+            payment.paymentIntent = PaymentIntent.objects.first()
+            payment.save()
+            if payIntent.plan == PaymentIntent.VIDEOREPORT:
+                context={'awesome':'popup_pay_1'}
+            elif payIntent.plan == PaymentIntent.VIDEOCOLLOQUIO:
+                context={'awesome':'popup_pay_2'}
+            else:
+                context={'awesome':'popup_pay_3'}
+
+            return render(request, 'home/index.html', context=context)
+        except:
+            return redirect('home_reject')
+    else:
+        return redirect('homepage')
 
 def reject(request):
-    return render(request, 'home/index.html')
+    return render(request, 'home/index.html', context={'reject':True})
 
 @csrf_exempt
 def create_payment(request):
     if request.method == 'POST':
         try:
-            payIntent = PaymentIntent.objects.filter(session_key=request.session.session_key, purchased=False).first()
-            if payIntent is None:
-                payIntent = PaymentIntent()
+            payIntent = PaymentIntent()
             payIntent.name = request.POST['name']
             payIntent.email = request.POST['email'] 
             payIntent.website = request.POST['website']
@@ -46,64 +82,31 @@ def create_payment(request):
                 payIntent.plan = PaymentIntent.VIDEOCOLLOQUIO
 
             if(request.POST['plan'] == 'popup_pay_3'):
-                payIntent.plan = PaymentIntent.PIANOSUMISURA
+                payIntent.plan = PaymentIntent.MEDIAMANAGER
+            
+            payIntent.screen_height = request.POST['screen_height']
+            payIntent.screen_width = request.POST['screen_width']
 
-            payIntent.session_key = request.session.session_key
+            payIntent.user_agent = request.POST['user_agent']
+            ua = parse(payIntent.user_agent)
+            payIntent.browser_family = ua.browser.family
+            payIntent.browser_version = ua.browser.version_string
+            payIntent.os_family = ua.os.family
+            payIntent.os_version = ua.os.version_string
+            payIntent.device_family = ua.device.family
+            payIntent.device_brand = ua.device.model
+            payIntent.device_model = ua.device.brand
+            payIntent.device_is_mobile = ua.is_mobile
+            payIntent.device_is_tablet = ua.is_tablet
+            payIntent.device_is_touch_capable = ua.is_touch_capable
+            payIntent.device_is_pc = ua.is_pc
+            payIntent.device_is_bot = ua.is_bot
+
             payIntent.save()
-            return JsonResponse({'primary_key': payIntent.pk, 'session_key': request.session.session_key})
+            payIntent.payment_intent_id = '{:08d}_{}'.format(payIntent.pk, hash(request.session.session_key))
+            payIntent.save()
+            return JsonResponse({'payment_intent_id': payIntent.payment_intent_id})
         except:
-            return JsonResponse({'primary_key': False})
+            return JsonResponse({'error_message': traceback.format_exc()})
     else:
-        return JsonResponse({'primary_key': False})
-
-# @csrf_exempt
-# def create_payment(request):
-#     if request.method == 'POST':
-#         data = json.loads(request.body)
-#         # Create a PaymentIntent with the order amount and currency
-#         intent = stripe.PaymentIntent.create(
-#             amount=1000,
-#             currency=data['currency']
-#         )
-
-#         try:
-#             # Send publishable key and PaymentIntent details to client
-#             return HttpResponse(json.dumps({'publishableKey': os.getenv('STRIPE_PUBLISHABLE_KEY'), 'clientSecret': intent.client_secret}))
-#         except Exception as e:
-#             return HttpResponse(json.dumps(error=str(e)), status=403)
-#     else:
-#             return HttpResponse(json.dumps({'message': 'POST request needed'}), status=400)
-
-# @csrf_exempt
-# def webhook_received():
-#     if request.method == 'POST':
-#         # You can use webhooks to receive information about asynchronous payment events.
-#         # For more about our webhook events check out https://stripe.com/docs/webhooks.
-#         webhook_secret = os.getenv('STRIPE_WEBHOOK_SECRET')
-#         request_data = json.loads(request.body)
-
-#         if webhook_secret:
-#             # Retrieve the event by verifying the signature using the raw body and secret if webhook signing is configured.
-#             signature = request.headers.get('stripe-signature')
-#             try:
-#                 event = stripe.Webhook.construct_event(
-#                     payload=request.data, sig_header=signature, secret=webhook_secret)
-#                 data = event['data']
-#             except Exception as e:
-#                 return e
-#             # Get the type of webhook event sent - used to check the status of PaymentIntents.
-#             event_type = event['type']
-#         else:
-#             data = request_data['data']
-#             event_type = request_data['type']
-#         data_object = data['object']
-
-#         if event_type == 'payment_intent.succeeded':
-#             print('💰 Payment received!')
-#             # Fulfill any orders, e-mail receipts, etc
-#             # To cancel the payment you will need to issue a Refund (https://stripe.com/docs/api/refunds)
-#         elif event_type == 'payment_intent.payment_failed':
-#             print('❌ Payment failed.')
-#         return HttpResponse(json.dumps({'status': 'success'}))
-#     else:
-#         return HttpResponse(json.dumps({'message': 'POST request needed'}), status=400)
+        return JsonResponse({'error_message': 'Used GET method instead of POST'})
