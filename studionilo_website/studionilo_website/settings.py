@@ -28,6 +28,7 @@ SECRET_KEY = DJ.SECRET_KEY
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'www.studionilo.it',
     'studionilo.it',
 ]
@@ -86,7 +87,12 @@ DATABASES = {
         'USER': PA.USERNAME,
         'PASSWORD': PA.DB_PASS,
         'HOST': PA.DB_HOSTNAME,
+        # 'HOST': '127.0.0.1',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 
