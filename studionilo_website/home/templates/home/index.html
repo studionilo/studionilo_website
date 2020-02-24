@@ -45,8 +45,8 @@
         <li class="mb-3 nilo-nav-item-logo">
             <span>Studio<strong>nilo</strong></span>
         </li>
-        <li class="my-1 nilo-nav-item">
-            <a href="#presenza_digitale">contattaci</a>
+        <li class="my-1 nilo-nav-item" id="nilo-contactus">
+            contattaci
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
                 <title>freccina_contact_piani_su_misura</title>
                 <g id="Livello_2" data-name="Livello 2">
@@ -57,8 +57,8 @@
                 </g>
             </svg>
         </li>
-        <li class="my-1 nilo-nav-item">
-            <a href="#contattaci">piani su misura</a>
+        <li class="my-1 nilo-nav-item" id="nilo-tailored">
+            piani su misura
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
                 <title>freccina_contact_piani_su_misura</title>
                 <g id="Livello_2" data-name="Livello 2">
@@ -73,6 +73,9 @@
 
     <!-- Splash screen -->
     <div class="nilo-jumbo-container nilo-blue-bg">
+        <div class="nilo-home-monkey">
+            <img src="{% static 'home/illustrazioni/home.png' %}" alt="Ciao, siamo Lorenzo e Nicola">
+        </div>
         <div class="nilo-container">
             <p class="nilo-lead-paragraph">Siamo Nicola e Lorenzo, possiamo aiutarti a consolidare la tua
                 <strong>strategia comunicativa</strong> per garantirti una <strong>presenza digitale</strong> efficace.
@@ -166,9 +169,7 @@
     
     {% if awesome %}
     <script>
-        popupTarget = '{{ awesome }}'
-        open_popup()
-        tabBodySelector('popup_pay_tab_awesome')
+        show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}')
     </script>
     {% endif %}
     

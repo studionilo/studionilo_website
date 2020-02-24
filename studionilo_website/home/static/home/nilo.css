@@ -69,6 +69,7 @@ body {
 .nilo-nav-item {
     position: relative;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .nilo-nav-item:hover {
@@ -251,6 +252,7 @@ button {
     color: white;
     background-color: #f76054;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 button:focus {
@@ -513,11 +515,12 @@ tr.nilo-table-trio>th {
 
 tr.nilo-table-body>td>img {
     width: 100%;
+    margin-bottom: -10%;
+    margin-top: -10%;
 }
 
 tr.nilo-table-images>td>img {
-    margin-left: 25%;
-    width: 50%;
+    width: 100%;
 }
 
 tr.nilo-table-duo>th {
@@ -651,11 +654,7 @@ a.nilo-email {
     -ms-overflow-style: none;
 }
 
-.nilo-popup-body>.nilo-card-2>img {
-    width: 100%;
-    padding-left: 25%;
-    padding-right: 25%;
-}
+
 
 .nilo-popup-body form {
     width: 100%;
@@ -757,9 +756,26 @@ a.nilo-email {
     width: 100%;
 }
 
+.nilo-home-monkey {
+    position: absolute;
+    width: 20%;
+    left: 80%;
+    bottom: 0%;
+    overflow: hidden;
+}
+.nilo-home-monkey img {
+    width: 100%;
+    margin-bottom: -13%;
+}
+
 .nilo-popup-monkey {
     display: none;
     align-items: center;
+}
+
+.nilo-popup-monkey img {
+    width: 100%;
+    padding: 15%;
 }
 
 .nilo-card-2 {
@@ -899,6 +915,11 @@ a.nilo-email {
 .nilo-error-msg {
     color: #f76054;
     display: none;
+}
+
+a.nilo-mail {
+    color: #f76054;
+    text-decoration: none;
 }
 
 #default {

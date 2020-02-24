@@ -29,6 +29,12 @@ function open_popup() {
     $('body').css('overflow', 'hidden')
 }
 
+function show_popup_tab(popupTab, pTarget = 'popup_pay_1') {
+    popupTarget = pTarget
+    open_popup()
+    tabBodySelector(popupTab)
+}
+
 function place_bottom() {
     let parent = $(this).parent()
     if (parent.css('display') == 'block') {
@@ -228,6 +234,13 @@ $(document).on('click', '.nilo-read-more-button', function (e) {
     } else {
         moreText.slideDown()
     }
+});
+
+$(document).on('click', '#nilo-tailored', function (e) {
+    show_popup_tab('popup_pay_tab_tailored')
+});
+$(document).on('click', '#nilo-contactus', function (e) {
+    show_popup_tab('popup_pay_tab_contactus')
 });
 
 $(document).mouseup(function (e) {
