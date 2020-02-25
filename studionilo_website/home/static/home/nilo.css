@@ -49,11 +49,17 @@ body {
 }
 
 .nilo-nav {
-    height: 10vh;
-    position: absolute;
+    width: 100%;
+    position: fixed;
     list-style: none;
-    padding: 0%;
-    margin: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #c6e8e9;
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
 }
 
 .nilo-nav a {
@@ -69,6 +75,11 @@ body {
 .nilo-nav-item {
     position: relative;
     font-size: 18px;
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.nilo-nav-item>div {
     cursor: pointer;
 }
 
@@ -82,6 +93,11 @@ body {
     fill: inherit;
     opacity: 0%;
     height: 0.5em;
+    display: none;
+}
+
+.nilo-nav-item>div {
+    margin-right: 2em;
 }
 
 .nilo-more-services {
@@ -759,8 +775,9 @@ a.nilo-email {
 
 .nilo-home-monkey {
     position: absolute;
-    width: 20%;
-    left: 80%;
+    width: 40%;
+    max-width: 400px;
+    right: 1%;
     bottom: 0%;
     overflow: hidden;
 }

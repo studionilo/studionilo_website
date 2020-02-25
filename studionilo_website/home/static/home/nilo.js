@@ -271,3 +271,24 @@ $(document).on('click', '.nilo-table-collapse-btn', function (e) {
         wrappers.slideDown()
     }
 });
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    if($(window).width() < 1200){
+        let currentScrollPos = window.pageYOffset;
+        let navHeight = $('.nilo-nav').outerHeight()
+        let shift = currentScrollPos - prevScrollpos
+        let prevShift = parseInt($('.nilo-nav').css('top'), 10)
+        let totalShift = prevShift - shift
+        if (-totalShift > navHeight) {
+            totalShift = -navHeight
+        } else if (totalShift > 0) {
+            totalShift = 0
+        }
+        // console.log(`shift=${shift}\tprevShift=${prevShift}\ttotal=${totalShift}\tnavHeight=${navHeight}`)
+        $('.nilo-nav').css('top', `${totalShift}px`)
+        prevScrollpos = currentScrollPos;
+    } else {
+        $('.nilo-nav').css('top', '0px')
+    }
+}

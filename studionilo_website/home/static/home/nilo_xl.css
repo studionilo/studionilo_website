@@ -6,6 +6,9 @@
     }
     .nilo-nav {
         position: fixed;
+        background-color: transparent;
+        padding-left: 2%;
+        flex-direction: column;
     }
     .nilo-lead-paragraph {
         font-size: 40px;
@@ -45,5 +48,12 @@
     }
     .nilo-button-pay-method>img {
         width: 60%;
+    }
+    .nilo-nav-item {
+        margin-top: 0.5em;
+    }
+    .nilo-nav-item>div {
+        margin-right: 0em;
+        margin-left: 0em;
     }
 }

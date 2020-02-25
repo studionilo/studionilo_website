@@ -43,4 +43,19 @@
     .nilo-button-pay-method.carta:hover, .nilo-button-pay-method.carta:focus, .nilo-button-pay-method.carta.active {
         background-size: 50%;
     }
+    .nilo-nav {
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nilo-nav-item>div {
+        margin-right: 0em;
+        margin-left: 2em;
+    }
+    .nilo-nav-item {
+        margin-top: 0em;
+    }
 }
