@@ -772,16 +772,17 @@ a.nilo-email {
 
 .nilo-test-size {
     position: fixed;
-    width: 30%;
-    left: 70%;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
     text-align: right;
     display: none;
     opacity: 50%;
+    background-color: #ff0000;
+    padding-right: 1em;
+    font-weight: bold;
 }
 
-.nilo-test-size {
-    background-color: #ff0000;
-}
 
 .nilo-card-1 {
     width: 100%;
@@ -954,9 +955,4 @@ a.nilo-email {
 a.nilo-mail {
     color: #f76054;
     text-decoration: none;
-}
-
-#default {
-    top: 0px;
-    display: block;
 }

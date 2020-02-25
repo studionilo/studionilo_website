@@ -16,9 +16,20 @@
     .nilo-currency {
         font-size: 16px !important;
     }
+    #x-large {
+        display: none;
+    }
+    #large {
+        display: none;
+    }
     #medium {
-        top: 60px;
         display: block;
+    }
+    #small {
+        display: none;
+    }
+    #x-small {
+        display: none;
     }
     .nilo-test-size {
         background-color: #fbff00;

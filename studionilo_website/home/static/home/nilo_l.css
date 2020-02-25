@@ -15,9 +15,20 @@
     #nilo-reference {
         width: 40%;
     }
+    #x-large {
+        display: none;
+    }
     #large {
-        top: 40px;
         display: block;
+    }
+    #medium {
+        display: none;
+    }
+    #small {
+        display: none;
+    }
+    #x-small {
+        display: none;
     }
     .nilo-test-size {
         background-color: #ffae00;

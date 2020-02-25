@@ -15,6 +15,9 @@ def hash(value):
 def home(request):
     return render(request, 'home/index.html')
 
+def debugging(request):
+    return render(request, 'home/index.html', context={'debugging':True})
+
 @csrf_exempt
 def awesome(request):
     if request.method == 'POST':

@@ -27,8 +27,19 @@
         width: 40%;
     }
     #x-large {
-        top: 20px;
         display: block;
+    }
+    #large {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
+    #small {
+        display: none;
+    }
+    #x-small {
+        display: none;
     }
     .nilo-test-size {
         background-color: #ff5100;

@@ -30,12 +30,6 @@
 
 <body>
     <a id="homepage"></a>
-    <!-- <div class="nilo-test-size" id="default">default</div>
-    <div class="nilo-test-size" id="x-large">min-width: 1200px</div>
-    <div class="nilo-test-size" id="large">min-width: 992px</div>
-    <div class="nilo-test-size" id="medium">min-width: 768px</div>
-    <div class="nilo-test-size" id="small">min-width: 600px</div>
-    <div class="nilo-test-size" id="x-small">max-width: 600px</div> -->
 
     <!-- Popup -->
     {% include 'home/popup/popup.html' %}
@@ -112,7 +106,8 @@
             <p class="nilo-lead-paragraph">Siamo Nicola e Lorenzo, possiamo aiutarti a consolidare la tua
                 <strong>strategia comunicativa</strong> per garantirti una <strong>presenza digitale</strong> efficace.
             </p>
-            <button class="nilo-more-services" onclick="window.location.href = '#payment';" type="button">Scopri i nostri servizi</button>
+            <button class="nilo-more-services" onclick="window.location.href = '#payment';" type="button">Scopri i
+                nostri servizi</button>
         </div>
         <div class="nilo-scroll-down-arrow">
             <a href="#presenza_digitale">
@@ -141,7 +136,8 @@
     <div class="nilo-jumbo-container nilo-red-bg">
         <div class="nilo-container nilo-center-vertically">
             <p class="nilo-lead-paragraph">Spesso, azzeccare alcune scelte comunicative può fare la differenza. Abbiamo
-                pensato un sistema di <strong>consulenza veloce</strong> adatto a chi comprende l’importanza del sapersi comunicare e sta
+                pensato un sistema di <strong>consulenza veloce</strong> adatto a chi comprende l’importanza del sapersi
+                comunicare e sta
                 cercando qualche consiglio per farlo al meglio.</p>
         </div>
     </div>
@@ -173,6 +169,16 @@
         </p>
     </div> -->
 
+    {% if debugging %}
+    <div class="nilo-test-size" id="default">default</div>
+    <div class="nilo-test-size" id="x-large">min-width: 1200px</div>
+    <div class="nilo-test-size" id="large">min-width: 992px</div>
+    <div class="nilo-test-size" id="medium">min-width: 768px</div>
+    <div class="nilo-test-size" id="small">min-width: 600px</div>
+    <div class="nilo-test-size" id="x-small">max-width: 600px</div>
+    {% endif %}
+
+
     <footer class="text-center">
         <div class="nilo-center-vertically">
             <p>Studio Nilo 2019 - All rights reserved - Privacy policy - Cookie policy</p>
@@ -198,17 +204,17 @@
             text: 'Thumbnail'
         });
     </script>
-    
+
     {% if awesome %}
     <script>
         show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}')
     </script>
     {% endif %}
-    
+
     {% if reject %}
-        
+
     {% endif %}
-        
+
 </body>
 
 </html>

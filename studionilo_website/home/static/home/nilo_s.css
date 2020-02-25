@@ -4,9 +4,20 @@
     .nilo-lead-paragraph {
         font-size: 26px;
     }
+    #x-large {
+        display: none;
+    }
+    #large {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
     #small {
-        top: 80px;
         display: block;
+    }
+    #x-small {
+        display: none;
     }
     .nilo-test-size {
         background-color: #88ff00;

@@ -1,8 +1,19 @@
 /* Extra small devices (phones, 600px and down) */
 
 @media only screen and (max-width: 600px) {
+    #x-large {
+        display: none;
+    }
+    #large {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
+    #small {
+        display: none;
+    }
     #x-small {
-        top: 100px;
         display: block;
     }
     .nilo-test-size {
