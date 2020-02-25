@@ -227,12 +227,14 @@ $(document).on('click', '.nilo-button-pay-method', function (e) {
 
 $(document).on('click', '.nilo-read-more-button', function (e) {
     var moreText = $(this).closest('table>tbody').find('span.nilo-more')
-    $(this).closest('table>tbody').find('.nilo-read-more-button').css('display', 'none')
+    let readButton = $(this).closest('table>tbody').find('.nilo-read-more-button')
 
     if (moreText.is(':visible')) {
         moreText.slideUp()
+        readButton.text(readButton.data('orig-txt'))
     } else {
         moreText.slideDown()
+        readButton.text(readButton.data('alt-txt'))
     }
 });
 
