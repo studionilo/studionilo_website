@@ -696,9 +696,10 @@ a.nilo-email {
     margin-bottom: 1em;
     border: 2px solid #b3b3b3;
     border-radius: 0px;
-    -webkit-box-shadow: inset 0 0 0px #000;
+    -webkit-appearance: none;
+    /* -webkit-box-shadow: inset 0 0 0px #000;
     -moz-box-shadow: inset 0 0 0px #000;
-    box-shadow: inset 0 0 0px #000;
+    box-shadow: inset 0 0 0px #000; */
 }
 .nilo-popup-body form>input.error {
     border: 2px solid #f76054;
