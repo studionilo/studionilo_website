@@ -29,7 +29,7 @@ body {
 }
 
 .nilo-blur-bg {
-    background-color: #cfcfcf;
+    background-color: rgba(207, 207, 207, 0.65);
 }
 
 .nilo-white-bg {
