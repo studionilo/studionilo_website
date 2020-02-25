@@ -1,7 +1,10 @@
 
-/* primary f76054
-secondary dd4a43
-gray f2f2f2 */
+/*
+rosso       f76054
+rosso-scuro dd4a43
+grigio      f2f2f2
+arancio     e54c45 
+*/
 
 html {
     -webkit-box-sizing: border-box;
@@ -211,6 +214,7 @@ body {
 .nilo-read-more-button {
     color: #a3a5a6;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .nilo-payments {
@@ -451,6 +455,10 @@ table.nilo-table.top {
 table.nilo-table.bottom {
     margin-top: 15%;
     margin-bottom: 20%;
+}
+
+td.nilo-table-collapse-btn  {
+    cursor: pointer;
 }
 
 td.nilo-table-collapse-btn>div {
@@ -877,6 +885,7 @@ a.nilo-email {
     padding-right: 0.5em;
     margin-top: 0.3em;
     font-size: 22px;
+    cursor: pointer;
 }
 
 .nilo-pill.active {
