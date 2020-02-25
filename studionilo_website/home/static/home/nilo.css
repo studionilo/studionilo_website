@@ -415,7 +415,7 @@ table.nilo-table th {
 
 table.nilo-table td {
     padding-bottom: 2%;
-    border-bottom: 15px solid #f2f2f2;
+    /* border-bottom: 15px solid #f2f2f2; */
 }
 table.nilo-table.transparent td {
     padding-bottom: 2%;
@@ -562,7 +562,6 @@ tr.nilo-table-muted>td {
 
 tr.nilo-table-bold>td {
     font-weight: bold;
-    padding-bottom: 0%;
     font-size: 18px;
 }
 
