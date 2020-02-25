@@ -63,4 +63,7 @@
     .nilo-more-services {
         width: auto;
     }
+    .nilo-popup {
+        margin-bottom: 0vh;
+    }
 }
