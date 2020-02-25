@@ -15,15 +15,6 @@
     .nilo-lead-paragraph {
         font-size: 40px;
     }
-    .nilo-mobile {
-        display: none;
-    }
-    .nilo-desktop {
-        display: block;
-    }
-    .nilo-jumbo-container.nilo-desktop {
-        display: flex;
-    }
     .nilo-container {
         margin-left: 15%;
         margin-right: 15%;

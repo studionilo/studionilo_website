@@ -4,15 +4,6 @@
     .nilo-lead-paragraph {
         font-size: 36px;
     }
-    .nilo-mobile {
-        display: none;
-    }
-    .nilo-desktop {
-        display: block;
-    }
-    .nilo-jumbo-container.nilo-desktop {
-        display: flex;
-    }
     .nilo-container {
         margin-left: 7.5%;
         margin-right: 7.5%;
