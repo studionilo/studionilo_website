@@ -210,6 +210,7 @@ body {
 
 .nilo-read-more-button {
     color: #a3a5a6;
+    text-decoration: underline;
 }
 
 .nilo-payments {
