@@ -234,13 +234,11 @@
     </script> -->
 
     {% if awesome %}
-    <script>
-        show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}')
-    </script>
+    <script>show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}');</script>
     {% endif %}
-
+    
     {% if reject %}
-
+    <script>show_popup_tab('popup_pay_tab_reject');</script>
     {% endif %}
 
 </body>

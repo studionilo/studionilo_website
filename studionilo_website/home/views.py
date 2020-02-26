@@ -127,8 +127,12 @@ def create_payment(request):
             payIntent.save()
         except:
             pass
-
-        NiloEmail(payIntent).send()
+        
+        try:
+            if payIntent.plan == PaymentIntent.MEDIAMANAGER:
+                NiloEmail(payIntent).send()
+        except:
+            pass
         return JsonResponse({'payment_intent_id': payIntent.payment_intent_id})
     else:
         return JsonResponse({'error_message': 'Used GET method instead of POST'})
