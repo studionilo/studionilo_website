@@ -305,16 +305,11 @@ window.onscroll = function () {
     }
 }
 
-window.onresize = function (event) {
-    custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
+function set_popup_height(){
+    let = height = window.innerHeight || $(window).height();
+    $('#nilo-popup-inner-container').css('height', `${window.innerHeight * 0.85}px`)
+    // custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
 }
 
-function constant_log() {
-    let = height = window.innerHeight || $(window).height();
-    $('#nilo-popup-container').css('height', `${window.innerHeight}px`)
-    $('#nilo-popup-clickable').css('height', `${window.innerHeight * 0.85}px`)
-    $('.nilo-test-height').css('height', `${window.innerHeight - 10}px`)
-    // custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
-    window.requestAnimationFrame(constant_log); // update on each frame
-}
-constant_log()
+window.onresize = set_popup_height
+set_popup_height()
