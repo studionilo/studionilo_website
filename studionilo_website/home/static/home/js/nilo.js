@@ -310,6 +310,6 @@ function constant_log() {
     let = height = window.innerHeight || $(window).height();
     $('.nilo-test-height').css('height', `${height}px`)
     custom_console(`h=${height}`)
-    window.requestAnimationFrame(constant_log); // update on each frame
+    // window.requestAnimationFrame(constant_log); // update on each frame
 }
 constant_log()
