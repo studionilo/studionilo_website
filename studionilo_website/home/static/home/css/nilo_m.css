@@ -99,4 +99,8 @@
         padding-top: 1%;
         padding-bottom: 3%;
     }
+    table.nilo-table-faq td {
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
 }

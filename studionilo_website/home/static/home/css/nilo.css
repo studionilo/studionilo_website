@@ -1033,3 +1033,8 @@ a.nilo-policy {
 button.nilo-open-popup-button {
     margin-bottom: 4.5%;
 }
+
+table.nilo-table-faq td {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
