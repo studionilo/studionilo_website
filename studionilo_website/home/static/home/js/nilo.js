@@ -3,7 +3,7 @@ const VIDEO_REPORT = 'CST78TAN6SFEE'
 const VIDEO_COLLOQUIO = 'TSQ3J3SQZU458'
 const MEDIA_MANAGER = VIDEO_COLLOQUIO
 
-function custom_console(msg){
+function custom_console(msg) {
     $('#console').text(msg)
 }
 
@@ -13,7 +13,7 @@ function onUpdate() {
 }
 
 function checkout_paypal() {
-    if(PAYMENT_ID.length > 0){
+    if (PAYMENT_ID.length > 0) {
         $('#nilo-paypal-submit').closest('form').find('input[name="custom"]').val(PAYMENT_ID)
         if (popupTarget == 'popup_pay_1')
             $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_REPORT)
@@ -27,13 +27,29 @@ function checkout_paypal() {
 
 function close_popup() {
     $('#nilo-popup-container').css('display', 'none')
-    $('body').css('overflow', 'auto')
+    // $('body').css('overflow', 'auto')
+    document.documentElement.classList.remove('no-scroll');
+    disableBodyScroll(false, '.nilo-popup');
 }
 
 function open_popup() {
     $('#nilo-popup-container').css('display', 'flex')
-    $('body').css('overflow', 'hidden')
+    // $('body').css('overflow', 'hidden')
+    document.documentElement.classList.add('no-scroll');
+    disableBodyScroll(true, '.nilo-popup');
 }
+
+function stopBodyScrolling(bool) {
+    if (bool === true) {
+        document.body.addEventListener("touchmove", freezeVp, false);
+    } else {
+        document.body.removeEventListener("touchmove", freezeVp, false);
+    }
+}
+
+var freezeVp = function (e) {
+    e.preventDefault();
+};
 
 function show_popup_tab(popupTab, pTarget = 'popup_pay_1') {
     popupTarget = pTarget
@@ -178,7 +194,7 @@ function create_payment() {
         get_from_values(),
         function (data, status) {
             console.log(data);
-            if(data['payment_intent_id']){
+            if (data['payment_intent_id']) {
                 PAYMENT_ID = data['payment_intent_id']
             }
             console.log(PAYMENT_ID)
@@ -285,7 +301,7 @@ $(document).on('click', '.nilo-table-collapse-btn', function (e) {
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-    if($(window).width() < 1200 && $(window).scrollTop() > 0){
+    if ($(window).width() < 1200 && $(window).scrollTop() > 0) {
         let currentScrollPos = window.pageYOffset;
         let navHeight = $('.nilo-nav').outerHeight()
         let shift = currentScrollPos - prevScrollpos
@@ -309,8 +325,8 @@ window.onscroll = function () {
 function constant_log() {
     let = height = window.innerHeight || $(window).height();
     $('#nilo-popup-container').css('height', `${window.innerHeight}px`)
-    $('#nilo-popup-clickable').css('height', `${window.innerHeight*0.85}px`)
-    $('.nilo-test-height').css('height', `${window.innerHeight-10}px`)
+    $('#nilo-popup-clickable').css('height', `${window.innerHeight * 0.85}px`)
+    $('.nilo-test-height').css('height', `${window.innerHeight - 10}px`)
     custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
     window.requestAnimationFrame(constant_log); // update on each frame
 }
