@@ -45,10 +45,6 @@
     .nilo-button-pay-method>img {
         width: 70%;
     }
-    tr.nilo-table-title>th {
-        padding-bottom: 0%;
-        padding-top: 2%;
-    }
     table.nilo-table td {
         /* padding-bottom: 0%; */
     }
@@ -67,5 +63,8 @@
     }
     .nilo-popup {
         margin-bottom: 0vh;
+    }
+    tr.nilo-table-btn>td {
+        padding-bottom: 3%;
     }
 }

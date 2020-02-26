@@ -81,4 +81,22 @@
     .nilo-nav-item {
         margin-top: 0em;
     }
+    button.nilo-open-popup-button {
+        margin-bottom: auto;
+    }
+    tr.nilo-table-title>th {
+        padding-top: 2%;
+        padding-bottom: 0%;
+    }
+    tr.nilo-table-images>td {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    tr.nilo-table-body>td {
+        padding-bottom: 2%;
+    }
+    tr.nilo-table-bold>td {
+        padding-top: 1%;
+        padding-bottom: 3%;
+    }
 }

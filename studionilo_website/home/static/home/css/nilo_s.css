@@ -52,4 +52,7 @@
     .nilo-scroll-down-arrow {
         display: block;
     }
+    button.nilo-open-popup-button {
+        margin-bottom: 1%;
+    }
 }

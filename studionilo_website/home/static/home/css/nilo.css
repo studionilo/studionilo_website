@@ -411,6 +411,8 @@ table.nilo-table td, table.nilo-table th {
     background-color: #f2f2f2;
     padding-left: 7%;
     padding-right: 7%;
+    padding-top: 0%;
+    padding-bottom: 0%;
 }
 
 table.nilo-table.transparent td, table.nilo-table.transparent th {
@@ -424,7 +426,7 @@ table.nilo-table th {
 }
 
 table.nilo-table td {
-    padding-bottom: 2%;
+    /* padding-bottom: 2%; */
     /* border-bottom: 15px solid #f2f2f2; */
 }
 
@@ -509,9 +511,11 @@ td.nilo-table-collapse-btn img.deactivated {
     }
 }
 
-hr.nilo-shrink {
-    margin: 0%;
-    padding: 0%;
+.nilo-shrink {
+    margin-top: 0%!important;
+    margin-bottom: 0%!important;
+    padding-top: 0%!important;
+    padding-bottom: 0%!important;
 }
 
 tr.nilo-table-separator td {
@@ -525,9 +529,24 @@ tr.nilo-table-title>th {
     /* width: 33%; */
     /* margin-bottom: 2.5%;
     margin-top: 2.5%; */
-    padding: 5%;
+    /* padding: 5%; */
+    padding-top: 4%;
+    padding-bottom: 4%;
     font-size: 26px;
     text-align: center;
+}
+
+tr.nilo-table-body>td {
+    padding-bottom: 7%;
+}
+
+tr.nilo-table-bold>td {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+tr.nilo-table-btn>td {
+    padding-bottom: 4%;
 }
 
 tr.nilo-table-card-title th {
@@ -1010,3 +1029,7 @@ a.nilo-policy {
 /* .no-scroll {
     overflow: hidden;
 } */
+
+button.nilo-open-popup-button {
+    margin-bottom: 4.5%;
+}
