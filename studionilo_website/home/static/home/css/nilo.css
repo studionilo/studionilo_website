@@ -254,7 +254,7 @@ ul.nilo-gains-list>li::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("/static/home/assets/done.svg");
+    background: url("/static/home/assets/done.svg");
     background-position: center;
 }
 
@@ -318,17 +318,44 @@ button:focus {
 }
 
 .nilo-button-muted.close-btn {
-    background: url("/static/home/assets/close_popup_normal.svg") no-repeat;
-    background-position: center;
-    background-size: 70%;
     width: 1.5em;
     height: 1.5em;
+    position: relative;
 }
 
-.nilo-button-muted.close-btn:hover {
+.nilo-button-muted.close-btn:before, .nilo-button-muted.close-btn:after {
+    position: absolute;
+    top: 0%;
+    /* right: 0; */
+    /* bottom: 0; */
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    content: "";
+    display: block;
+    background-size: 70%!important;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s;
+    background-position: center!important;
+}
+
+.nilo-button-muted.close-btn:before {
+    background: url("/static/home/assets/close_popup_normal.svg") no-repeat;
+    opacity: 1;
+}
+
+.nilo-button-muted.close-btn:after {
     background: url("/static/home/assets/close_popup_hover.svg") no-repeat;
-    background-position: center;
-    background-size: 70%;
+    opacity: 0;
+}
+
+.nilo-button-muted.close-btn:hover:before, .nilo-button-muted.close-btn.active:before {
+    opacity: 0;
+}
+
+.nilo-button-muted.close-btn:hover:after, .nilo-button-muted.close-btn.active:after {
+    opacity: 1;
 }
 
 .nilo-button-pay-method {
@@ -345,6 +372,24 @@ button:focus {
     justify-content: center;
     font-size: 100%;
     line-height: 1em;
+    position: relative;
+}
+
+.nilo-button-pay-method.paypal:before, .nilo-button-pay-method.paypal:after, .nilo-button-pay-method.carta:before, .nilo-button-pay-method.carta:after {
+    position: absolute;
+    top: 0%;
+    /* right: 0; */
+    /* bottom: 0; */
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    content: "";
+    display: block;
+    background-size: 60%!important;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s;
+    background-position: center!important;
 }
 
 .nilo-button-pay-method:hover, .nilo-button-pay-method:focus, .nilo-button-pay-method.active {
@@ -352,28 +397,40 @@ button:focus {
     border-color: #f76054;
 }
 
-.nilo-button-pay-method.paypal {
+.nilo-button-pay-method.paypal:before {
     background: url("/static/home/assets/paypal_logo_grigio.svg") no-repeat;
-    background-position: center;
-    background-size: 60%;
+    opacity: 1;
 }
 
-.nilo-button-pay-method.paypal:hover, .nilo-button-pay-method.paypal:focus, .nilo-button-pay-method.paypal.active {
+.nilo-button-pay-method.paypal:after {
     background: url("/static/home/assets/paypal_logo_arancio.svg") no-repeat;
-    background-position: center;
-    background-size: 60%;
+    opacity: 0;
 }
 
-.nilo-button-pay-method.carta {
+.nilo-button-pay-method.paypal:hover:before, .nilo-button-pay-method.paypal.active:before {
+    opacity: 0;
+}
+
+.nilo-button-pay-method.paypal:hover:after, .nilo-button-pay-method.paypal.active:after {
+    opacity: 1;
+}
+
+.nilo-button-pay-method.carta:before {
     background: url("/static/home/assets/logo_card_off.svg") no-repeat;
-    background-position: center;
-    background-size: 60%;
+    opacity: 1;
 }
 
-.nilo-button-pay-method.carta:hover, .nilo-button-pay-method.carta:focus, .nilo-button-pay-method.carta.active {
+.nilo-button-pay-method.carta:after {
     background: url("/static/home/assets/logo_card_on.svg") no-repeat;
-    background-position: center;
-    background-size: 60%;
+    opacity: 0;
+}
+
+.nilo-button-pay-method.carta:hover:before, .nilo-button-pay-method.carta.active:before {
+    opacity: 0;
+}
+
+.nilo-button-pay-method.carta:hover:after, .nilo-button-pay-method.carta.active:after {
+    opacity: 1;
 }
 
 .nilo-button-pay-method>img {
@@ -1037,4 +1094,28 @@ button.nilo-open-popup-button {
 table.nilo-table-faq td {
     padding-top: 0%;
     padding-bottom: 0%;
+}
+
+/* Images containers */
+
+/* Attach backgrounds */
+
+.icon1:before {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwMCAzMDAiIGhlaWdodD0iMzAwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMDAgMzAwIiB3aWR0aD0iMzAwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik0xNTEuMTI1LDE0Ljk4OUM3Ni4zMzcsMTQuOTg5LDE1LjcxLDc1LjYxLDE1LjcxLDE1MC40YzAsNzQuNzgyLDYwLjYyNywxMzUuNDA5LDEzNS40MTUsMTM1LjQwOSAgIGM3NC43ODcsMCwxMzUuNDE1LTYwLjYyNywxMzUuNDE1LTEzNS40MDlDMjg2LjU0LDc1LjYxLDIyNS45MTIsMTQuOTg5LDE1MS4xMjUsMTQuOTg5eiBNMTUxLjEyNSwyNjYuNjY0ICAgYy02NC4yMTIsMC0xMTYuMjYzLTUyLjA2My0xMTYuMjYzLTExNi4yNjRjMC02NC4yMTQsNTIuMDUxLTExNi4yNjMsMTE2LjI2My0xMTYuMjYzUzI2Ny4zODgsODYuMTg2LDI2Ny4zODgsMTUwLjQgICBDMjY3LjM4OCwyMTQuNjAyLDIxNS4zMzcsMjY2LjY2NCwxNTEuMTI1LDI2Ni42NjR6IiBmaWxsPSIjMjM4REIxIi8+PHBhdGggZD0iTTI1NS44NywxNTAuNDAyYzAsNTcuODUxLTQ2Ljg5NCwxMDQuNzQxLTEwNC43NDUsMTA0Ljc0MVM0Ni4zOCwyMDguMjUzLDQ2LjM4LDE1MC40MDIgICBjMC01Ny44NTIsNDYuODk0LTEwNC43NSwxMDQuNzQ1LTEwNC43NVMyNTUuODcsOTIuNTUsMjU1Ljg3LDE1MC40MDJ6IiBmaWxsPSIjMjM4REIxIi8+PHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIxOTguNDk3LDE1OS41NSAxNzMuNjgxLDE1OS41NSAxNzMuNjgxLDIyMy4zMDMgMTI4LjU2OSwyMjMuMzAzIDEyOC41NjksMTU5LjU1IDEwMy43NTMsMTU5LjU1ICAgIDEyOC41NjksMTE2LjMxMyAxMjguNTY5LDExNi4xMTEgMTI4LjY3NCwxMTYuMTExIDE1MC44MzIsNzcuNDk3IDE3My4yNzEsMTE2LjExMSAxNzMuNjc3LDExNi4xMTEgMTczLjY3NywxMTYuODM3ICAiLz48L2c+PC9zdmc+);
+    opacity: 1;
+}
+
+.icon1:after {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMwMCAzMDAiIGhlaWdodD0iMzAwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMDAgMzAwIiB3aWR0aD0iMzAwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik0xNTAuNzU1LDE0LjM5MWMtNzQuNzgsMC0xMzUuNDA0LDYwLjYyNC0xMzUuNDA0LDEzNS40MTJjMCw3NC43OCw2MC42MjQsMTM1LjQwOCwxMzUuNDA0LDEzNS40MDggICBjNzQuNzg4LDAsMTM1LjQxNi02MC42MjgsMTM1LjQxNi0xMzUuNDA4QzI4Ni4xNzEsNzUuMDE0LDIyNS41NDMsMTQuMzkxLDE1MC43NTUsMTQuMzkxeiBNMTUwLjc1NSwyNjYuMDY1ICAgYy02NC4yMDQsMC0xMTYuMjYzLTUyLjA2LTExNi4yNjMtMTE2LjI2M2MwLTY0LjIxMiw1Mi4wNTktMTE2LjI2MywxMTYuMjYzLTExNi4yNjNjNjQuMjExLDAsMTE2LjI2Myw1Mi4wNTEsMTE2LjI2MywxMTYuMjYzICAgQzI2Ny4wMTksMjE0LjAwNiwyMTQuOTY3LDI2Ni4wNjUsMTUwLjc1NSwyNjYuMDY1eiIgZmlsbD0iIzJEODZCQSIvPjxwYXRoIGQ9Ik0yNTUuNTA5LDE0OS44MDJjMCw1Ny44NTItNDYuODk3LDEwNC43NDYtMTA0Ljc1LDEwNC43NDZTNDYuMDE4LDIwNy42NTQsNDYuMDE4LDE0OS44MDIgICBzNDYuODktMTA0Ljc1LDEwNC43NDItMTA0Ljc1UzI1NS41MDksOTEuOTUsMjU1LjUwOSwxNDkuODAyeiIgZmlsbD0iIzJEODZCQSIvPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTczLjMxMiwxODMuMzY0IDE3My4zMTIsMTg0LjA4NSAxNzIuOTA1LDE4NC4wODUgMTUwLjQ2NiwyMjIuNjk5IDEyOC4zMTIsMTg0LjA4NSAgICAxMjguMTk1LDE4NC4wODUgMTI4LjE5NSwxODMuODg4IDEwMy4zODcsMTQwLjY1IDEyOC4xOTUsMTQwLjY1IDEyOC4xOTUsNzYuOTAxIDE3My4zMTksNzYuOTAxIDE3My4zMTksMTQwLjY1NCAxOTguMTMyLDE0MC42NTQgICAgICIvPjwvZz48L3N2Zz4=);
+    opacity: 0;
+}
+
+/* Transition on hover */
+
+.icon1:hover:before {
+    opacity: 0;
+}
+
+.icon1:hover:after {
+    opacity: 1;
 }
