@@ -15,10 +15,17 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159135011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159135011-1');
+    </script>
     <!-- jQuery core CSS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- Stripe -->
-    <!-- <script src="https://js.stripe.com/v3/"></script> -->
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_xs.css' %}">
@@ -176,7 +183,7 @@
     <div class="nilo-test-size" id="medium">min-width: 768px</div>
     <div class="nilo-test-size" id="small">min-width: 600px</div>
     <div class="nilo-test-size" id="x-small">max-width: 600px</div>
-    
+
     <div class="nilo-test-size nilo-test-up-1" id="console"></div>
     {% endif %}
 

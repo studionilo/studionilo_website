@@ -4,10 +4,12 @@ class PaymentIntent(models.Model):
     VIDEOREPORT = 'Video-report'
     VIDEOCOLLOQUIO = 'Video-colloquio'
     MEDIAMANAGER = 'Social media manager'
+    UNKNOWN = 'Unknown'
     PAYMENTS = (
         (VIDEOREPORT, 'Video-report'),
         (VIDEOCOLLOQUIO, 'Video-colloquio'),
         (MEDIAMANAGER, 'Social media manager'),
+        (UNKNOWN, 'Unknown'),
     )
     name = models.CharField(max_length=128)
     email = models.CharField(max_length=192)
@@ -23,6 +25,7 @@ class PaymentIntent(models.Model):
     # sn_other = models.CharField(max_length=255, default='')
     payment_intent_id = models.CharField(max_length=128, default='', unique=True)
     purchased = models.BooleanField(default=False)
+    done = models.BooleanField(default=False)
     date = models.DateTimeField(auto_now_add=True)
 
     user_agent = models.TextField(null=True)

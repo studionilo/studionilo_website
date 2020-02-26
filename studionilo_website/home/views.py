@@ -8,6 +8,7 @@ from user_agents import parse
 import traceback
 from datetime import datetime
 import hashlib
+from .niloemail import NiloEmail
 
 def hash(value):
     return hashlib.sha256(value.encode('utf-8')).hexdigest()
@@ -23,24 +24,24 @@ def awesome(request):
     if request.method == 'POST':
         try:
             payment = Payment()
-            payment.payer_email = request.POST['payer_email']
-            payment.payer_id = request.POST['payer_id']
-            payment.payer_status = request.POST['payer_status']
-            payment.first_name = request.POST['first_name']
-            payment.last_name = request.POST['last_name']
-            payment.txn_id = request.POST['txn_id']
-            payment.txn_type = request.POST['txn_type']
-            payment.mc_currency = request.POST['mc_currency']
-            payment.payment_fee = float(request.POST['payment_fee'])
-            payment.payment_gross = float(request.POST['payment_gross'])
+            payment.payer_email = safe_post(request, 'payer_email')
+            payment.payer_id = safe_post(request, 'payer_id')
+            payment.payer_status = safe_post(request, 'payer_status')
+            payment.first_name = safe_post(request, 'first_name')
+            payment.last_name = safe_post(request, 'last_name')
+            payment.txn_id = safe_post(request, 'txn_id')
+            payment.txn_type = safe_post(request, 'txn_type')
+            payment.mc_currency = safe_post(request, 'mc_currency')
+            payment.payment_fee = float(safe_post(request, 'payment_fee'))
+            payment.payment_gross = float(safe_post(request, 'payment_gross'))
             payment.payment_revenue = payment.payment_gross - payment.payment_fee
-            payment.payment_status = request.POST['payment_status']
-            payment.payment_type = request.POST['payment_type']
-            payment.item_name = request.POST['item_name']
-            payment.payment_date = datetime.strptime(request.POST['payment_date'], '%Y-%m-%dT%H:%M:%SZ')
-            payment.verify_sign = request.POST['verify_sign']
+            payment.payment_status = safe_post(request, 'payment_status')
+            payment.payment_type = safe_post(request, 'payment_type')
+            payment.item_name = safe_post(request, 'item_name')
+            payment.payment_date = datetime.strptime(safe_post(request, 'payment_date'), '%Y-%m-%dT%H:%M:%SZ')
+            payment.verify_sign = safe_post(request, 'verify_sign')
 
-            payIntent = PaymentIntent.objects.filter(payment_intent_id=request.POST['custom']).first()
+            payIntent = PaymentIntent.objects.filter(payment_intent_id=safe_post(request, 'custom')).first()
             payIntent.purchased = True
             payIntent.save()
 
@@ -53,6 +54,7 @@ def awesome(request):
             else:
                 context={'awesome':'popup_pay_3'}
 
+            NiloEmail(payment.paymentIntent).send()
             return render(request, 'home/index.html', context=context)
         except:
             return redirect('home_reject')
@@ -62,35 +64,51 @@ def awesome(request):
 def reject(request):
     return render(request, 'home/index.html', context={'reject':True})
 
+def safe_post(request, key, default=''):
+    if key in request.POST:
+        return request.POST[request, key]
+    else:
+        return default
+
 @csrf_exempt
 def create_payment(request):
     if request.method == 'POST':
         try:
             payIntent = PaymentIntent()
-            payIntent.name = request.POST['name']
-            payIntent.email = request.POST['email'] 
-            payIntent.website = request.POST['website']
-            payIntent.sn_facebook = request.POST['sn_facebook'] == 'true'
-            payIntent.sn_instagram = request.POST['sn_instagram'] == 'true'
-            payIntent.sn_twitter = request.POST['sn_twitter'] == 'true'
-            payIntent.sn_tiktok = request.POST['sn_tiktok'] == 'true'
-            payIntent.sn_linkedin = request.POST['sn_linkedin'] == 'true'
-            payIntent.sn_snapchat = request.POST['sn_snapchat'] == 'true'
-            payIntent.sn_pinterest = request.POST['sn_pinterest'] == 'true'
+            payIntent.name = safe_post(request, 'name')
+            payIntent.email = safe_post(request, 'email') 
+            payIntent.website = safe_post(request, 'website')
+            payIntent.sn_facebook = safe_post(request, 'sn_facebook') == 'true'
+            payIntent.sn_instagram = safe_post(request, 'sn_instagram') == 'true'
+            payIntent.sn_twitter = safe_post(request, 'sn_twitter') == 'true'
+            payIntent.sn_tiktok = safe_post(request, 'sn_tiktok') == 'true'
+            payIntent.sn_linkedin = safe_post(request, 'sn_linkedin') == 'true'
+            payIntent.sn_snapchat = safe_post(request, 'sn_snapchat') == 'true'
+            payIntent.sn_pinterest = safe_post(request, 'sn_pinterest') == 'true'
 
-            if(request.POST['plan'] == 'popup_pay_1'):
+            if(safe_post(request, 'plan') == 'popup_pay_1'):
                 payIntent.plan = PaymentIntent.VIDEOREPORT
-
-            if(request.POST['plan'] == 'popup_pay_2'):
+            elif(safe_post(request, 'plan') == 'popup_pay_2'):
                 payIntent.plan = PaymentIntent.VIDEOCOLLOQUIO
-
-            if(request.POST['plan'] == 'popup_pay_3'):
+            elif(safe_post(request, 'plan') == 'popup_pay_3'):
                 payIntent.plan = PaymentIntent.MEDIAMANAGER
-            
-            payIntent.screen_height = request.POST['screen_height']
-            payIntent.screen_width = request.POST['screen_width']
+            else:
+                payIntent.plan = PaymentIntent.UNKNOWN
 
-            payIntent.user_agent = request.POST['user_agent']
+            
+            payIntent.payment_intent_id = 'temporary_id'
+            payIntent.save()
+            payIntent.payment_intent_id = '{:08d}_{}'.format(payIntent.pk, hash(request.session.session_key))
+            payIntent.save()
+        except:
+            return JsonResponse({'error_message': traceback.format_exc()})
+
+        try:
+            payIntent.screen_height = safe_post(request, 'screen_height')
+            payIntent.screen_width = safe_post(request, 'screen_width')
+
+            payIntent.user_agent = safe_post(request, 'user_agent')
+
             ua = parse(payIntent.user_agent)
             payIntent.browser_family = ua.browser.family
             payIntent.browser_version = ua.browser.version_string
@@ -104,12 +122,11 @@ def create_payment(request):
             payIntent.device_is_touch_capable = ua.is_touch_capable
             payIntent.device_is_pc = ua.is_pc
             payIntent.device_is_bot = ua.is_bot
-
             payIntent.save()
-            payIntent.payment_intent_id = '{:08d}_{}'.format(payIntent.pk, hash(request.session.session_key))
-            payIntent.save()
-            return JsonResponse({'payment_intent_id': payIntent.payment_intent_id})
         except:
-            return JsonResponse({'error_message': traceback.format_exc()})
+            pass
+
+        NiloEmail(payIntent).send()
+        return JsonResponse({'payment_intent_id': payIntent.payment_intent_id})
     else:
         return JsonResponse({'error_message': 'Used GET method instead of POST'})
