@@ -297,7 +297,7 @@ window.onscroll = function () {
             totalShift = 0
         }
         // console.log(`shift=${shift}\tprevShift=${prevShift}\ttotal=${totalShift}\tnavHeight=${navHeight}`)
-        custom_console(`wp=${$(window).scrollTop()}\tsh=${shift}\tprevSh=${prevShift}\tt=${totalShift}\tnH=${navHeight}`)
+        // custom_console(`wp=${$(window).scrollTop()}\tsh=${shift}\tprevSh=${prevShift}\tt=${totalShift}\tnH=${navHeight}`)
         $('.nilo-nav').css('top', `${totalShift}px`)
         prevScrollpos = currentScrollPos;
     } else {
@@ -305,3 +305,11 @@ window.onscroll = function () {
     }
 }
 
+
+function constant_log() {
+    let = height = window.innerHeight || $(window).height();
+    $('.nilo-test-height').css('height', `${height}px`)
+    custom_console(`h=${height}`)
+    window.requestAnimationFrame(constant_log); // update on each frame
+}
+constant_log()
