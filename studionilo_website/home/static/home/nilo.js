@@ -3,6 +3,10 @@ const VIDEO_REPORT = 'E5WNWYNZLK9C6'
 const VIDEO_COLLOQUIO = 'REE52ZG3VNS34'
 const MEDIA_MANAGER = 'REE52ZG3VNS34'
 
+function custom_console(msg){
+    $('#console').text(msg)
+}
+
 function onUpdate() {
     $('.nilo-popup-body').each(place_bottom);
     window.requestAnimationFrame(onUpdate); // update on each frame
@@ -288,9 +292,11 @@ window.onscroll = function () {
             totalShift = 0
         }
         // console.log(`shift=${shift}\tprevShift=${prevShift}\ttotal=${totalShift}\tnavHeight=${navHeight}`)
+        custom_console(`sh=${shift}\tprevSh=${prevShift}\tt=${totalShift}\tnH=${navHeight}`)
         $('.nilo-nav').css('top', `${totalShift}px`)
         prevScrollpos = currentScrollPos;
     } else {
         $('.nilo-nav').css('top', '0px')
     }
 }
+

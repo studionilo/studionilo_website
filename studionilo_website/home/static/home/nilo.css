@@ -773,6 +773,7 @@ a.nilo-email {
 .nilo-test-size {
     position: fixed;
     width: 100%;
+    height: 1.5em;
     left: 0%;
     bottom: 0%;
     text-align: right;
@@ -783,6 +784,10 @@ a.nilo-email {
     font-weight: bold;
 }
 
+.nilo-test-up-1 {
+    bottom: 1.5em;
+    display: block;
+}
 
 .nilo-card-1 {
     width: 100%;
