@@ -65,7 +65,7 @@ class Payment(models.Model):
     payment_date = models.DateTimeField()
     verify_sign = models.CharField(max_length=255)
 
-    paymentIntent = models.ForeignKey(PaymentIntent, on_delete = models.CASCADE) 
+    paymentIntent = models.ForeignKey(PaymentIntent, on_delete=models.CASCADE, null=True) 
 
     def __str__(self):
         return self.payer_email

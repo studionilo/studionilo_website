@@ -42,11 +42,12 @@ def awesome(request):
             payment.verify_sign = request.POST.get('verify_sign', '')
 
             payIntent = PaymentIntent.objects.filter(payment_intent_id=request.POST.get('custom', '')).first()
-            payIntent.purchased = True
-            payIntent.save()
-
-            payment.paymentIntent = PaymentIntent.objects.first()
+            if not payIntent is None:
+                payIntent.purchased = True
+                payIntent.save()
+                payment.paymentIntent = PaymentIntent.objects.first()
             payment.save()
+            
             if payIntent.plan == PaymentIntent.VIDEOREPORT:
                 context={'awesome':'popup_pay_1'}
             elif payIntent.plan == PaymentIntent.VIDEOCOLLOQUIO:
