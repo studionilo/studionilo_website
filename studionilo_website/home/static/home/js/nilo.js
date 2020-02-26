@@ -27,16 +27,16 @@ function checkout_paypal() {
 
 function close_popup() {
     $('#nilo-popup-container').css('display', 'none')
-    // $('body').css('overflow', 'auto')
-    document.documentElement.classList.remove('no-scroll');
-    disableBodyScroll(false, '.nilo-popup');
+    $('body').css('overflow', 'auto')
+    // document.documentElement.classList.remove('no-scroll');
+    // disableBodyScroll(false, '.nilo-popup');
 }
 
 function open_popup() {
     $('#nilo-popup-container').css('display', 'flex')
-    // $('body').css('overflow', 'hidden')
-    document.documentElement.classList.add('no-scroll');
-    disableBodyScroll(true, '.nilo-popup');
+    $('body').css('overflow', 'hidden')
+    // document.documentElement.classList.add('no-scroll');
+    // disableBodyScroll(true, '.nilo-popup');
 }
 
 function stopBodyScrolling(bool) {
