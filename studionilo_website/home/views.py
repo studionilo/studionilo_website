@@ -9,9 +9,13 @@ import traceback
 from datetime import datetime
 import hashlib
 from .niloemail import NiloEmail
+import os,binascii
 
 def hash(value):
-    return hashlib.sha256(value.encode('utf-8')).hexdigest()
+    if not value is None:
+        return hashlib.sha256(value.encode('utf-8')).hexdigest()
+    else:
+        return hashlib.sha256('none'.encode('utf-8')).hexdigest()
 
 def home(request):
     return render(request, 'home/index.html')
@@ -90,8 +94,11 @@ def create_payment(request):
             else:
                 payIntent.plan = PaymentIntent.UNKNOWN
 
-            
-            payIntent.payment_intent_id = 'temporary_id'
+            tmp_id = 'temporary_id_{}'.format(binascii.b2a_hex(os.urandom(4)))
+            while(not PaymentIntent.objects.filter(payment_intent_id=tmp_id).first() is None):
+                tmp_id = 'temporary_id_{}'.format(binascii.b2a_hex(os.urandom(20)))
+
+            payIntent.payment_intent_id = tmp_id
             payIntent.save()
             payIntent.payment_intent_id = '{:08d}_{}'.format(payIntent.pk, hash(request.session.session_key))
             payIntent.save()

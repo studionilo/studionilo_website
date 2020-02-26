@@ -1,7 +1,7 @@
 var PAYMENT_ID = ''
-const VIDEO_REPORT = 'E5WNWYNZLK9C6'
-const VIDEO_COLLOQUIO = 'REE52ZG3VNS34'
-const MEDIA_MANAGER = 'REE52ZG3VNS34'
+const VIDEO_REPORT = 'CST78TAN6SFEE'
+const VIDEO_COLLOQUIO = 'TSQ3J3SQZU458'
+const MEDIA_MANAGER = VIDEO_COLLOQUIO
 
 function custom_console(msg){
     $('#console').text(msg)
@@ -178,7 +178,9 @@ function create_payment() {
         get_from_values(),
         function (data, status) {
             console.log(data);
-            PAYMENT_ID = data['payment_intent_id']
+            if(data['payment_intent_id']){
+                PAYMENT_ID = data['payment_intent_id']
+            }
             console.log(PAYMENT_ID)
         });
 }
