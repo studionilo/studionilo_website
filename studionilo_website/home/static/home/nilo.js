@@ -292,7 +292,7 @@ window.onscroll = function () {
             totalShift = 0
         }
         // console.log(`shift=${shift}\tprevShift=${prevShift}\ttotal=${totalShift}\tnavHeight=${navHeight}`)
-        custom_console(`sh=${shift}\tprevSh=${prevShift}\tt=${totalShift}\tnH=${navHeight}`)
+        custom_console(`wp=${$(window).scrollTop()}\tsh=${shift}\tprevSh=${prevShift}\tt=${totalShift}\tnH=${navHeight}`)
         $('.nilo-nav').css('top', `${totalShift}px`)
         prevScrollpos = currentScrollPos;
     } else {
