@@ -158,7 +158,7 @@ body {
 }
 
 .nilo-lead-paragraph {
-    font-size: 26px;
+    font-size: 24px;
 }
 
 @keyframes waving-fade {
@@ -180,6 +180,7 @@ body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+    display: none;
 }
 
 .nilo-card {
@@ -800,6 +801,7 @@ a.nilo-email {
     right: 1%;
     bottom: 0%;
     overflow: hidden;
+    display: none;
 }
 .nilo-home-monkey img {
     width: 100%;
