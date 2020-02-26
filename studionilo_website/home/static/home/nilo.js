@@ -280,7 +280,7 @@ $(document).on('click', '.nilo-table-collapse-btn', function (e) {
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-    if($(window).width() < 1200 || $(window).scrollTop() < 0){
+    if($(window).width() < 1200 && $(window).scrollTop() > 0){
         let currentScrollPos = window.pageYOffset;
         let navHeight = $('.nilo-nav').outerHeight()
         let shift = currentScrollPos - prevScrollpos
