@@ -13,14 +13,16 @@ function onUpdate() {
 }
 
 function checkout_paypal() {
-    $('#nilo-paypal-submit').closest('form').find('input[name="custom"]').val(PAYMENT_ID)
-    if (popupTarget == 'popup_pay_1')
-        $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_REPORT)
-    else if (popupTarget == 'popup_pay_2')
-        $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_COLLOQUIO)
-    else
-        $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(MEDIA_MANAGER)
-    $('#nilo-paypal-submit').click()
+    if(PAYMENT_ID.length > 0){
+        $('#nilo-paypal-submit').closest('form').find('input[name="custom"]').val(PAYMENT_ID)
+        if (popupTarget == 'popup_pay_1')
+            $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_REPORT)
+        else if (popupTarget == 'popup_pay_2')
+            $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_COLLOQUIO)
+        else
+            $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(MEDIA_MANAGER)
+        $('#nilo-paypal-submit').click()
+    }
 }
 
 function close_popup() {
