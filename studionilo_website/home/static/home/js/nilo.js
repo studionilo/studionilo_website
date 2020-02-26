@@ -309,7 +309,7 @@ window.onscroll = function () {
 function constant_log() {
     let = height = window.innerHeight || $(window).height();
     $('.nilo-test-height').css('height', `${height}px`)
-    custom_console(`h=${height}`)
-    // window.requestAnimationFrame(constant_log); // update on each frame
+    custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
+    window.requestAnimationFrame(constant_log); // update on each frame
 }
 constant_log()

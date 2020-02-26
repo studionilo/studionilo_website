@@ -785,6 +785,10 @@ a.nilo-email {
     font-weight: bold;
 }
 
+#console {
+    height: auto;
+}
+
 .nilo-test-up-1 {
     bottom: 1.5em;
     display: block;
