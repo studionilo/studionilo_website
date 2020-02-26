@@ -309,14 +309,7 @@ function set_popup_height(){
     let = height = window.innerHeight || $(window).height();
     $('#nilo-popup-inner-container').css('height', `${window.innerHeight * 0.85}px`)
     // custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
-    window.requestAnimationFrame(set_popup_height); // update on each frame
 }
 
-// window.onresize = set_popup_height
+window.onresize = set_popup_height
 set_popup_height()
-
-// function constant_log() {
-//     $('.nilo-test-height').css('height', `${window.innerHeight - 10}px`)
-//     // custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
-// }
-// constant_log()
