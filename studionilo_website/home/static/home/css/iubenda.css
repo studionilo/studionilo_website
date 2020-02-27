@@ -416,7 +416,7 @@
 }
 
 #iubenda-cs-banner .iubenda-cs-opt-group button:hover {
-    opacity: 0.5 !important;
+    /* opacity: 0.5 !important; */
 }
 
 @media (min-width: 640px) {
@@ -512,8 +512,8 @@
 }
 
 #iubenda-cs-banner .iubenda-cs-opt-group button {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #FFFFFF !important;
+    /* background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important; */
 }
 
 #iubenda-cs-banner .iubenda-cs-opt-group button.iubenda-cs-btn-primary {
