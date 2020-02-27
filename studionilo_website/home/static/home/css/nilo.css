@@ -84,35 +84,32 @@ body {
 .nilo-nav-item>div {
     cursor: pointer;
     margin-right: 2em;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .nilo-nav-item>div:hover {
     color: gray;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
+
 .nilo-nav-item>div:hover svg {
     color: gray;
     opacity: 1;
     animation-name: fade-in-right;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    /* transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out; */
 }
 
 .nilo-nav-item>div svg {
     fill: gray;
     opacity: 0;
     height: 0.5em;
-    /* transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out; */
 }
 
 .nilo-more-services {
@@ -287,6 +284,9 @@ button {
     border: none;
     color: white;
     background-color: #f76054;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -302,6 +302,9 @@ button:hover {
 .nilo-button:hover {
     color: white;
     background-color: #dd4a43;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -311,6 +314,9 @@ button:hover {
     background-color: transparent;
     border: 1px solid;
     border-color: #f76054;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -319,6 +325,9 @@ button:hover {
     background-color: #dd4a43;
     border: 1px solid;
     border-color: #dd4a43;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -326,6 +335,9 @@ button:hover {
     color: #bcbec0;
     font-weight: normal;
     background-color: transparent;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -333,6 +345,9 @@ button:hover {
     color: #dd4a43;
     background-color: transparent;
     font-weight: normal;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -355,7 +370,10 @@ button:hover {
     display: block;
     background-size: 70%!important;
     background-repeat: no-repeat;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     background-position: center!important;
 }
 
@@ -385,7 +403,10 @@ button:hover {
     background-color: transparent;
     border: 2px solid;
     border-color: #b3b3b3;
-    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -407,7 +428,10 @@ button:hover {
     display: block;
     background-size: 60%!important;
     background-repeat: no-repeat;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     background-position: center!important;
 }
 
@@ -745,17 +769,26 @@ a.nilo-email {
     display: flex;
     align-items: center;
     width: auto;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
 .nilo-popup-title button svg {
     width: 1.5em;
     height: 1.5em;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
 .nilo-popup-title button:hover svg {
     fill: white;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -1011,7 +1044,6 @@ a.nilo-email {
     background-color: transparent;
     border: 2px solid;
     border-color: #b3b3b3;
-    transition: 0.05s ease-in-out;
     float: left;
     margin-right: 0.5em;
     padding-left: 0.5em;
@@ -1019,13 +1051,19 @@ a.nilo-email {
     margin-top: 0.3em;
     font-size: 22px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .nilo-pill.active, .nilo-pill:hover {
     color: #f76054;
     border-color: #f76054;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* .nilo-tabs .nilo-popup {
