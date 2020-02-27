@@ -131,7 +131,7 @@ function tabBodySelector(nextTab) {
     allPopupTarget.forEach(function (target) {
         $(`#${nextTab} .${target}`).css('display', 'none')
     });
-    $(`#${nextTab} .${popupTarget}`).css('display', 'inline-grid')
+    $(`#${nextTab} .${popupTarget}`).css('display', 'inline')
 }
 
 function check_forms() {
