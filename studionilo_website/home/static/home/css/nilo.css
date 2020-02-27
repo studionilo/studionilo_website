@@ -499,6 +499,7 @@ tr.nilo-table-gains>td {
 
 tr.nilo-table-gains>td>div.wrapper {
     display: none;
+    padding-bottom: 1em;
 }
 
 .nilo-col-left {
