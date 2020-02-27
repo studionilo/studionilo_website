@@ -292,7 +292,11 @@ button {
 }
 
 button:focus {
-    outline-color: #f76054;
+    outline-color: #e54c45;
+}
+
+button:hover {
+    background-color: #e54c45;
 }
 
 .nilo-button:hover {
@@ -327,6 +331,7 @@ button:focus {
 
 .nilo-button-muted:hover {
     color: #dd4a43;
+    background-color: transparent;
     font-weight: normal;
     transition: 0.3s ease-in-out;
 }
@@ -409,6 +414,7 @@ button:focus {
 .nilo-button-pay-method:hover, .nilo-button-pay-method:focus, .nilo-button-pay-method.active {
     color: #f76054;
     border-color: #f76054;
+    background-color: transparent;
 }
 
 .nilo-button-pay-method.paypal:before {
