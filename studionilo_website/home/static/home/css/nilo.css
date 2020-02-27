@@ -95,7 +95,7 @@ a:focus {
 }
 
 .nilo-nav-item>div:hover {
-    color: gray;
+    color: black;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
@@ -103,7 +103,7 @@ a:focus {
 }
 
 .nilo-nav-item>div:hover svg {
-    color: gray;
+    color: black;
     opacity: 1;
     animation-name: fade-in-right;
     animation-duration: 1s;
@@ -111,13 +111,12 @@ a:focus {
 }
 
 .nilo-nav-item>div svg {
-    fill: gray;
+    fill: black;
     opacity: 0;
     height: 0.5em;
 }
 
 .nilo-more-services {
-    font-weight: normal;
     margin-top: 1em;
     width: 100%;
     font-size: 22px;
@@ -747,7 +746,7 @@ a.nilo-email {
 }
 
 .nilo-popup-title {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     overflow: auto;
 }

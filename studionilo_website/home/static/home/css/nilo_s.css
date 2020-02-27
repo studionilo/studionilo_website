@@ -55,4 +55,7 @@
     button.nilo-open-popup-button {
         margin-bottom: 1%;
     }
+    .nilo-popup-title {
+        font-size: 26px;
+    }
 }
