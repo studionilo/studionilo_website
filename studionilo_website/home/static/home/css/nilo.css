@@ -811,7 +811,8 @@ a.nilo-email {
 }
 
 .nilo-popup-body form>input:focus {
-    border: 2px solid #f76054;
+    border: 2px solid #e54c45;
+    outline: 0;
 }
 
 .nilo-popup-body form>input::-webkit-input-placeholder {
@@ -1018,11 +1019,13 @@ a.nilo-email {
     margin-top: 0.3em;
     font-size: 22px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-.nilo-pill.active {
+.nilo-pill.active, .nilo-pill:hover {
     color: #f76054;
     border-color: #f76054;
+    transition: all 0.3s ease-in-out;
 }
 
 /* .nilo-tabs .nilo-popup {
