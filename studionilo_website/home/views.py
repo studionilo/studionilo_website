@@ -10,6 +10,7 @@ from datetime import datetime
 import hashlib
 from .niloemail import NiloEmail
 import os,binascii
+from django.contrib.admin.views.decorators import staff_member_required
 
 def hash(value):
     if not value is None:
@@ -20,6 +21,7 @@ def hash(value):
 def home(request):
     return render(request, 'home/index.html')
 
+@staff_member_required
 def debugging(request):
     return render(request, 'home/index.html', context={'debugging':True})
 
