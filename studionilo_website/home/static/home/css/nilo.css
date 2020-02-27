@@ -189,7 +189,7 @@ a:focus {
     top: 92%;
     width: 2em;
     height: 2em;
-    display: none;
+    /* display: none; */
 }
 .nilo-scroll-down-arrow>a {
     animation-name: waving-fade;
