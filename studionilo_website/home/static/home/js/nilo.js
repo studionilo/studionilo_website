@@ -39,17 +39,17 @@ function open_popup() {
     // disableBodyScroll(true, '.nilo-popup');
 }
 
-function stopBodyScrolling(bool) {
-    if (bool === true) {
-        document.body.addEventListener("touchmove", freezeVp, false);
-    } else {
-        document.body.removeEventListener("touchmove", freezeVp, false);
-    }
-}
+// function stopBodyScrolling(bool) {
+//     if (bool === true) {
+//         document.body.addEventListener("touchmove", freezeVp, false);
+//     } else {
+//         document.body.removeEventListener("touchmove", freezeVp, false);
+//     }
+// }
 
-var freezeVp = function (e) {
-    e.preventDefault();
-};
+// var freezeVp = function (e) {
+//     e.preventDefault();
+// };
 
 function show_popup_tab(popupTab, pTarget = 'popup_pay_1') {
     popupTarget = pTarget
@@ -131,7 +131,7 @@ function tabBodySelector(nextTab) {
     allPopupTarget.forEach(function (target) {
         $(`#${nextTab} .${target}`).css('display', 'none')
     });
-    $(`#${nextTab} .${popupTarget}`).css('display', 'inline')
+    $(`#${nextTab} .${popupTarget}`).css('display', 'inline-grid')
 }
 
 function check_forms() {
