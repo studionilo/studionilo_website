@@ -32,4 +32,3 @@ class NiloEmail:
 
     def __recipient_list(self):
         return [self.payIntent.email, ]
-        # return ['vittoriopippi97@gmail.com',]
