@@ -1,0 +1,61 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* line 4, home/static/home/scss/nilo_xl.scss */
+  .nilo-nav-item {
+    display: block; }
+  /* line 7, home/static/home/scss/nilo_xl.scss */
+  .nilo-nav {
+    position: fixed;
+    background-color: transparent;
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-direction: column;
+    width: 15%; }
+  /* line 15, home/static/home/scss/nilo_xl.scss */
+  .nilo-lead-paragraph {
+    font-size: 40px; }
+  /* line 18, home/static/home/scss/nilo_xl.scss */
+  .nilo-container {
+    margin-left: 15%;
+    margin-right: 15%; }
+  /* line 22, home/static/home/scss/nilo_xl.scss */
+  table.nilo-table {
+    margin-top: 0%;
+    margin-bottom: 0%; }
+  /* line 26, home/static/home/scss/nilo_xl.scss */
+  #nilo-reference {
+    width: 40%; }
+  /* line 29, home/static/home/scss/nilo_xl.scss */
+  #x-large {
+    display: block; }
+  /* line 32, home/static/home/scss/nilo_xl.scss */
+  #large {
+    display: none; }
+  /* line 35, home/static/home/scss/nilo_xl.scss */
+  #medium {
+    display: none; }
+  /* line 38, home/static/home/scss/nilo_xl.scss */
+  #small {
+    display: none; }
+  /* line 41, home/static/home/scss/nilo_xl.scss */
+  #x-small {
+    display: none; }
+  /* line 44, home/static/home/scss/nilo_xl.scss */
+  .nilo-test-size {
+    background-color: #ff5100; }
+  /* line 47, home/static/home/scss/nilo_xl.scss */
+  .nilo-popup-monkey {
+    display: flex; }
+  /* line 50, home/static/home/scss/nilo_xl.scss */
+  .nilo-card-2 {
+    width: 50%; }
+  /* line 53, home/static/home/scss/nilo_xl.scss */
+  .nilo-button-pay-method > img {
+    width: 60%; }
+  /* line 56, home/static/home/scss/nilo_xl.scss */
+  .nilo-nav-item {
+    margin-top: 0.5em; }
+  /* line 59, home/static/home/scss/nilo_xl.scss */
+  .nilo-nav-item > div {
+    margin-right: 0em;
+    margin-left: 0em; } }

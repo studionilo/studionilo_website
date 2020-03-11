@@ -49,12 +49,14 @@
     <!-- jQuery core CSS -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_xs.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_s.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_m.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_l.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/nilo_xl.css' %}">
+    {% compress css %}
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xs.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_s.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_m.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_l.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xl.scss' %}">
+    {% endcompress %}
 </head>
 
 <body>

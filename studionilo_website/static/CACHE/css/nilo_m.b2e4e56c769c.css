@@ -1,0 +1,104 @@
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* line 4, home/static/home/scss/nilo_m.scss */
+  .nilo-lead-paragraph {
+    font-size: 32px; }
+  /* line 7, home/static/home/scss/nilo_m.scss */
+  .nilo-mobile {
+    display: none; }
+  /* line 10, home/static/home/scss/nilo_m.scss */
+  .nilo-desktop {
+    display: block; }
+  /* line 13, home/static/home/scss/nilo_m.scss */
+  .nilo-jumbo-container.nilo-desktop {
+    display: flex; }
+  /* line 16, home/static/home/scss/nilo_m.scss */
+  .nilo-currency {
+    font-size: 16px !important; }
+  /* line 19, home/static/home/scss/nilo_m.scss */
+  #x-large {
+    display: none; }
+  /* line 22, home/static/home/scss/nilo_m.scss */
+  #large {
+    display: none; }
+  /* line 25, home/static/home/scss/nilo_m.scss */
+  #medium {
+    display: block; }
+  /* line 28, home/static/home/scss/nilo_m.scss */
+  #small {
+    display: none; }
+  /* line 31, home/static/home/scss/nilo_m.scss */
+  #x-small {
+    display: none; }
+  /* line 34, home/static/home/scss/nilo_m.scss */
+  .nilo-test-size {
+    background-color: #fbff00; }
+  /* line 37, home/static/home/scss/nilo_m.scss */
+  .nilo-popup-monkey {
+    display: flex; }
+  /* line 40, home/static/home/scss/nilo_m.scss */
+  .nilo-card-2 {
+    width: 50%; }
+  /* line 43, home/static/home/scss/nilo_m.scss */
+  .nilo-button-pay-method > img {
+    width: 75%; }
+  /* line 46, home/static/home/scss/nilo_m.scss */
+  table.nilo-table.top {
+    margin-top: 16%;
+    margin-bottom: 10%; }
+  /* line 50, home/static/home/scss/nilo_m.scss */
+  table.nilo-table.bottom {
+    margin-top: 10%;
+    margin-bottom: 16%; }
+  /* line 54, home/static/home/scss/nilo_m.scss */
+  .nilo-flex-footer-order {
+    flex-direction: row; }
+  /* line 57, home/static/home/scss/nilo_m.scss */
+  .nilo-button-pay-method.paypal {
+    background-size: 50%; }
+  /* line 60, home/static/home/scss/nilo_m.scss */
+  .nilo-button-pay-method.paypal:hover, .nilo-button-pay-method.paypal:focus, .nilo-button-pay-method.paypal.active {
+    background-size: 50%; }
+  /* line 63, home/static/home/scss/nilo_m.scss */
+  .nilo-button-pay-method.carta {
+    background-size: 50%; }
+  /* line 66, home/static/home/scss/nilo_m.scss */
+  .nilo-button-pay-method.carta:hover, .nilo-button-pay-method.carta:focus, .nilo-button-pay-method.carta.active {
+    background-size: 50%; }
+  /* line 69, home/static/home/scss/nilo_m.scss */
+  .nilo-nav {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-direction: row;
+    justify-content: space-between; }
+  /* line 77, home/static/home/scss/nilo_m.scss */
+  .nilo-nav-item > div {
+    margin-right: 0em;
+    margin-left: 2em; }
+  /* line 81, home/static/home/scss/nilo_m.scss */
+  .nilo-nav-item {
+    margin-top: 0em; }
+  /* line 84, home/static/home/scss/nilo_m.scss */
+  button.nilo-open-popup-button {
+    margin-bottom: auto; }
+  /* line 87, home/static/home/scss/nilo_m.scss */
+  tr.nilo-table-title > th {
+    padding-top: 2%;
+    padding-bottom: 0%; }
+  /* line 91, home/static/home/scss/nilo_m.scss */
+  tr.nilo-table-images > td {
+    padding-top: 3%;
+    padding-bottom: 3%; }
+  /* line 95, home/static/home/scss/nilo_m.scss */
+  tr.nilo-table-body > td {
+    padding-bottom: 2%; }
+  /* line 98, home/static/home/scss/nilo_m.scss */
+  tr.nilo-table-bold > td {
+    padding-top: 1%;
+    padding-bottom: 3%; }
+  /* line 102, home/static/home/scss/nilo_m.scss */
+  table.nilo-table-faq td {
+    padding-top: 0%;
+    padding-bottom: 0%; } }

@@ -1,0 +1,54 @@
+/* Small devices (portrait tablets and large phones, 400px and up) */
+@media only screen and (min-width: 600px) {
+  /* line 4, home/static/home/scss/nilo_s.scss */
+  .nilo-lead-paragraph {
+    font-size: 26px; }
+  /* line 7, home/static/home/scss/nilo_s.scss */
+  #x-large {
+    display: none; }
+  /* line 10, home/static/home/scss/nilo_s.scss */
+  #large {
+    display: none; }
+  /* line 13, home/static/home/scss/nilo_s.scss */
+  #medium {
+    display: none; }
+  /* line 16, home/static/home/scss/nilo_s.scss */
+  #small {
+    display: block; }
+  /* line 19, home/static/home/scss/nilo_s.scss */
+  #x-small {
+    display: none; }
+  /* line 22, home/static/home/scss/nilo_s.scss */
+  .nilo-test-size {
+    background-color: #88ff00; }
+  /* line 25, home/static/home/scss/nilo_s.scss */
+  .nilo-card-2 {
+    width: 100%; }
+  /* line 28, home/static/home/scss/nilo_s.scss */
+  .nilo-button-pay-method > img {
+    width: 80%; }
+  /* line 32, home/static/home/scss/nilo_s.scss */
+  table.nilo-table td, table.nilo-table th {
+    padding-left: 3%;
+    padding-right: 3%; }
+  /* line 37, home/static/home/scss/nilo_s.scss */
+  .nilo-button-pay-method.paypal {
+    background-size: 40%; }
+  /* line 40, home/static/home/scss/nilo_s.scss */
+  .nilo-button-pay-method.paypal:hover, .nilo-button-pay-method.paypal:focus, .nilo-button-pay-method.paypal.active {
+    background-size: 40%; }
+  /* line 43, home/static/home/scss/nilo_s.scss */
+  .nilo-button-pay-method.carta {
+    background-size: 40%; }
+  /* line 46, home/static/home/scss/nilo_s.scss */
+  .nilo-button-pay-method.carta:hover, .nilo-button-pay-method.carta:focus, .nilo-button-pay-method.carta.active {
+    background-size: 40%; }
+  /* line 49, home/static/home/scss/nilo_s.scss */
+  .nilo-home-monkey {
+    display: block; }
+  /* line 52, home/static/home/scss/nilo_s.scss */
+  button.nilo-open-popup-button {
+    margin-bottom: 1%; }
+  /* line 55, home/static/home/scss/nilo_s.scss */
+  .nilo-popup-title {
+    font-size: 26px; } }
