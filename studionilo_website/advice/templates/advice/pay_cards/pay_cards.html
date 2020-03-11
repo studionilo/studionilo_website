@@ -1,0 +1,10 @@
+{% block pay_cards %}
+<div class="nilo-container nilo-pt-spacer">
+    <a id="payment"></a>
+    <p>Scegli il piano che fa per te:</p>
+    <!-- Mobile version -->
+    {% include 'advice/pay_cards/pay_card_mobile.html' %}
+    <!-- Desktop version -->
+    {% include 'advice/pay_cards/pay_card_desktop.html' %}
+</div>
+{% endblock pay_cards %}

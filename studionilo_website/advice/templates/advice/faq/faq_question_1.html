@@ -1,0 +1,9 @@
+{% block faq_question_1 %}
+{% include 'advice/pay_cards/components/pay_row_separator_single.html' %}
+<tr class="nilo-table-bold">
+    {% include 'advice/faq/components/faq_colapse_btn.html' with class='nilo-mtb' question='Di cosa si occupa Studionilo?' target='nilo-faq-1' %}
+</tr>
+<tr class="nilo-table-gains" id="nilo-faq-1">
+    {% include 'advice/faq/components/faq_collapsable_answer_1.html' %}
+</tr>
+{% endblock faq_question_1 %}

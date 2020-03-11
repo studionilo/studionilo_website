@@ -4,52 +4,52 @@ rosso-scuro dd4a43
 grigio      f2f2f2
 arancio     e54c45 
 */
-/* line 8, home/static/advice/scss/nilo.scss */
+/* line 8, advice/static/advice/scss/nilo.scss */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
-/* line 15, home/static/advice/scss/nilo.scss */
+/* line 15, advice/static/advice/scss/nilo.scss */
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-/* line 21, home/static/advice/scss/nilo.scss */
+/* line 21, advice/static/advice/scss/nilo.scss */
 body {
   font-family: 'Karla', sans-serif; }
 
-/* line 25, home/static/advice/scss/nilo.scss */
+/* line 25, advice/static/advice/scss/nilo.scss */
 .nilo-red-bg {
   background-color: #f76054; }
 
-/* line 29, home/static/advice/scss/nilo.scss */
+/* line 29, advice/static/advice/scss/nilo.scss */
 .nilo-blue-bg {
   background-color: #c6e8e9; }
 
-/* line 33, home/static/advice/scss/nilo.scss */
+/* line 33, advice/static/advice/scss/nilo.scss */
 .nilo-blur-bg {
   background-color: rgba(207, 207, 207, 0.65); }
 
-/* line 37, home/static/advice/scss/nilo.scss */
+/* line 37, advice/static/advice/scss/nilo.scss */
 .nilo-white-bg {
   background-color: white; }
 
-/* line 41, home/static/advice/scss/nilo.scss */
+/* line 41, advice/static/advice/scss/nilo.scss */
 .nilo-gray-bg {
   background-color: #f2f2f2; }
 
-/* line 45, home/static/advice/scss/nilo.scss */
+/* line 45, advice/static/advice/scss/nilo.scss */
 .nilo-w-25 {
   width: 2.5em; }
 
-/* line 49, home/static/advice/scss/nilo.scss */
+/* line 49, advice/static/advice/scss/nilo.scss */
 .nilo-mr-044 {
   margin-right: 0.44em; }
 
-/* line 53, home/static/advice/scss/nilo.scss */
+/* line 53, advice/static/advice/scss/nilo.scss */
 .nilo-nav {
   width: 100%;
   position: fixed;
@@ -63,29 +63,29 @@ body {
   flex-direction: column;
   z-index: 7; }
 
-/* line 67, home/static/advice/scss/nilo.scss */
+/* line 67, advice/static/advice/scss/nilo.scss */
 .nilo-nav a {
   color: inherit;
   text-decoration: none; }
 
-/* line 72, home/static/advice/scss/nilo.scss */
+/* line 72, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item-logo {
   position: relative;
   font-size: 22px; }
 
-/* line 76, home/static/advice/scss/nilo.scss */
+/* line 76, advice/static/advice/scss/nilo.scss */
 a:focus {
   opacity: 0.7;
   outline: 0; }
 
-/* line 81, home/static/advice/scss/nilo.scss */
+/* line 81, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item {
   position: relative;
   font-size: 18px;
   display: flex;
   margin-top: 0.5em; }
 
-/* line 88, home/static/advice/scss/nilo.scss */
+/* line 88, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item > div {
   cursor: pointer;
   margin-right: 2em;
@@ -94,7 +94,7 @@ a:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 97, home/static/advice/scss/nilo.scss */
+/* line 97, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item > div:hover {
   color: black;
   -webkit-transition: 0.3s ease-in-out;
@@ -102,7 +102,7 @@ a:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 105, home/static/advice/scss/nilo.scss */
+/* line 105, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item > div:hover svg {
   color: black;
   opacity: 1;
@@ -110,13 +110,13 @@ a:focus {
   animation-duration: 1s;
   animation-fill-mode: forwards; }
 
-/* line 113, home/static/advice/scss/nilo.scss */
+/* line 113, advice/static/advice/scss/nilo.scss */
 .nilo-nav-item > div svg {
   fill: black;
   opacity: 0;
   height: 0.5em; }
 
-/* line 119, home/static/advice/scss/nilo.scss */
+/* line 119, advice/static/advice/scss/nilo.scss */
 .nilo-more-services {
   margin-top: 1em;
   width: 100%;
@@ -143,7 +143,7 @@ a:focus {
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
 } */
-/* line 153, home/static/advice/scss/nilo.scss */
+/* line 153, advice/static/advice/scss/nilo.scss */
 .nilo-jumbo-container {
   width: 100%;
   min-height: 100vh;
@@ -154,17 +154,17 @@ a:focus {
   padding: 1%;
   position: relative; }
 
-/* line 164, home/static/advice/scss/nilo.scss */
+/* line 164, advice/static/advice/scss/nilo.scss */
 .nilo-container {
   margin-left: 5%;
   margin-right: 5%;
   overflow: auto; }
 
-/* line 170, home/static/advice/scss/nilo.scss */
+/* line 170, advice/static/advice/scss/nilo.scss */
 .max-width {
   width: 100%; }
 
-/* line 174, home/static/advice/scss/nilo.scss */
+/* line 174, advice/static/advice/scss/nilo.scss */
 .nilo-lead-paragraph {
   font-size: 23px; }
 
@@ -174,7 +174,7 @@ a:focus {
   to {
     opacity: 70%; } }
 
-/* line 187, home/static/advice/scss/nilo.scss */
+/* line 187, advice/static/advice/scss/nilo.scss */
 .nilo-scroll-down-arrow {
   position: absolute;
   top: 92%;
@@ -182,7 +182,7 @@ a:focus {
   height: 2em;
   /* display: none; */ }
 
-/* line 194, home/static/advice/scss/nilo.scss */
+/* line 194, advice/static/advice/scss/nilo.scss */
 .nilo-scroll-down-arrow > a {
   animation-name: waving-fade;
   animation-duration: 1s;
@@ -190,69 +190,69 @@ a:focus {
   animation-direction: alternate;
   animation-timing-function: ease-in-out; }
 
-/* line 202, home/static/advice/scss/nilo.scss */
+/* line 202, advice/static/advice/scss/nilo.scss */
 .nilo-scroll-down-arrow > a:hover, .nilo-scroll-down-arrow > a:focus {
   opacity: 0.8;
   animation: none;
   outline: 0; }
 
-/* line 208, home/static/advice/scss/nilo.scss */
+/* line 208, advice/static/advice/scss/nilo.scss */
 .nilo-card {
   background-color: #f2f2f2;
   padding: 1.5%;
   flex: 1; }
 
-/* line 214, home/static/advice/scss/nilo.scss */
+/* line 214, advice/static/advice/scss/nilo.scss */
 .nilo-card-title {
   margin-bottom: 2.5%;
   font-size: 18px; }
 
-/* line 219, home/static/advice/scss/nilo.scss */
+/* line 219, advice/static/advice/scss/nilo.scss */
 .nilo-card-footer {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   font-size: 18px; }
 
-/* line 225, home/static/advice/scss/nilo.scss */
+/* line 225, advice/static/advice/scss/nilo.scss */
 .nilo-dots {
   display: inline; }
 
-/* line 229, home/static/advice/scss/nilo.scss */
+/* line 229, advice/static/advice/scss/nilo.scss */
 .nilo-more {
   display: none; }
 
-/* line 233, home/static/advice/scss/nilo.scss */
+/* line 233, advice/static/advice/scss/nilo.scss */
 .nilo-read-more-button {
   color: #a3a5a6;
   text-decoration: underline;
   cursor: pointer; }
 
-/* line 239, home/static/advice/scss/nilo.scss */
+/* line 239, advice/static/advice/scss/nilo.scss */
 .nilo-payments {
   margin-top: 7%; }
 
-/* line 243, home/static/advice/scss/nilo.scss */
+/* line 243, advice/static/advice/scss/nilo.scss */
 .nilo-payment-title {
   text-align: center;
   padding-top: 2%;
   font-size: 23px; }
 
-/* line 249, home/static/advice/scss/nilo.scss */
+/* line 249, advice/static/advice/scss/nilo.scss */
 .nilo-price {
   font-size: 64px;
   text-align: center;
   font-weight: bold; }
 
-/* line 255, home/static/advice/scss/nilo.scss */
+/* line 255, advice/static/advice/scss/nilo.scss */
 .nilo-price .nilo-currency {
   font-size: 24px;
   font-weight: normal; }
 
-/* line 260, home/static/advice/scss/nilo.scss */
+/* line 260, advice/static/advice/scss/nilo.scss */
 ul.nilo-gains-list {
   list-style: none; }
 
-/* line 264, home/static/advice/scss/nilo.scss */
+/* line 264, advice/static/advice/scss/nilo.scss */
 ul.nilo-gains-list > li::before {
   content: "";
   height: 1em;
@@ -267,11 +267,11 @@ ul.nilo-gains-list > li::before {
   background: url("/static/advice/assets/done.svg");
   background-position: center; }
 
-/* line 279, home/static/advice/scss/nilo.scss */
+/* line 279, advice/static/advice/scss/nilo.scss */
 .nilo-text-muted {
   color: #bcbec0; }
 
-/* line 283, home/static/advice/scss/nilo.scss */
+/* line 283, advice/static/advice/scss/nilo.scss */
 button {
   width: 100%;
   font-weight: bold;
@@ -289,12 +289,12 @@ button {
   transition: 0.3s ease-in-out;
   cursor: pointer; }
 
-/* line 301, home/static/advice/scss/nilo.scss */
+/* line 301, advice/static/advice/scss/nilo.scss */
 button:hover, button:focus {
   background-color: #e54c45;
   outline: 0; }
 
-/* line 306, home/static/advice/scss/nilo.scss */
+/* line 306, advice/static/advice/scss/nilo.scss */
 .nilo-button:hover {
   color: white;
   background-color: #dd4a43;
@@ -303,7 +303,7 @@ button:hover, button:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 315, home/static/advice/scss/nilo.scss */
+/* line 315, advice/static/advice/scss/nilo.scss */
 .nilo-button-border {
   color: black;
   font-weight: normal;
@@ -315,7 +315,7 @@ button:hover, button:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 327, home/static/advice/scss/nilo.scss */
+/* line 327, advice/static/advice/scss/nilo.scss */
 .nilo-button-border:hover, .nilo-button-border:focus {
   color: white;
   background-color: #dd4a43;
@@ -326,7 +326,7 @@ button:hover, button:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 338, home/static/advice/scss/nilo.scss */
+/* line 338, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted {
   color: #bcbec0;
   font-weight: normal;
@@ -336,7 +336,7 @@ button:hover, button:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 348, home/static/advice/scss/nilo.scss */
+/* line 348, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted:hover {
   color: #dd4a43;
   background-color: transparent;
@@ -346,13 +346,13 @@ button:hover, button:focus {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 358, home/static/advice/scss/nilo.scss */
+/* line 358, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn {
   width: 1.5em;
   height: 1.5em;
   position: relative; }
 
-/* line 364, home/static/advice/scss/nilo.scss */
+/* line 364, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn:before, .nilo-button-muted.close-btn:after {
   position: absolute;
   top: 0%;
@@ -372,25 +372,25 @@ button:hover, button:focus {
   transition: opacity 0.5s ease-in-out;
   background-position: center !important; }
 
-/* line 384, home/static/advice/scss/nilo.scss */
+/* line 384, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn:before {
   background: url("/static/advice/assets/close_popup_normal.svg") no-repeat;
   opacity: 1; }
 
-/* line 389, home/static/advice/scss/nilo.scss */
+/* line 389, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn:after {
   background: url("/static/advice/assets/close_popup_hover.svg") no-repeat;
   opacity: 0; }
 
-/* line 394, home/static/advice/scss/nilo.scss */
+/* line 394, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn:hover:before, .nilo-button-muted.close-btn.active:before {
   opacity: 0; }
 
-/* line 398, home/static/advice/scss/nilo.scss */
+/* line 398, advice/static/advice/scss/nilo.scss */
 .nilo-button-muted.close-btn:hover:after, .nilo-button-muted.close-btn.active:after {
   opacity: 1; }
 
-/* line 402, home/static/advice/scss/nilo.scss */
+/* line 402, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method {
   width: 49.5%;
   color: #b3b3b3;
@@ -410,7 +410,7 @@ button:hover, button:focus {
   line-height: 1em;
   position: relative; }
 
-/* line 422, home/static/advice/scss/nilo.scss */
+/* line 422, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.paypal:before, .nilo-button-pay-method.paypal:after, .nilo-button-pay-method.carta:before, .nilo-button-pay-method.carta:after {
   position: absolute;
   top: 0%;
@@ -430,80 +430,80 @@ button:hover, button:focus {
   transition: opacity 0.5s ease-in-out;
   background-position: center !important; }
 
-/* line 442, home/static/advice/scss/nilo.scss */
+/* line 442, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method:hover, .nilo-button-pay-method:focus, .nilo-button-pay-method.active {
   color: #f76054;
   border-color: #f76054;
   background-color: transparent; }
 
-/* line 448, home/static/advice/scss/nilo.scss */
+/* line 448, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.paypal:before {
   background: url("/static/advice/assets/paypal_logo_grigio.svg") no-repeat;
   opacity: 1; }
 
-/* line 453, home/static/advice/scss/nilo.scss */
+/* line 453, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.paypal:after {
   background: url("/static/advice/assets/paypal_logo_arancio.svg") no-repeat;
   opacity: 0; }
 
-/* line 458, home/static/advice/scss/nilo.scss */
+/* line 458, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.paypal:hover:before, .nilo-button-pay-method.paypal.active:before {
   opacity: 0; }
 
-/* line 462, home/static/advice/scss/nilo.scss */
+/* line 462, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.paypal:hover:after, .nilo-button-pay-method.paypal.active:after {
   opacity: 1; }
 
-/* line 466, home/static/advice/scss/nilo.scss */
+/* line 466, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.carta:before {
   background: url("/static/advice/assets/logo_card_off.svg") no-repeat;
   opacity: 1; }
 
-/* line 471, home/static/advice/scss/nilo.scss */
+/* line 471, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.carta:after {
   background: url("/static/advice/assets/logo_card_on.svg") no-repeat;
   opacity: 0; }
 
-/* line 476, home/static/advice/scss/nilo.scss */
+/* line 476, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.carta:hover:before, .nilo-button-pay-method.carta.active:before {
   opacity: 0; }
 
-/* line 480, home/static/advice/scss/nilo.scss */
+/* line 480, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.carta:hover:after, .nilo-button-pay-method.carta.active:after {
   opacity: 1; }
 
-/* line 484, home/static/advice/scss/nilo.scss */
+/* line 484, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method > img {
   width: 90%; }
 
-/* line 488, home/static/advice/scss/nilo.scss */
+/* line 488, advice/static/advice/scss/nilo.scss */
 .nilo-button-pay-method.margin-right {
   margin-right: 1%; }
 
-/* line 492, home/static/advice/scss/nilo.scss */
+/* line 492, advice/static/advice/scss/nilo.scss */
 footer {
   background-color: #f2f2f2;
   margin-bottom: 0;
   margin-top: 200px;
   padding: 40px; }
 
-/* line 499, home/static/advice/scss/nilo.scss */
+/* line 499, advice/static/advice/scss/nilo.scss */
 .nilo-deck {
   display: flex;
   width: 100%; }
 
-/* line 504, home/static/advice/scss/nilo.scss */
+/* line 504, advice/static/advice/scss/nilo.scss */
 table.nilo-table {
   width: 100%;
   margin-top: 10%;
   margin-bottom: 10%; }
 
-/* line 510, home/static/advice/scss/nilo.scss */
+/* line 510, advice/static/advice/scss/nilo.scss */
 table.nilo-table-faq {
   width: 100%;
   margin-bottom: 5%; }
 
-/* line 515, home/static/advice/scss/nilo.scss */
+/* line 515, advice/static/advice/scss/nilo.scss */
 table.nilo-table td, table.nilo-table th {
   background-color: #f2f2f2;
   padding-left: 7%;
@@ -511,69 +511,69 @@ table.nilo-table td, table.nilo-table th {
   padding-top: 0%;
   padding-bottom: 0%; }
 
-/* line 523, home/static/advice/scss/nilo.scss */
+/* line 523, advice/static/advice/scss/nilo.scss */
 table.nilo-table.transparent td, table.nilo-table.transparent th {
   background-color: transparent;
   padding-left: 0%;
   padding-right: 0%; }
 
-/* line 529, home/static/advice/scss/nilo.scss */
+/* line 529, advice/static/advice/scss/nilo.scss */
 table.nilo-table th {
   padding-top: 2%; }
 
-/* line 533, home/static/advice/scss/nilo.scss */
+/* line 533, advice/static/advice/scss/nilo.scss */
 table.nilo-table td {
   /* padding-bottom: 2%; */
   /* border-bottom: 15px solid #f2f2f2; */ }
 
-/* line 538, home/static/advice/scss/nilo.scss */
+/* line 538, advice/static/advice/scss/nilo.scss */
 table.nilo-table.transparent td {
   padding-bottom: 2%;
   border-bottom: 15px solid transparent; }
 
-/* line 543, home/static/advice/scss/nilo.scss */
+/* line 543, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-gains > td {
   /* Per evitare che rimane lo spazio quando viene effettuato lo slide */
   padding-bottom: 0%; }
 
-/* line 548, home/static/advice/scss/nilo.scss */
+/* line 548, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-gains > td > div.wrapper {
   display: none;
   padding-bottom: 1em; }
 
-/* line 553, home/static/advice/scss/nilo.scss */
+/* line 553, advice/static/advice/scss/nilo.scss */
 .nilo-col-left {
   border-right: 15px solid white; }
 
-/* line 557, home/static/advice/scss/nilo.scss */
+/* line 557, advice/static/advice/scss/nilo.scss */
 .nilo-col-right {
   border-left: 15px solid white; }
 
-/* line 561, home/static/advice/scss/nilo.scss */
+/* line 561, advice/static/advice/scss/nilo.scss */
 .nilo-col-center {
   border-right: 15px solid white;
   border-left: 15px solid white; }
 
-/* line 566, home/static/advice/scss/nilo.scss */
+/* line 566, advice/static/advice/scss/nilo.scss */
 table.nilo-table.top {
   margin-top: 20%;
   margin-bottom: 15%; }
 
-/* line 571, home/static/advice/scss/nilo.scss */
+/* line 571, advice/static/advice/scss/nilo.scss */
 table.nilo-table.bottom {
   margin-top: 15%;
   margin-bottom: 20%; }
 
-/* line 576, home/static/advice/scss/nilo.scss */
+/* line 576, advice/static/advice/scss/nilo.scss */
 td.nilo-table-collapse-btn {
   cursor: pointer; }
 
-/* line 580, home/static/advice/scss/nilo.scss */
+/* line 580, advice/static/advice/scss/nilo.scss */
 td.nilo-table-collapse-btn > div {
   display: flex;
   align-items: center; }
 
-/* line 585, home/static/advice/scss/nilo.scss */
+/* line 585, advice/static/advice/scss/nilo.scss */
 td.nilo-table-collapse-btn img {
   height: 0.8em;
   float: right;
@@ -582,11 +582,11 @@ td.nilo-table-collapse-btn img {
   animation-duration: 0.5s;
   animation-fill-mode: forwards; }
 
-/* line 594, home/static/advice/scss/nilo.scss */
+/* line 594, advice/static/advice/scss/nilo.scss */
 td.nilo-table-collapse-btn img.activated {
   animation-name: rotate-90-clockwise; }
 
-/* line 598, home/static/advice/scss/nilo.scss */
+/* line 598, advice/static/advice/scss/nilo.scss */
 td.nilo-table-collapse-btn img.deactivated {
   animation-name: rotate-90-counterclockwise; }
 
@@ -602,21 +602,21 @@ td.nilo-table-collapse-btn img.deactivated {
   100% {
     transform: rotate(0deg); } }
 
-/* line 620, home/static/advice/scss/nilo.scss */
+/* line 620, advice/static/advice/scss/nilo.scss */
 .nilo-shrink {
   margin-top: 0% !important;
   margin-bottom: 0% !important;
   padding-top: 0% !important;
   padding-bottom: 0% !important; }
 
-/* line 627, home/static/advice/scss/nilo.scss */
+/* line 627, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-separator td {
   padding-bottom: 0%;
   padding-top: 0%;
   border-bottom: 0px;
   border-top: 0px; }
 
-/* line 634, home/static/advice/scss/nilo.scss */
+/* line 634, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-title > th {
   /* width: 33%; */
   /* margin-bottom: 2.5%;
@@ -627,20 +627,20 @@ tr.nilo-table-title > th {
   font-size: 26px;
   text-align: center; }
 
-/* line 645, home/static/advice/scss/nilo.scss */
+/* line 645, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-body > td {
   padding-bottom: 7%; }
 
-/* line 649, home/static/advice/scss/nilo.scss */
+/* line 649, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-bold > td {
   padding-top: 7%;
   padding-bottom: 7%; }
 
-/* line 654, home/static/advice/scss/nilo.scss */
+/* line 654, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-btn > td {
   padding-bottom: 4%; }
 
-/* line 658, home/static/advice/scss/nilo.scss */
+/* line 658, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-card-title th {
   padding-bottom: 2.5%;
   font-size: 22px;
@@ -648,67 +648,67 @@ tr.nilo-table-card-title th {
   padding-bottom: 1em;
   line-height: 1.4em; }
 
-/* line 666, home/static/advice/scss/nilo.scss */
+/* line 666, advice/static/advice/scss/nilo.scss */
 table.nilo-table tbody {
   font-size: 18px; }
 
-/* line 670, home/static/advice/scss/nilo.scss */
+/* line 670, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-trio > th {
   width: 33%; }
 
-/* line 674, home/static/advice/scss/nilo.scss */
+/* line 674, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-body > td > img {
   width: 100%;
   margin-bottom: -10%;
   margin-top: -10%; }
 
-/* line 680, home/static/advice/scss/nilo.scss */
+/* line 680, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-images > td > img {
   width: 100%; }
 
-/* line 684, home/static/advice/scss/nilo.scss */
+/* line 684, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-duo > th {
   width: 50%; }
 
-/* line 688, home/static/advice/scss/nilo.scss */
+/* line 688, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-price > td {
   font-size: 64px;
   text-align: center;
   font-weight: bold; }
 
-/* line 694, home/static/advice/scss/nilo.scss */
+/* line 694, advice/static/advice/scss/nilo.scss */
 .nilo-currency {
   font-size: 24px !important;
   font-weight: normal; }
 
-/* line 699, home/static/advice/scss/nilo.scss */
+/* line 699, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-muted > td {
   color: #bcbec0;
   font-size: 14px; }
 
-/* line 704, home/static/advice/scss/nilo.scss */
+/* line 704, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-bold > td {
   font-weight: bold;
   font-size: 18px; }
 
-/* line 709, home/static/advice/scss/nilo.scss */
+/* line 709, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-btn > td {
   margin-bottom: 100px; }
 
-/* line 713, home/static/advice/scss/nilo.scss */
+/* line 713, advice/static/advice/scss/nilo.scss */
 .nilo-mobile {
   display: block; }
 
-/* line 717, home/static/advice/scss/nilo.scss */
+/* line 717, advice/static/advice/scss/nilo.scss */
 .nilo-desktop {
   display: none; }
 
-/* line 721, home/static/advice/scss/nilo.scss */
+/* line 721, advice/static/advice/scss/nilo.scss */
 a.nilo-email {
   color: #f76054;
   text-decoration: none; }
 
-/* line 726, home/static/advice/scss/nilo.scss */
+/* line 726, advice/static/advice/scss/nilo.scss */
 .nilo-popup {
   background-color: white;
   width: 100%;
@@ -718,39 +718,39 @@ a.nilo-email {
   position: relative;
   z-index: 9; }
 
-/* line 736, home/static/advice/scss/nilo.scss */
+/* line 736, advice/static/advice/scss/nilo.scss */
 .nilo-popup-view {
   display: none;
   position: fixed;
   z-index: 8; }
 
-/* line 742, home/static/advice/scss/nilo.scss */
+/* line 742, advice/static/advice/scss/nilo.scss */
 .nilo-popup hr {
   margin-top: 1.5%;
   margin-bottom: 1.5%;
   width: 100%; }
 
-/* line 748, home/static/advice/scss/nilo.scss */
+/* line 748, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title {
   font-size: 22px;
   font-weight: bold;
   overflow: auto; }
 
-/* line 754, home/static/advice/scss/nilo.scss */
+/* line 754, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title p {
   margin: 0px;
   float: left; }
 
-/* line 759, home/static/advice/scss/nilo.scss */
+/* line 759, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title > div {
   overflow: auto;
   margin-bottom: 0.35em; }
 
-/* line 764, home/static/advice/scss/nilo.scss */
+/* line 764, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title hr {
   margin-top: 0px; }
 
-/* line 768, home/static/advice/scss/nilo.scss */
+/* line 768, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title button {
   font-size: 24px;
   font-weight: bold;
@@ -764,7 +764,7 @@ a.nilo-email {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 782, home/static/advice/scss/nilo.scss */
+/* line 782, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title button svg {
   width: 1.5em;
   height: 1.5em;
@@ -773,7 +773,7 @@ a.nilo-email {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 791, home/static/advice/scss/nilo.scss */
+/* line 791, advice/static/advice/scss/nilo.scss */
 .nilo-popup-title button:hover svg {
   fill: white;
   -webkit-transition: 0.3s ease-in-out;
@@ -781,7 +781,7 @@ a.nilo-email {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 799, home/static/advice/scss/nilo.scss */
+/* line 799, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body {
   height: auto;
   display: flex;
@@ -789,7 +789,7 @@ a.nilo-email {
   font-size: 16px;
   overflow: auto; }
 
-/* line 807, home/static/advice/scss/nilo.scss */
+/* line 807, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body > p {
   font-size: 16px;
   margin-top: 0.5em;
@@ -797,22 +797,22 @@ a.nilo-email {
   padding: 0em; }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-/* line 816, home/static/advice/scss/nilo.scss */
+/* line 816, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body::-webkit-scrollbar {
   display: none; }
 
 /* Hide scrollbar for IE and Edge */
-/* line 822, home/static/advice/scss/nilo.scss */
+/* line 822, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body {
   -ms-overflow-style: none; }
 
-/* line 826, home/static/advice/scss/nilo.scss */
+/* line 826, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form {
   width: 100%;
   padding-top: 2em;
   overflow: auto; }
 
-/* line 832, home/static/advice/scss/nilo.scss */
+/* line 832, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input {
   width: 100%;
   font-size: 22px;
@@ -826,39 +826,39 @@ a.nilo-email {
     -moz-box-shadow: inset 0 0 0px #000;
     box-shadow: inset 0 0 0px #000; */ }
 
-/* line 846, home/static/advice/scss/nilo.scss */
+/* line 846, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input.error {
   border: 2px solid #f76054; }
 
-/* line 850, home/static/advice/scss/nilo.scss */
+/* line 850, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input:focus {
   border: 2px solid #e54c45;
   outline: 0; }
 
-/* line 855, home/static/advice/scss/nilo.scss */
+/* line 855, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input::-webkit-input-placeholder {
   /* Edge */
   color: #e6e6e6; }
 
-/* line 860, home/static/advice/scss/nilo.scss */
+/* line 860, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #e6e6e6; }
 
-/* line 865, home/static/advice/scss/nilo.scss */
+/* line 865, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body form > input::placeholder {
   color: #e6e6e6; }
 
-/* line 869, home/static/advice/scss/nilo.scss */
+/* line 869, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body ul {
   list-style: none;
   color: #bcbec0; }
 
-/* line 874, home/static/advice/scss/nilo.scss */
+/* line 874, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body li {
   margin-top: 1em; }
 
-/* line 878, home/static/advice/scss/nilo.scss */
+/* line 878, advice/static/advice/scss/nilo.scss */
 .nilo-popup-body ul li::before {
   content: "\2022";
   color: #f76054;
@@ -867,15 +867,15 @@ a.nilo-email {
   width: 1em;
   margin-left: -1em; }
 
-/* line 887, home/static/advice/scss/nilo.scss */
+/* line 887, advice/static/advice/scss/nilo.scss */
 .paypal-section, .card-section, .bonifico-section {
   display: none; }
 
-/* line 891, home/static/advice/scss/nilo.scss */
+/* line 891, advice/static/advice/scss/nilo.scss */
 .paypal-section.active, .card-section.active, .bonifico-section.active {
   display: contents; }
 
-/* line 895, home/static/advice/scss/nilo.scss */
+/* line 895, advice/static/advice/scss/nilo.scss */
 .nilo-popup-footer {
   display: flex;
   flex-direction: column;
@@ -883,21 +883,21 @@ a.nilo-email {
   align-items: center;
   overflow: auto; }
 
-/* line 903, home/static/advice/scss/nilo.scss */
+/* line 903, advice/static/advice/scss/nilo.scss */
 .nilo-popup-footer button {
   width: 100%;
   font-size: 16px;
   float: right; }
 
-/* line 909, home/static/advice/scss/nilo.scss */
+/* line 909, advice/static/advice/scss/nilo.scss */
 .nilo-popup-footer button.margin-left {
   margin-left: 1%; }
 
-/* line 913, home/static/advice/scss/nilo.scss */
+/* line 913, advice/static/advice/scss/nilo.scss */
 .nilo-popup-footer-buttons {
   width: 100%; }
 
-/* line 917, home/static/advice/scss/nilo.scss */
+/* line 917, advice/static/advice/scss/nilo.scss */
 .nilo-test-size {
   position: fixed;
   width: 100%;
@@ -911,16 +911,16 @@ a.nilo-email {
   padding-right: 1em;
   font-weight: bold; }
 
-/* line 931, home/static/advice/scss/nilo.scss */
+/* line 931, advice/static/advice/scss/nilo.scss */
 #console {
   height: auto; }
 
-/* line 935, home/static/advice/scss/nilo.scss */
+/* line 935, advice/static/advice/scss/nilo.scss */
 .nilo-test-up-1 {
   bottom: 1.5em;
   display: block; }
 
-/* line 940, home/static/advice/scss/nilo.scss */
+/* line 940, advice/static/advice/scss/nilo.scss */
 .nilo-test-height {
   position: fixed;
   top: 0%;
@@ -932,11 +932,11 @@ a.nilo-email {
   height: 5px;
   z-index: 10; }
 
-/* line 952, home/static/advice/scss/nilo.scss */
+/* line 952, advice/static/advice/scss/nilo.scss */
 .nilo-card-1 {
   width: 100%; }
 
-/* line 956, home/static/advice/scss/nilo.scss */
+/* line 956, advice/static/advice/scss/nilo.scss */
 .nilo-home-monkey {
   position: absolute;
   width: 40%;
@@ -946,31 +946,31 @@ a.nilo-email {
   overflow: hidden;
   display: none; }
 
-/* line 966, home/static/advice/scss/nilo.scss */
+/* line 966, advice/static/advice/scss/nilo.scss */
 .nilo-home-monkey img {
   width: 100%;
   margin-bottom: -13%; }
 
-/* line 971, home/static/advice/scss/nilo.scss */
+/* line 971, advice/static/advice/scss/nilo.scss */
 .nilo-popup-monkey {
   display: none;
   align-items: center; }
 
-/* line 976, home/static/advice/scss/nilo.scss */
+/* line 976, advice/static/advice/scss/nilo.scss */
 .nilo-popup-monkey img {
   width: 100%;
   padding-left: 15%;
   padding-right: 15%; }
 
-/* line 982, home/static/advice/scss/nilo.scss */
+/* line 982, advice/static/advice/scss/nilo.scss */
 .nilo-card-2 {
   width: 100%; }
 
-/* line 986, home/static/advice/scss/nilo.scss */
+/* line 986, advice/static/advice/scss/nilo.scss */
 .nilo-dots {
   margin-bottom: 0px; }
 
-/* line 990, home/static/advice/scss/nilo.scss */
+/* line 990, advice/static/advice/scss/nilo.scss */
 .nilo-dot {
   height: 5px;
   width: 5px;
@@ -980,52 +980,52 @@ a.nilo-email {
   border-radius: 50%;
   display: inline-block; }
 
-/* line 1000, home/static/advice/scss/nilo.scss */
+/* line 1000, advice/static/advice/scss/nilo.scss */
 .nilo-dot.active {
   background-color: #f76054; }
 
-/* line 1004, home/static/advice/scss/nilo.scss */
+/* line 1004, advice/static/advice/scss/nilo.scss */
 .nilo-tabs {
   width: 100%;
   height: 100%; }
 
-/* line 1009, home/static/advice/scss/nilo.scss */
+/* line 1009, advice/static/advice/scss/nilo.scss */
 .nilo-tab {
   display: none; }
 
-/* line 1013, home/static/advice/scss/nilo.scss */
+/* line 1013, advice/static/advice/scss/nilo.scss */
 .nilo-tab.active {
   display: block; }
 
-/* line 1017, home/static/advice/scss/nilo.scss */
+/* line 1017, advice/static/advice/scss/nilo.scss */
 .nilo-big-thanks p {
   font-size: 18px; }
 
-/* line 1021, home/static/advice/scss/nilo.scss */
+/* line 1021, advice/static/advice/scss/nilo.scss */
 .nilo-big-thanks {
   font-size: 14px; }
 
-/* line 1025, home/static/advice/scss/nilo.scss */
+/* line 1025, advice/static/advice/scss/nilo.scss */
 .nilo-big-thanks div > img {
   width: 2em;
   margin-right: 3em;
   margin-bottom: 1em; }
 
-/* line 1031, home/static/advice/scss/nilo.scss */
+/* line 1031, advice/static/advice/scss/nilo.scss */
 .nilo-flex-vertical {
   display: flex;
   flex-direction: column; }
 
-/* line 1036, home/static/advice/scss/nilo.scss */
+/* line 1036, advice/static/advice/scss/nilo.scss */
 .nilo-flex-vertical-center {
   justify-content: center; }
 
-/* line 1040, home/static/advice/scss/nilo.scss */
+/* line 1040, advice/static/advice/scss/nilo.scss */
 .nilo-flex-horizontal {
   display: flex;
   flex-direction: row; }
 
-/* line 1045, home/static/advice/scss/nilo.scss */
+/* line 1045, advice/static/advice/scss/nilo.scss */
 .nilo-pill {
   color: #b3b3b3;
   font-weight: normal;
@@ -1044,7 +1044,7 @@ a.nilo-email {
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out; }
 
-/* line 1064, home/static/advice/scss/nilo.scss */
+/* line 1064, advice/static/advice/scss/nilo.scss */
 .nilo-pill.active, .nilo-pill:hover {
   color: #f76054;
   border-color: #f76054;
@@ -1057,68 +1057,68 @@ a.nilo-email {
     width: 100%;
     box-sizing: border-box;
 } */
-/* line 1078, home/static/advice/scss/nilo.scss */
+/* line 1078, advice/static/advice/scss/nilo.scss */
 #nilo-popup-container {
   min-height: auto; }
 
-/* line 1082, home/static/advice/scss/nilo.scss */
+/* line 1082, advice/static/advice/scss/nilo.scss */
 .nilo-pt-spacer {
   padding-top: 3em; }
 
-/* line 1086, home/static/advice/scss/nilo.scss */
+/* line 1086, advice/static/advice/scss/nilo.scss */
 .nilo-pt-spacer-bottom {
   padding-bottom: 3em; }
 
-/* line 1090, home/static/advice/scss/nilo.scss */
+/* line 1090, advice/static/advice/scss/nilo.scss */
 .nilo-checkout-info .nilo-checkout-price {
   font-weight: bold;
   font-size: 22px; }
 
-/* line 1095, home/static/advice/scss/nilo.scss */
+/* line 1095, advice/static/advice/scss/nilo.scss */
 .nilo-checkout-info .nilo-checkout-price-2 {
   /* font-weight: bold; */
   font-size: 16px; }
 
-/* line 1100, home/static/advice/scss/nilo.scss */
+/* line 1100, advice/static/advice/scss/nilo.scss */
 .nilo-checkout-info .nilo-muted {
   color: #a3a3a3;
   font-size: 12px;
   margin-bottom: 1em; }
 
-/* line 1106, home/static/advice/scss/nilo.scss */
+/* line 1106, advice/static/advice/scss/nilo.scss */
 .nilo-vertical-spacer {
   height: 3em; }
 
-/* line 1110, home/static/advice/scss/nilo.scss */
+/* line 1110, advice/static/advice/scss/nilo.scss */
 .nilo-flex-footer-order {
   display: flex;
   flex-direction: column; }
 
-/* line 1115, home/static/advice/scss/nilo.scss */
+/* line 1115, advice/static/advice/scss/nilo.scss */
 .nilo-pb-1 {
   padding-bottom: 1em !important; }
 
-/* line 1119, home/static/advice/scss/nilo.scss */
+/* line 1119, advice/static/advice/scss/nilo.scss */
 .nilo-mtb {
   margin-top: 0.7em;
   margin-bottom: 0.7em; }
 
-/* line 1124, home/static/advice/scss/nilo.scss */
+/* line 1124, advice/static/advice/scss/nilo.scss */
 .nilo-error-msg {
   color: #f76054;
   display: none; }
 
-/* line 1129, home/static/advice/scss/nilo.scss */
+/* line 1129, advice/static/advice/scss/nilo.scss */
 a.nilo-mail {
   color: #f76054;
   text-decoration: none; }
 
-/* line 1134, home/static/advice/scss/nilo.scss */
+/* line 1134, advice/static/advice/scss/nilo.scss */
 a.nilo-policy {
   color: inherit;
   text-decoration: underline; }
 
-/* line 1139, home/static/advice/scss/nilo.scss */
+/* line 1139, advice/static/advice/scss/nilo.scss */
 .nilo-karla {
   font-family: "Karla", sans-serif !important; }
 
@@ -1133,15 +1133,15 @@ a.nilo-policy {
 /* .no-scroll {
     overflow: hidden;
 } */
-/* line 1156, home/static/advice/scss/nilo.scss */
+/* line 1156, advice/static/advice/scss/nilo.scss */
 button.nilo-open-popup-button {
   margin-bottom: 4.5%; }
 
-/* line 1160, home/static/advice/scss/nilo.scss */
+/* line 1160, advice/static/advice/scss/nilo.scss */
 table.nilo-table-faq td {
   padding-top: 0%;
   padding-bottom: 0%; }
 
-/* line 1165, home/static/advice/scss/nilo.scss */
+/* line 1165, advice/static/advice/scss/nilo.scss */
 tr.nilo-table-read-more > td {
   padding-bottom: 1.5em; }

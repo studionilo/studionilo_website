@@ -1,0 +1,41 @@
+{% block pay_card_mobile_table_1 %}
+<!-- Video-report -->
+<table valign="bottom" class="nilo-table">
+    <!-- Title -->
+    <tr class="nilo-table-title">
+        {% include 'advice/pay_cards/components/pay_row_title_1.html' with column=''%}
+    </tr>
+    <!-- Separator -->
+    {% include 'advice/pay_cards/components/pay_row_separator_single.html'%}
+    <!-- Prices -->
+    <tr class="nilo-table-price">
+        {% include 'advice/pay_cards/components/pay_row_price_1.html' with column=''%}
+    </tr>
+    <!-- Muted text -->
+    <tr class="nilo-table-muted">
+        {% include 'advice/pay_cards/components/pay_row_single_payment.html' with column=''%}
+    </tr>
+    <!-- Monkey images -->
+    <tr class="nilo-table-images">
+        {% include 'advice/pay_cards/components/pay_row_monkey_1.html' with column=''%}
+    </tr>
+    <!-- Content -->
+    <tr class="nilo-table-body">
+        {% include 'advice/pay_cards/components/pay_row_content_1.html' with column=''%}
+    </tr>
+    <!-- Separator -->
+    {% include 'advice/pay_cards/components/pay_row_separator_single.html'%}
+    <!-- Title button -->
+    <tr class="nilo-table-bold">
+        {% include 'advice/pay_cards/components/pay_row_colapse_btn.html' with column=''%}
+    </tr>
+    <!-- Collapsable gains -->
+    <tr class="nilo-table-gains">
+        {% include 'advice/pay_cards/components/pay_row_collapsable_gain_1.html' with column=''%}
+    </tr>
+    <!-- Buttons -->
+    <tr class="nilo-table-btn">
+        {% include 'advice/pay_cards/components/pay_row_button_1.html' with column=''%}
+    </tr>
+</table>
+{% endblock pay_card_mobile_table_1 %}

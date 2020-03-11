@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'compressor',
-    'home.apps.HomeConfig',
+    'advice.apps.AdviceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

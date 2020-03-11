@@ -1,0 +1,66 @@
+{% load static %}
+{% block popup_pay_tab_form %}
+<div class="nilo-tab" id="popup_pay_tab_form">
+    <div class="nilo-popup-title">
+        Raccontaci di voi
+        {% include 'advice/popup/components/popup_close_btn.html' %}
+        <hr>
+    </div>
+    <div class="nilo-popup-body">
+        <div class="nilo-card-2 pr-2">
+            Presentandoti, ci permetterai di ispezionare accuratamente i principali canali con i
+            quali ti comunichi su internet.
+            <form action="#" id="nilo-form-api">
+                Qual è il nome della vostra attività? <span class="nilo-error-msg" id="nilo-error-name">Devi inserire il
+                    nome della tua attività</span><br>
+                <input type="text" name="name" placeholder="es. Esempio srl">
+
+                <span class="popup_pay_1">
+                    <br>A quale indirizzo mail desideri ricevere il video-report?
+                </span>
+                <span class="popup_pay_2 popup_pay_3">
+                    <br>A quale indirizzo mail possiamo ricontattarti?
+                </span>
+                <span class="nilo-error-msg" id="nilo-error-email">Indirizzo email non valido</span><br>
+
+                <input type="text" name="email" placeholder="es. esempio@mail.com">
+
+                <br>Se avete un sito internet, inseriscine qui il link <span class="nilo-error-msg"
+                    id="nilo-error-website">Link non valido</span><br>
+                <input type="text" name="website" placeholder="es. https://www.esempio.it/">
+                <br>Su quali social network siete presenti?<br>
+                <div class="nilo-pill" name="sn_facebook">Facebook</div>
+                <div class="nilo-pill" name="sn_instagram">Instagram</div>
+                <div class="nilo-pill" name="sn_twitter">Twitter</div>
+                <div class="nilo-pill" name="sn_tiktok">Tiktok</div>
+                <div class="nilo-pill" name="sn_linkedin">Linkedin</div>
+                <div class="nilo-pill" name="sn_snapchat">Snapchat</div>
+                <div class="nilo-pill" name="sn_pinterest">Pinterest</div>
+            </form>
+            <div class="nilo-vertical-spacer"></div>
+        </div>
+        <div class="nilo-card-2 pl-2 nilo-popup-monkey">
+            <img src="{% static 'advice/illustrazioni/form.png' %}" alt="Inserisci i tuoi dati">
+        </div>
+    </div>
+    <div class="nilo-popup-footer">
+        <div class="nilo-dots nilo-center-horizontally">
+            <span class="nilo-dot active"></span>
+            <span class="nilo-dot active"></span>
+            <span class="nilo-dot"></span>
+        </div>
+        <div class="nilo-popup-footer-buttons">
+            <hr>
+            <div class="nilo-flex-footer-order">
+                <button type="button" class="nilo-popup-footer-button nilo-button-muted"
+                    data-target="popup_pay_tab_info">Indietro</button>
+                <button type="button" class="nilo-popup-footer-button popup_pay_1 popup_pay_2"
+                    data-target="popup_pay_tab_checkout" data-focus="nilo-paypal-btn"
+                    data-pay="nilo-create-payment-btn">Vai al check-out</button>
+                <button type="button" class="nilo-popup-footer-button popup_pay_3" data-target="popup_pay_tab_awesome"
+                    data-pay="nilo-create-payment-btn">Invia modulo</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock popup_pay_tab_form %}

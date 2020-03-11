@@ -1,0 +1,23 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* line 4, advice/static/advice/scss/nilo_xs.scss */
+  #x-large {
+    display: none; }
+  /* line 7, advice/static/advice/scss/nilo_xs.scss */
+  #large {
+    display: none; }
+  /* line 10, advice/static/advice/scss/nilo_xs.scss */
+  #medium {
+    display: none; }
+  /* line 13, advice/static/advice/scss/nilo_xs.scss */
+  #small {
+    display: none; }
+  /* line 16, advice/static/advice/scss/nilo_xs.scss */
+  #x-small {
+    display: block; }
+  /* line 19, advice/static/advice/scss/nilo_xs.scss */
+  .nilo-test-size {
+    background-color: #00ffea; }
+  /* line 22, advice/static/advice/scss/nilo_xs.scss */
+  .nilo-card-2 {
+    width: 100%; } }

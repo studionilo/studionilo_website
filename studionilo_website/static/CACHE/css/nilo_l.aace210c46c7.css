@@ -1,71 +1,71 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  /* line 4, home/static/home/scss/nilo_l.scss */
+  /* line 4, home/static/advice/scss/nilo_l.scss */
   .nilo-lead-paragraph {
     font-size: 36px; }
-  /* line 7, home/static/home/scss/nilo_l.scss */
+  /* line 7, home/static/advice/scss/nilo_l.scss */
   .nilo-container {
     margin-left: 7.5%;
     margin-right: 7.5%; }
-  /* line 11, home/static/home/scss/nilo_l.scss */
+  /* line 11, home/static/advice/scss/nilo_l.scss */
   table.nilo-table {
     margin-top: 0%;
     margin-bottom: 0%; }
-  /* line 15, home/static/home/scss/nilo_l.scss */
+  /* line 15, home/static/advice/scss/nilo_l.scss */
   #nilo-reference {
     width: 40%; }
-  /* line 18, home/static/home/scss/nilo_l.scss */
+  /* line 18, home/static/advice/scss/nilo_l.scss */
   #x-large {
     display: none; }
-  /* line 21, home/static/home/scss/nilo_l.scss */
+  /* line 21, home/static/advice/scss/nilo_l.scss */
   #large {
     display: block; }
-  /* line 24, home/static/home/scss/nilo_l.scss */
+  /* line 24, home/static/advice/scss/nilo_l.scss */
   #medium {
     display: none; }
-  /* line 27, home/static/home/scss/nilo_l.scss */
+  /* line 27, home/static/advice/scss/nilo_l.scss */
   #small {
     display: none; }
-  /* line 30, home/static/home/scss/nilo_l.scss */
+  /* line 30, home/static/advice/scss/nilo_l.scss */
   #x-small {
     display: none; }
-  /* line 33, home/static/home/scss/nilo_l.scss */
+  /* line 33, home/static/advice/scss/nilo_l.scss */
   .nilo-test-size {
     background-color: #ffae00; }
-  /* line 36, home/static/home/scss/nilo_l.scss */
+  /* line 36, home/static/advice/scss/nilo_l.scss */
   .nilo-popup-footer button {
     width: 30%; }
-  /* line 39, home/static/home/scss/nilo_l.scss */
+  /* line 39, home/static/advice/scss/nilo_l.scss */
   .nilo-popup-monkey {
     display: flex; }
-  /* line 42, home/static/home/scss/nilo_l.scss */
+  /* line 42, home/static/advice/scss/nilo_l.scss */
   .nilo-card-2 {
     width: 50%; }
-  /* line 45, home/static/home/scss/nilo_l.scss */
+  /* line 45, home/static/advice/scss/nilo_l.scss */
   .nilo-button-pay-method > img {
     width: 70%; }
-  /* line 48, home/static/home/scss/nilo_l.scss */
+  /* line 48, home/static/advice/scss/nilo_l.scss */
   table.nilo-table td {
     /* padding-bottom: 0%; */ }
-  /* line 51, home/static/home/scss/nilo_l.scss */
+  /* line 51, home/static/advice/scss/nilo_l.scss */
   .nilo-pt-spacer {
     padding-top: 7em; }
-  /* line 54, home/static/home/scss/nilo_l.scss */
+  /* line 54, home/static/advice/scss/nilo_l.scss */
   .nilo-pt-spacer-bottom {
     padding-bottom: 7em; }
-  /* line 57, home/static/home/scss/nilo_l.scss */
+  /* line 57, home/static/advice/scss/nilo_l.scss */
   .nilo-flex-footer-order {
     flex-direction: row;
     justify-content: flex-end; }
-  /* line 61, home/static/home/scss/nilo_l.scss */
+  /* line 61, home/static/advice/scss/nilo_l.scss */
   .nilo-more-services {
     width: auto; }
-  /* line 64, home/static/home/scss/nilo_l.scss */
+  /* line 64, home/static/advice/scss/nilo_l.scss */
   .nilo-popup {
     margin-bottom: 0vh; }
-  /* line 67, home/static/home/scss/nilo_l.scss */
+  /* line 67, home/static/advice/scss/nilo_l.scss */
   tr.nilo-table-btn > td {
     padding-bottom: 3%; }
-  /* line 70, home/static/home/scss/nilo_l.scss */
+  /* line 70, home/static/advice/scss/nilo_l.scss */
   .nilo-home-monkey {
     width: 34%; } }
