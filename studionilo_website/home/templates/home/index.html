@@ -1,232 +1,26 @@
-{% load static %}
-{% load compress %}
+{% extends 'home/base.html' %}{% block body_contents %}
+<a id="homepage"></a>
 
-<!doctype html>
-<html lang="en">
+<!-- Popup -->
+{% include 'home/popup/popup.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Studionilo">
-    <link rel="icon" href="{% static 'home/favicon-studionilo.ico' %}">
+<!-- NavBar -->
+{% include 'home/nav_bar/nav_bar.html' %}
 
-    <title>Studionilo</title>
+<!-- Splash screen -->
+{% include 'home/hero/hero.html' %}
 
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
+<!-- Presenza digitale -->
+{% include 'home/digital_presence/digital_presence.html' %}
 
-    <!-- Bootstrap core CSS -->
-    {% compress css %}
-    <link type="text/x-scss" href="{% static 'home/bootstrap/bootstrap.scss' %}" rel="stylesheet" media="screen">
-    {% endcompress %}
+<!-- Text middle -->
+{% include 'home/splash_screen/splash_screen.html' %}
 
-    {% if not debug %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159135011-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<!-- Payment cards -->
+{% include 'home/pay_cards/pay_cards.html' %}
 
-        gtag('config', 'UA-159135011-1');
-    </script>
-    {% else %}
-    <script>
-        window.alert('Debug mode on');
-    </script>
-    {% endif %}
+<!-- FAQ -->
+{% include 'home/faq/faq.html' %}
 
-    <!-- Iubenda -->
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/iubenda.css' %}">
-    <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = { "lang": "it", "siteId": 1803146, "consentOnDocument": true, "consentOnHorizontalScroll": true, "gdprAppliesGlobally": false, "cookiePolicyId": 87991730, "banner": { "acceptButtonDisplay": true, "position": "float-bottom-center", "textColor": "black", "customizeButtonDisplay": true, "fontSize": "14PX", "applyStyles": false, "innerHtmlCloseBtn": "" } };
-
-    </script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <!-- jQuery core CSS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <!-- Custom styles for this template -->
-    {% compress css %}
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xs.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_s.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_m.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_l.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xl.scss' %}">
-    {% endcompress %}
-</head>
-
-<body>
-    <a id="homepage"></a>
-
-    <!-- Popup -->
-    {% include 'home/popup/popup.html' %}
-
-    <!-- NavBar -->
-    <div class="nilo-nav">
-        <div class="nilo-nav-item-logo">
-            <a href="#homepage"><span>studio<strong>nilo</strong></span></a>
-        </div>
-        <div class="nilo-nav-item">
-            <div id="nilo-contactus">
-                contattaci
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
-                    <title>freccina_contact_piani_su_misura</title>
-                    <g id="Livello_2" data-name="Livello 2">
-                        <g id="Livello_2-2" data-name="Livello 2">
-                            <polygon
-                                points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
-                        </g>
-                    </g>
-                </svg>
-            </div>
-            <div id="nilo-tailored">
-                piani su misura
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
-                    <title>freccina_contact_piani_su_misura</title>
-                    <g id="Livello_2" data-name="Livello 2">
-                        <g id="Livello_2-2" data-name="Livello 2">
-                            <polygon
-                                points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
-                        </g>
-                    </g>
-                </svg>
-            </div>
-        </div>
-    </div>
-
-    <!-- Splash screen -->
-    <div class="nilo-jumbo-container nilo-blue-bg">
-        <div class="nilo-home-monkey">
-            <img src="{% static 'home/illustrazioni/home.png' %}" alt="Ciao, siamo Lorenzo e Nicola">
-        </div>
-        <div class="nilo-container">
-            <p class="nilo-lead-paragraph">Siamo Nicola e Lorenzo, possiamo aiutarti a consolidare la tua
-                <strong>strategia comunicativa</strong> per garantirti una <strong>presenza digitale</strong> efficace.
-            </p>
-            <button class="nilo-more-services" onclick="window.location.href = '#payment';" type="button">Scopri i
-                nostri servizi</button>
-        </div>
-        <div class="nilo-scroll-down-arrow">
-            <a href="#presenza_digitale">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 35.3714 8.0029">
-                    <title>freccia_giu_hero</title>
-                    <g id="Livello_2" data-name="Livello 2">
-                        <g id="Livello_2-2" data-name="Livello 2">
-                            <polygon
-                                points="17.686 8.003 0 0.929 0.371 0 17.686 6.926 35 0 35.371 0.929 17.686 8.003" />
-                        </g>
-                    </g>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <!-- Presenza digitale -->
-    <a id="presenza_digitale"></a>
-    <!-- Mobile version -->
-    {% include 'home/digital_presence/digital_presence_mobile.html' %}
-    <!-- Desktop version -->
-    {% include 'home/digital_presence/digital_presence_desktop.html' %}
-
-
-    <!-- Text middle -->
-    <div class="nilo-jumbo-container nilo-red-bg">
-        <div class="nilo-container nilo-center-vertically">
-            <p class="nilo-lead-paragraph">Spesso, azzeccare alcune scelte comunicative può fare la differenza. Abbiamo
-                pensato un sistema di <strong>consulenza veloce</strong> adatto a chi comprende l’importanza del sapersi
-                comunicare e sta
-                cercando qualche consiglio per farlo al meglio.</p>
-        </div>
-    </div>
-
-    <!-- Payment cards -->
-    <div class="nilo-container nilo-pt-spacer">
-        <a id="payment"></a>
-        <p>Scegli il piano che fa per te:</p>
-        <!-- Mobile version -->
-        {% include 'home/pay_cards/pay_card_mobile.html' %}
-        <!-- Desktop version -->
-        {% include 'home/pay_cards/pay_card_desktop.html' %}
-    </div>
-
-    <!-- FAQ -->
-    <div class="nilo-container nilo-pt-spacer">
-        <a id="faq"></a>
-        <p>Segue una lista di domande frequenti.<br>Contattaci pure per qualsiasi altra informazione.</p>
-        {% include 'home/faq/faq.html' %}
-    </div>
-
-
-    <!-- <div class="nilo-container mt-5" id="nilo-reference">
-        <p>
-            *Ci teniamo a specificare che il nostro intento è quello di fornirti il nostro punto di vista professionale
-            senza secondi fini. Cerchiamo di offrire un punto di partenza per migliorare la qualità della tua
-            comunicazione, senza pregiudizi sulle possibili
-            soluzioni.
-        </p>
-    </div> -->
-
-    {% if debugging %}
-    <div class="nilo-test-size" id="default">default</div>
-    <div class="nilo-test-size" id="x-large">x-large</div>
-    <div class="nilo-test-size" id="large">large</div>
-    <div class="nilo-test-size" id="medium">medium</div>
-    <div class="nilo-test-size" id="small">small</div>
-    <div class="nilo-test-size" id="x-small">x-small</div>
-
-    <div class="nilo-test-size nilo-test-up-1" id="console"></div>
-    <div class="nilo-test-height"></div>
-    {% endif %}
-
-
-    <footer class="text-center">
-        <div class="nilo-center-vertically">
-            <p>studionilo 2020 |
-                <a href="https://www.iubenda.com/privacy-policy/87991730" class="nilo-policy" title="Privacy Policy "
-                    target="_blank">Privacy Policy</a>
-                |
-                <a href="https://www.iubenda.com/privacy-policy/87991730/cookie-policy" class="nilo-policy"
-                    title="Cookie Policy " target="_blank">Cookie Policy</a>
-                |
-                <a href="https://www.iubenda.com/termini-e-condizioni/87991730" class="nilo-policy"
-                    title="Termini e Condizioni " target="_blank">Termini e Condizioni</a>
-            </p>
-        </div>
-    </footer>
-    </div>
-
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <script src="{% static 'home/js/nilo.js' %}"></script>
-    <script src="{% static 'home/js/scroll.js' %}"></script>
-    <!-- <script src="{% static 'home/stripe.js' %}"></script> -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://getbootstrap.com/docs/4.0/js/vendor/popper.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://getbootstrap.com/docs/4.0/js/vendor/holder.min.js"></script>
-    <!-- <script>
-        Holder.addTheme('thumb', {
-            bg: '#55595c',
-            fg: '#eceeef',
-            text: 'Thumbnail'
-        });
-    </script> -->
-
-    {% if awesome %}
-    <script>show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}');</script>
-    {% endif %}
-
-    {% if reject %}
-    <script>show_popup_tab('popup_pay_tab_reject');</script>
-    {% endif %}
-
-</body>
-
-</html>
+{% endblock body_contents %}
+    

@@ -1,0 +1,99 @@
+{% load static %}
+{% load compress %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Studionilo">
+    <link rel="icon" href="{% static 'home/favicon-studionilo.ico' %}">
+
+    <title>Studionilo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    {% compress css %}
+    <link type="text/x-scss" href="{% static 'home/bootstrap/bootstrap.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
+
+    {% if not debug %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159135011-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159135011-1');
+    </script>
+    {% else %}
+    <script>
+        window.alert('Debug mode on');
+    </script>
+    {% endif %}
+
+    <!-- Iubenda -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/iubenda.css' %}">
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = { "lang": "it", "siteId": 1803146, "consentOnDocument": true, "consentOnHorizontalScroll": true, "gdprAppliesGlobally": false, "cookiePolicyId": 87991730, "banner": { "acceptButtonDisplay": true, "position": "float-bottom-center", "textColor": "black", "customizeButtonDisplay": true, "fontSize": "14PX", "applyStyles": false, "innerHtmlCloseBtn": "" } };
+
+    </script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <!-- jQuery core CSS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Custom styles for this template -->
+    {% compress css %}
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xs.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_s.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_m.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_l.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'home/scss/nilo_xl.scss' %}">
+    {% endcompress %}
+</head>
+
+<body>
+    {% block body_contents %}{% endblock body_contents %}
+    
+    {% if debugging %}
+    <div class="nilo-test-size" id="default">default</div>
+    <div class="nilo-test-size" id="x-large">x-large</div>
+    <div class="nilo-test-size" id="large">large</div>
+    <div class="nilo-test-size" id="medium">medium</div>
+    <div class="nilo-test-size" id="small">small</div>
+    <div class="nilo-test-size" id="x-small">x-small</div>
+
+    <div class="nilo-test-size nilo-test-up-1" id="console"></div>
+    <div class="nilo-test-height"></div>
+    {% endif %}
+
+    <!-- Footer -->
+    {% include 'home/footer/footer.html' %}
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <script src="{% static 'home/js/nilo.js' %}"></script>
+    <script src="{% static 'home/js/scroll.js' %}"></script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://getbootstrap.com/docs/4.0/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/js/vendor/holder.min.js"></script>
+
+    {% if awesome %}
+    <script>show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}');</script>
+    {% endif %}
+
+    {% if reject %}
+    <script>show_popup_tab('popup_pay_tab_reject');</script>
+    {% endif %}
+</body>
+
+</html>

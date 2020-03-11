@@ -1,12 +1,7 @@
 {% block faq %}
-<table valign="bottom" class="nilo-table-faq">
-    {% include 'home/faq/faq_question_1.html' %}
-    {% include 'home/faq/faq_question_2.html' %}
-    {% include 'home/faq/faq_question_3.html' %}
-    {% include 'home/faq/faq_question_4.html' %}
-    {% include 'home/faq/faq_question_5.html' %}
-    {% include 'home/faq/faq_question_6.html' %}
-    {% include 'home/faq/faq_question_7.html' %}
-    {% include 'home/pay_cards/components/pay_row_separator_single.html' %}
-</table>
+<div class="nilo-container nilo-pt-spacer">
+    <a id="faq"></a>
+    <p>Segue una lista di domande frequenti.<br>Contattaci pure per qualsiasi altra informazione.</p>
+    {% include 'home/faq/faq_table.html' %}
+</div>
 {% endblock faq %}
