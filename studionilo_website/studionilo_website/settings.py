@@ -42,6 +42,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'compressor',
+    'makesite.apps.MakesiteConfig',
     'advice.apps.AdviceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
