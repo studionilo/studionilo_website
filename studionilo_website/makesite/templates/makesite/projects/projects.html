@@ -1,0 +1,37 @@
+{% load static %}
+{% block projects %}
+<div class="nilo-jumbo-container nilo-gray-bg flex-column px-0 align-items-start">
+    <div class="nilo-container">
+        <div class="font-weight-bold pb-4 nilo-font-size-1-8rem">
+            Portfolio
+        </div>
+    </div>
+    <div class="nilo-projects w-100 overflow-hidden">
+        {% for i in '012'|make_list %}
+        <div class="slide">
+            <!-- <img class="w-100 px-5" src="{% static 'advice/projects/centro_odontoiatrico_modigliani_desktop.jpg' %}"> -->
+            <div class="aspect-16-9 px-5 position-relative">
+                <div class="nilo-browser-bar w-100-6rem border-black border border-bottom-0 nilo-gray-bg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 799.4254 31.3098"><defs><style>.cls-1{fill:#f2f2f2;}.cls-2{fill:#fff;}</style></defs><title>dueRisorsa 1</title><g id="Livello_2" data-name="Livello 2"><g id="Livello_1-2" data-name="Livello 1"><rect class="cls-1" width="799.4254" height="31.3098"/><circle class="cls-2" cx="12.195" cy="15.7281" r="4.2669"/><circle class="cls-2" cx="29.2628" cy="15.7281" r="4.2669"/><circle class="cls-2" cx="46.3306" cy="15.7281" r="4.2669"/><rect class="cls-2" x="59.5021" y="9.3443" width="719.7335" height="12.7677" rx="6.3838" ry="6.3838"/></g></g></svg>
+                </div>
+                <div class="h-100 w-100-6rem position-absolute top-0 nilo-scrolling-background border-black border border-top-0"
+                style="background-image: url('{% static 'advice/projects/centro_odontoiatrico_modigliani_desktop.jpg' %}');"
+                >
+                    
+                </div>
+            </div>
+            <div class="px-5 pt-4 nilo-project-desc">
+                <div class="pb-3 nilo-font-size-1-4rem">
+                    <a class="nilo-mail"
+                        href="mailto:centroodontoiatricomodigliani.it">centroodontoiatricomodigliani.it</a><br>
+                </div>
+                <div>
+                    Diamo ai tuoi clienti un’immagine migliore di te, rendendoli più disposti a rivolgersi alla tua<br>
+                    attività. Questo sito è un po’ un’opera d’arte e questa didascalia sta su due righe.
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock projects %}

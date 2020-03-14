@@ -1,16 +1,32 @@
+{% load static %}
 {% block footer %}
 <footer class="text-center">
-    <div class="nilo-center-vertically">
-        <p>studionilo 2020 |
-            <a href="https://www.iubenda.com/privacy-policy/87991730" class="nilo-policy" title="Privacy Policy "
-                target="_blank">Privacy Policy</a>
-            |
-            <a href="https://www.iubenda.com/privacy-policy/87991730/cookie-policy" class="nilo-policy"
-                title="Cookie Policy " target="_blank">Cookie Policy</a>
-            |
-            <a href="https://www.iubenda.com/termini-e-condizioni/87991730" class="nilo-policy"
-                title="Termini e Condizioni " target="_blank">Termini e Condizioni</a>
-        </p>
+    <div class="d-flex justify-content-center align-items-center vh-22">
+        <div class="d-flex flex-column">
+            <div class="pb-4 d-flex justify-content-center">
+                <div class="nilo-logo-social w-1-4rem mr-2">
+                    <img src="{% static 'advice/assets/logo_fb.svg' %}">
+                </div>
+                <div class="nilo-logo-social w-1-4rem mx-2">
+                    <img src="{% static 'advice/assets/logo_ig.svg' %}">
+                </div>
+                <div class="nilo-logo-social w-1-4rem ml-2">
+                    <img src="{% static 'advice/assets/logo_yt.svg' %}">
+                </div>
+            </div>
+            <div class="border-top pt-4">
+                <p>Studio Nilo 2020 |
+                    <a href="https://www.iubenda.com/privacy-policy/87991730" class="nilo-policy" title="Privacy Policy "
+                        target="_blank">Privacy Policy</a>
+                    |
+                    <a href="https://www.iubenda.com/privacy-policy/87991730/cookie-policy" class="nilo-policy"
+                        title="Cookie Policy " target="_blank">Cookie Policy</a>
+                    |
+                    <a href="https://www.iubenda.com/termini-e-condizioni/87991730" class="nilo-policy"
+                        title="Termini e Condizioni " target="_blank">Termini e Condizioni</a>
+                </p>
+            </div>
+        </div>
     </div>
 </footer>
 {% endblock footer %}

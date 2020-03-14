@@ -1,0 +1,21 @@
+{% load static %}
+{% block goto_advice %}
+<div class="vh-70 d-flex align-items-center">
+    <div class="nilo-container nilo-blue-bg w-100 py-5 px-6 nilo-font-size-1-4rem position-relative">
+        <div class="nilo-home-monkey w-25">
+            <img src="{% static 'advice/illustrazioni/home.png' %}" alt="Ciao, siamo Lorenzo e Nicola">
+        </div>
+        <div class="font-weight-bold">
+            Curi un’attività che gestisce da sé la propria comunicazione?
+        </div>
+        <div class="pt-3">
+            Offriamo servizi di consulenza veloce (ma decisiva)<br>per aiutarti a migliorare la tua presenza digitale.
+        </div>
+        <div class="pt-4">
+            <button type="button" class="w-auto" data-target="popup_pay_tab_form">
+                Scopri i nostri piani di consulenza
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock goto_advice %}

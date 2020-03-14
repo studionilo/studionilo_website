@@ -115,8 +115,80 @@ $(document).ready(function () {
             }
             index++
         })
-    })
+    });
 })
+
+$(document).ready(function () {
+    $('.nilo-projects').slick({
+        centerMode: true,
+        centerPadding: 'calc(15% - 3em)',
+        slidesToShow: 1,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    var humanScrollDiv = null
+    var humanInterval = null
+    function humanSmallScroll() {
+        let aniTime = 10
+        if (humanScrollDiv != null) {
+            let bgPos = parseFloat(humanScrollDiv.css('background-position-y'))
+            bgPos += 20
+            if (bgPos < 90) {
+                humanScrollDiv.animate({
+                    backgroundPositionY: `${bgPos}%`,
+                }, aniTime, 'easeOutExpo')
+            } else {
+                humanScrollDiv.animate({
+                    backgroundPositionY: '100%',
+                }, aniTime, 'easeOutExpo')
+            }
+        }
+    }
+    function humanScroll() {
+        if ($(this).closest('.slick-slide').hasClass('slick-current')) {
+            console.log('in')
+            if ($(this).hasClass('nilo-scrolling-background')) {
+                humanScrollDiv = $(this)
+            }
+            humanSmallScroll()
+            humanInterval = setInterval(humanSmallScroll, 2000)
+        }
+    }
+
+    $('.nilo-scrolling-background').mouseover(humanScroll)
+    $('.nilo-scrolling-background').mouseout(function () {
+        if ($(this).closest('.slick-slide').hasClass('slick-current')) {
+            clearTimeout(humanInterval)
+            let bgPos = parseFloat($(this).css('background-position-y'))
+            let bgInterval = bgPos + 3.6
+            let aniTime = (200 * bgInterval) / 103.6
+            $(this).animate({
+                backgroundPositionY: '-3.6%',
+            }, aniTime)
+        }
+    })
+});
+
 var allPopupTarget = ['popup_pay_1', 'popup_pay_2', 'popup_pay_3']
 var popupTarget = allPopupTarget[0]
 
@@ -321,7 +393,6 @@ window.onscroll = function () {
     }
 }
 
-
 function constant_log() {
     let = height = window.innerHeight || $(window).height();
     $('#nilo-popup-container').css('height', `${window.innerHeight}px`)
@@ -330,4 +401,6 @@ function constant_log() {
     custom_console(`wi=${window.innerHeight}\two=${window.outerHeight}\tsh=${screen.height}\tch=${document.documentElement.clientHeight}\tvh=${$('.nilo-jumbo-container').first().height()}`)
     window.requestAnimationFrame(constant_log); // update on each frame
 }
-constant_log()
+// constant_log()
+
+

@@ -46,8 +46,6 @@
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <!-- jQuery core CSS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- Custom styles for this template -->
     {% compress css %}
     <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo.scss' %}">
@@ -57,11 +55,13 @@
     <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_l.scss' %}">
     <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_xl.scss' %}">
     {% endcompress %}
+    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick-theme.css' %}" />
 </head>
 
 <body>
     {% block body_contents %}{% endblock body_contents %}
-    
+
     {% if debugging %}
     <div class="nilo-test-size" id="default">default</div>
     <div class="nilo-test-size" id="x-large">x-large</div>
@@ -79,13 +79,16 @@
 
     <!-- Bootstrap core JavaScript
 ================================================== -->
-    <script src="{% static 'advice/js/nilo.js' %}"></script>
-    <script src="{% static 'advice/js/scroll.js' %}"></script>
-
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://getbootstrap.com/docs/4.0/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
     <script src="https://getbootstrap.com/docs/4.0/js/vendor/holder.min.js"></script>
+    <!-- jQuery core CSS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="{% static 'advice/slick/slick.min.js' %}"></script>
+    <script src="{% static 'advice/js/nilo.js' %}"></script>
+    <script src="{% static 'advice/js/scroll.js' %}"></script>
 
     {% if awesome %}
     <script>show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}');</script>

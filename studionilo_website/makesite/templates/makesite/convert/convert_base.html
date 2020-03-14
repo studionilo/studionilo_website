@@ -1,0 +1,28 @@
+{% load static %}
+{% block convert %}
+<div class="nilo-jumbo-container">
+    <div class="nilo-container w-100">
+        <div class="row row-cols-2 m-0">
+            <div class="col p-0">
+                {% block image %}
+                <img class="w-100" src="{% static 'advice/illustrazioni/strategia_comunicativa.png' %}">
+                {% endblock image %}
+            </div>
+            <div class="col d-flex align-items-center p-5 pr-10">
+                <div>
+                    <h1 class="font-weight-bold nilo-font-size-1-8rem">
+                        {% block title %}
+                        Tramutiamo utenti web in clienti reali
+                        {% endblock title %}
+                    </h1>
+                    <p class="nilo-font-size-1rem">
+                        {% block description %}
+                        Diamo ai tuoi clienti un’immagine migliore di te, rendendoli più disposti a rivolgersi alla tua attività.
+                        {% endblock description %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock convert %}

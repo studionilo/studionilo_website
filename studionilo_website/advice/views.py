@@ -62,7 +62,7 @@ def awesome(request):
         except:
             return redirect('advice_reject')
     else:
-        return redirect('homepage')
+        return redirect('advice_home')
 
 def reject(request):
     return render(request, 'advice/advice.html', context={'reject':True})
