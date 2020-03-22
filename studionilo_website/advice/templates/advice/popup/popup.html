@@ -1,18 +1,9 @@
 {% load static %}
 {% block popup %}
-<div class="nilo-jumbo-container nilo-blur-bg nilo-popup-view" id="nilo-popup-container">
-    <div class="nilo-container max-width">
-        <div class="nilo-popup" id="nilo-popup-clickable">
-            <div class="nilo-tabs">
-                {% include 'advice/popup/tabs/popup_pay_tab_tailored.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_contactus.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_info.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_form.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_checkout.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_awesome.html' %}
-                {% include 'advice/popup/tabs/popup_pay_tab_reject.html' %}
-            </div>
-        </div>
-    </div>
-</div>
+
+{% include 'advice/popup/modals/modal_contactus.html' %}
+{% include 'advice/popup/modals/modal_tailored.html' %}
+{% include 'advice/popup/modals/modal_videoreport.html' %}
+{% include 'advice/popup/modals/modal_videocall.html' %}
+
 {% endblock popup %}

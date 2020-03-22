@@ -1,0 +1,58 @@
+{% extends 'advice/popup/components/modal_content_base.html' %}
+{% load static %}
+
+{% block modal_title %}Check-out{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+    <div class="col pr-2">
+        <p>Seleziona il metodo di pagamento:</p>
+        <div>
+            <div class="d-flex flex-row">
+                {% include 'advice/popup/components/popup_card_btn.html' %}
+                {% include 'advice/popup/components/popup_paypal_btn.html' %}
+            </div>
+            <div class="nilo-gray-bg p-2 mt-2" id="circuit-logos">
+                <img class="nilo-w-25 nilo-mr-044" src="{% static 'advice/assets/logo_circuito_pagamento (1).svg' %}">
+                <img class="nilo-w-25 nilo-mr-044" src="{% static 'advice/assets/logo_circuito_pagamento (2).svg' %}">
+                <img class="nilo-w-25 nilo-mr-044" src="{% static 'advice/assets/logo_circuito_pagamento (3).svg' %}">
+                <img class="nilo-w-25 nilo-mr-044" src="{% static 'advice/assets/logo_circuito_pagamento (4).svg' %}">
+                <img class="nilo-w-25" src="{% static 'advice/assets/logo_circuito_pagamento (5).svg' %}">
+            </div>
+            <hr class="mt-2">
+            <div class="pt-3 nilo-checkout-info">
+                <div class="">
+                    Totale: <span class="nilo-checkout-price">69</span><span class="nilo-checkout-price-2">€</span>
+                    <div class="nilo-muted">
+                        Pagamento unico per la singola prestazione non ripetuto nel tempo.<br>
+                    </div>
+                    Selezionando "Ottieni colloquio" verrai re-indirizzato alla pagina
+                    di pagamento. Ti ricontatteremo entro due giorni lavorativi
+                    per concordare la data dell’incontro; nel frattempo ci
+                    mobiliteremo per analizzare la tua presenza digitale.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey"></div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display: none;">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="This value will be override">
+    <input type="hidden" name="custom" value="This value will be override">
+    <input type="image" name="submit" id="nilo-paypal-submit">
+</form>
+<ul class="nav" role="tablist">
+    <li class="nav-item">
+        <a class="nilo-btn ml-2 nilo-button-muted nilo-autoremove-active-show" data-toggle="tab"
+            href="#modal_tab_videocall_2" role="tab" id="nilo-videocall-back">Indietro</a>
+    </li>
+    <li class="nav-item">
+        <button type="button" class="nilo-popup-footer-button popup_pay_2" onclick="checkout_paypal('videocall')">Ottieni
+            colloquio</button>
+    </li>
+</ul>
+{% endblock modal_footer %}

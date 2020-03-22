@@ -1,6 +1,7 @@
 $color-red: #f76054;
 $color-red-hover: #dd4a43;
 $color-gray: #f2f2f2;
+$color-unknown-gray: #e6e6e6;
 $color-dark-gray: #c6c6c6;
 $color-orange: #e54c45;
 $color-yellow: rgb(255, 221, 0);
@@ -71,6 +72,15 @@ body {
   opacity: 0;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.pt-2-3rem {
+  padding-top: 2.3rem !important;
+}
+
+
 .pr-10 {
   padding-right: 6rem !important;
 }
@@ -85,6 +95,10 @@ body {
   padding-right: 5rem !important;
 }
 
+.p-2-5rem {
+  padding: 2.5rem;
+}
+
 .vh-22 {
   height: 22vh;
 }
@@ -97,12 +111,33 @@ body {
   height: 70vh;
 }
 
+.vh-80 {
+  height: 80vh;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
 .w-1-4rem {
   width: 1.4rem;
 }
 
 .w-100-6rem {
   width: calc(100% - 6rem);
+}
+
+.mt-2rem {
+  margin-top: 2rem !important;
+}
+
+.my-6rem {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
+.max-w-760px {
+  max-width: 760px !important;
 }
 
 .nilo-container-width {
@@ -127,6 +162,10 @@ body {
 
 .text-black {
   color: black;
+}
+
+.text-blue {
+  color: $color-deep-blue
 }
 
 .nilo-nav {
@@ -231,7 +270,6 @@ a:focus {
 
 .nilo-jumbo-container {
   width: 100%;
-  min-height: 100vh;
   height: auto;
   display: flex;
   align-items: center;
@@ -244,6 +282,7 @@ a:focus {
   margin-left: 5%;
   margin-right: 5%;
   overflow: auto;
+  width: 100%;
 }
 
 .max-width {
@@ -286,9 +325,23 @@ a:focus {
 }
 
 .nilo-card {
-  background-color: $color-gray;
+  background-color: white;
   padding: 1.5%;
-  flex: 1;
+  border-radius: 0px;
+  border-width: 0px;
+  & > .card-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: transparent;
+  }
+  & > .card-body {
+    background-color: transparent;
+  }
+  & > .card-footer {
+    padding: 0px;
+    background-color: transparent;
+  }
 }
 
 .nilo-card-title {
@@ -326,13 +379,7 @@ a:focus {
   font-size: 23px;
 }
 
-.nilo-price {
-  font-size: 64px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.nilo-price .nilo-currency {
+.nilo-currency {
   font-size: 24px;
   font-weight: normal;
 }
@@ -360,7 +407,12 @@ ul.nilo-gains-list > li::before {
   color: #bcbec0;
 }
 
-button {
+.nilo-btn {
+  display: inline-block;
+}
+
+button,
+.nilo-btn {
   width: 100%;
   font-weight: bold;
   font-size: 18px;
@@ -379,13 +431,16 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus,
+.nilo-btn:hover,
+.nilo-btn:focus {
   background-color: $color-orange;
   outline: 0;
 }
 
-.nilo-button:hover {
+.nilo-btn:hover {
   color: white;
+  text-decoration: none;
   background-color: $color-red-hover;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -932,65 +987,49 @@ a.nilo-email {
   -ms-overflow-style: none;
 }
 
-.nilo-popup-body form {
+.nilo-form {
   width: 100%;
   padding-top: 2em;
   overflow: auto;
+
+  & > input {
+    width: 100%;
+    font-size: 22px;
+    padding-left: 0.3em;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    border: 2px solid #b3b3b3;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    &.error {
+      border: 2px solid $color-red;
+    }
+    &:focus {
+      border: 2px solid $color-orange;
+      outline: 0;
+    }
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder,
+    &::placeholder {
+      color: $color-unknown-gray;
+    }
+  }
 }
 
-.nilo-popup-body form > input {
-  width: 100%;
-  font-size: 22px;
-  padding-left: 0.3em;
-  margin-top: 0.3em;
-  margin-bottom: 1em;
-  border: 2px solid #b3b3b3;
-  border-radius: 0px;
-  -webkit-appearance: none;
-  /* -webkit-box-shadow: inset 0 0 0px #000;
-    -moz-box-shadow: inset 0 0 0px #000;
-    box-shadow: inset 0 0 0px #000; */
-}
-
-.nilo-popup-body form > input.error {
-  border: 2px solid $color-red;
-}
-
-.nilo-popup-body form > input:focus {
-  border: 2px solid $color-orange;
-  outline: 0;
-}
-
-.nilo-popup-body form > input::-webkit-input-placeholder {
-  /* Edge */
-  color: #e6e6e6;
-}
-
-.nilo-popup-body form > input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #e6e6e6;
-}
-
-.nilo-popup-body form > input::placeholder {
-  color: #e6e6e6;
-}
-
-.nilo-popup-body ul {
+ul.nilo-list {
   list-style: none;
   color: #bcbec0;
-}
-
-.nilo-popup-body li {
-  margin-top: 1em;
-}
-
-.nilo-popup-body ul li::before {
-  content: "\2022";
-  color: $color-red;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+  li {
+    margin-top: 1em;
+    &::before {
+      content: "\2022";
+      color: $color-red;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
 }
 
 .paypal-section,
@@ -1190,7 +1229,7 @@ a.nilo-email {
 } */
 
 #nilo-popup-container {
-  min-height: auto;
+  // min-height: auto;
 }
 
 .nilo-pt-spacer {

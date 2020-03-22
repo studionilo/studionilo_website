@@ -1,10 +1,21 @@
 {% block pay_cards %}
-<div class="nilo-container nilo-pt-spacer">
-    <a id="payment"></a>
-    <p>Scegli il piano che fa per te:</p>
-    <!-- Mobile version -->
-    {% include 'advice/pay_cards/pay_card_mobile.html' %}
-    <!-- Desktop version -->
-    {% include 'advice/pay_cards/pay_card_desktop.html' %}
+<div class="nilo-jumbo-container min-vh-100 nilo-blue-bg">
+    <div class="nilo-container max-w-760px overflow-x-hidden">
+        <a id="payment"></a>
+        <p>Scegli il piano che fa per te:</p>
+
+        {% comment %}
+        <!-- Mobile version -->
+        {% include 'advice/pay_cards/pay_card_mobile.html' %}
+        <!-- Desktop version -->
+        {% include 'advice/pay_cards/pay_card_desktop.html' %}
+        {% endcomment %}
+
+        <div class="card-deck">
+            {% include 'advice/pay_cards/cards/pay_card_videoreport.html' %}
+            {% include 'advice/pay_cards/cards/pay_card_videoreport.html' %}
+        </div>
+
+    </div>
 </div>
 {% endblock pay_cards %}

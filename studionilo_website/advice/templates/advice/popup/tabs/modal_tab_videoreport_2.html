@@ -1,0 +1,31 @@
+{% extends 'advice/popup/components/modal_content_base.html' %}
+{% load static %}
+
+{% block modal_title %}Raccontaci di voi{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+    <div class="col pr-2">
+        <div class="">
+            Presentandoti, ci permetterai di ispezionare accuratamente i principali canali con i
+            quali ti comunichi su internet.
+            {% include 'advice/popup/components/modal_form.html' %}
+            <!-- <div class="nilo-vertical-spacer"></div> -->
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/form.png' %}" alt="Inserisci i tuoi dati">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<ul class="nav" id="myTab2" role="tablist">
+    <li class="nav-item">
+        <a class="nilo-btn ml-2 nilo-button-muted nilo-autoremove-active-show" data-toggle="tab" href="#modal_tab_videoreport_1" role="tab">Indietro</a>
+    </li>
+    <li class="nav-item">
+        <a class="nilo-btn ml-2 nilo-autoremove-active-show nilo-form-validation" data-toggle="tab" href="#modal_tab_videoreport_3" role="tab" data-nilo-stay="#nilo-videoreport-back">Invia modulo</a>
+    </li>
+</ul>
+{% endblock modal_footer %}

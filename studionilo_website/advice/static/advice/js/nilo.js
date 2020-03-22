@@ -12,16 +12,12 @@ function onUpdate() {
     window.requestAnimationFrame(onUpdate); // update on each frame
 }
 
-function checkout_paypal() {
+function checkout_paypal(item) {
     if (PAYMENT_ID.length > 0) {
         $('#nilo-paypal-submit').closest('form').find('input[name="custom"]').val(PAYMENT_ID)
-        if (popupTarget == 'popup_pay_1')
-            $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_REPORT)
-        else if (popupTarget == 'popup_pay_2')
+        if (item == 'videocall')
             $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_COLLOQUIO)
-        else
-            $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(MEDIA_MANAGER)
-        $('#nilo-paypal-submit').click()
+            $('#nilo-paypal-submit').click()
     }
 }
 
@@ -93,7 +89,7 @@ function out_hover_btn_img() {
 }
 
 
-onUpdate()
+// onUpdate()
 $(document).ready(function () {
     $('.nilo-deck').each(function () {
         let count = 0
@@ -206,64 +202,64 @@ function tabBodySelector(nextTab) {
     $(`#${nextTab} .${popupTarget}`).css('display', 'inline')
 }
 
-function check_forms() {
-    let name = $('#nilo-form-api').find('input[name="name"]').val()
-    let email = $('#nilo-form-api').find('input[name="email"]').val();
-    let website = $('#nilo-form-api').find('input[name="website"]').val();
+function check_forms(targetForm) {
+    let name = targetForm.find('input[name="name"]').val()
+    let email = targetForm.find('input[name="email"]').val();
+    let website = targetForm.find('input[name="website"]').val();
     let emailRegex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
     let websiteRegex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/);
     let status = true
     if (name.length == '') {
-        $('#nilo-error-name').css('display', 'contents')
-        $('#nilo-form-api').find('input[name="name"]').addClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-name').css('display', 'contents')
+        targetForm.find('input[name="name"]').addClass('error')
         status = false
     } else {
-        $('#nilo-error-name').css('display', 'none')
-        $('#nilo-form-api').find('input[name="name"]').removeClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-name').css('display', 'none')
+        targetForm.find('input[name="name"]').removeClass('error')
     }
     if (!emailRegex.test(email)) {
-        $('#nilo-error-email').css('display', 'contents')
-        $('#nilo-form-api').find('input[name="email"]').addClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-email').css('display', 'contents')
+        targetForm.find('input[name="email"]').addClass('error')
         status = false
     } else {
-        $('#nilo-error-email').css('display', 'none')
-        $('#nilo-form-api').find('input[name="email"]').removeClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-email').css('display', 'none')
+        targetForm.find('input[name="email"]').removeClass('error')
     }
     if (!websiteRegex.test(website) && website.length != '') {
-        $('#nilo-error-website').css('display', 'contents')
-        $('#nilo-form-api').find('input[name="website"]').addClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-website').css('display', 'contents')
+        targetForm.find('input[name="website"]').addClass('error')
         status = false
     } else {
-        $('#nilo-error-website').css('display', 'none')
-        $('#nilo-form-api').find('input[name="website"]').removeClass('error')
+        targetForm.find('.nilo-error-msg.nilo-error-website').css('display', 'none')
+        targetForm.find('input[name="website"]').removeClass('error')
     }
     return status
 }
 
-function get_from_values() {
+function get_from_values(targetForm) {
     let obj = {
-        name: $('#nilo-form-api').find('input[name="name"]').val(),
-        email: $('#nilo-form-api').find('input[name="email"]').val(),
-        website: $('#nilo-form-api').find('input[name="website"]').val(),
-        sn_facebook: $('#nilo-form-api').find('div[name="sn_facebook"]').hasClass('active'),
-        sn_instagram: $('#nilo-form-api').find('div[name="sn_instagram"]').hasClass('active'),
-        sn_twitter: $('#nilo-form-api').find('div[name="sn_twitter"]').hasClass('active'),
-        sn_tiktok: $('#nilo-form-api').find('div[name="sn_tiktok"]').hasClass('active'),
-        sn_linkedin: $('#nilo-form-api').find('div[name="sn_linkedin"]').hasClass('active'),
-        sn_snapchat: $('#nilo-form-api').find('div[name="sn_snapchat"]').hasClass('active'),
-        sn_pinterest: $('#nilo-form-api').find('div[name="sn_pinterest"]').hasClass('active'),
+        name: targetForm.find('input[name="name"]').val(),
+        email: targetForm.find('input[name="email"]').val(),
+        website: targetForm.find('input[name="website"]').val(),
+        sn_facebook: targetForm.find('div[name="sn_facebook"]').hasClass('active'),
+        sn_instagram: targetForm.find('div[name="sn_instagram"]').hasClass('active'),
+        sn_twitter: targetForm.find('div[name="sn_twitter"]').hasClass('active'),
+        sn_tiktok: targetForm.find('div[name="sn_tiktok"]').hasClass('active'),
+        sn_linkedin: targetForm.find('div[name="sn_linkedin"]').hasClass('active'),
+        sn_snapchat: targetForm.find('div[name="sn_snapchat"]').hasClass('active'),
+        sn_pinterest: targetForm.find('div[name="sn_pinterest"]').hasClass('active'),
 
         user_agent: navigator.userAgent,
         screen_height: Math.max(document.documentElement.clientHeight, window.innerHeight || 0),
         screen_width: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
-        plan: popupTarget,
+        plan: targetForm.find('input[name="plan"]').val(),
     }
     return obj
 }
 
-function create_payment() {
+function create_payment(targetForm) {
     $.post("api/create-payment-intent",
-        get_from_values(),
+        get_from_values(targetForm),
         function (data, status) {
             console.log(data);
             if (data['payment_intent_id']) {
@@ -272,6 +268,19 @@ function create_payment() {
             console.log(PAYMENT_ID)
         });
 }
+
+$(document).on('click', '.nilo-form-validation', function (e) {
+    let targetForm = $(this).closest('.modal-content').find('form.nilo-form')
+    if (check_forms(targetForm)) {
+        create_payment(targetForm)
+    } else {
+        if($(this).data('nilo-stay')){
+            console.log($(this).data('nilo-stay'))
+            $($(this).data('nilo-stay')).tab('show')
+            $($(this).data('nilo-stay')).removeClass('active show')
+        }
+    }
+});
 
 $(document).on('click', '.nilo-popup-footer-button', function (e) {
     if ($(this).data('target')) {
@@ -286,7 +295,24 @@ $(document).on('click', '.nilo-popup-footer-button', function (e) {
     }
 });
 
-
+$(document).on('click', '.nilo-autoremove-active-show', function (e) {
+    $(this).removeClass("active")
+    $(this).removeClass("show")
+})
+$(document).on('click', '.nilo-reset-tabs', function (e) {
+    let btn = $(this)
+    setTimeout(function(){
+        if (btn.data('target-tabs')) {
+            let tabs = $(`#${btn.data('target-tabs')}`).children('.tab-pane')
+            tabs.removeClass("active")
+            tabs.removeClass("show")
+            if(tabs.first()){
+                tabs.first().addClass("active")
+                tabs.first().addClass("show")
+            }
+        }
+    }, 500)
+})
 $(document).on('click', '.nilo-pill', function (e) {
     if (!$(this).hasClass('active')) {
         $(this).addClass("active")
@@ -299,22 +325,15 @@ $(document).on('click', '.nilo-button-pay-method', function (e) {
     if (!$(this).hasClass("active")) {
         $(this).addClass("active")
         if ($(this).hasClass("carta")) {
-            $(this).closest('.nilo-popup-body').find('img').fadeTo(200, 1)
+            $('#circuit-logos').find('img').fadeTo(200, 1)
         }
-    }
-    if ($(this).data('show-txt')) {
-        let sections = ['paypal-section', 'card-section']
-        sections.forEach(function (section) {
-            activeBtn.closest('.nilo-tab').find(`.${section}`).css('display', 'none')
-        })
-        $(this).closest('.nilo-tab').find(`.${$(this).data('show-txt')}`).css('display', 'block')
     }
     $(this).parent().children('.nilo-button-pay-method').each(function () {
         if ($(this)[0] !== activeBtn[0]) {
             if ($(this).hasClass("active")) {
                 $(this).removeClass("active")
                 if ($(this).hasClass("carta")) {
-                    $(this).closest('.nilo-popup-body').find('img').fadeTo(200, 0)
+                    $('#circuit-logos').find('img').fadeTo(200, 0)
                 }
             }
         }
@@ -339,6 +358,12 @@ $(document).on('click', '#nilo-tailored', function (e) {
 });
 $(document).on('click', '#nilo-contactus', function (e) {
     show_popup_tab('popup_pay_tab_contactus')
+});
+
+$(document).on('click', '.nilo-fake-link', function (e) {
+    if($(this).data('href')){
+        window.location.href = $(this).data('href');
+    }
 });
 
 $(document).mousedown(function (e) {

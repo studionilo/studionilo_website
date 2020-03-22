@@ -1,0 +1,10 @@
+{% extends 'advice/popup/components/modal_base.html' %}
+{% load static %}
+
+{% block modal_id %}modal-tailored{% endblock modal_id %}
+
+{% block modal_labelledby %}modal-tailored{% endblock modal_labelledby %}
+
+{% block modal_content %}
+{% include 'advice/popup/tabs/modal_tab_tailored_1.html' with class='active' %}
+{% endblock modal_content %}

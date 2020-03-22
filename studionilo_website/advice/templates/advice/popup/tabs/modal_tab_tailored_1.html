@@ -1,0 +1,39 @@
+{% extends 'advice/popup/components/modal_content_base.html' %}
+{% load static %}
+
+{% block modal_title %}Piano su misura{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+    <div class="col pr-2">
+        <div class="">
+            Raccontaci dei tuoi obiettivi comunicativi: pianificheremo insieme una modalità di consulenza
+            personalizzata basata sulle tue specifiche esigenze.<br>
+            <br>
+            Ecco alcuni esempi di alcuni dei servizi che offriamo per i nostri piani su misura:<br>
+            <ul>
+                <li>
+                    Workshop in azienda per l’avviamento o la riprogettazione della tua strategia comunicativa.
+                </li>
+                <li>
+                    Sessioni periodiche di video-consulenza sulla tua presenza digitale.
+                </li>
+                <li>
+                    Cura della presenza digitale aziendale in qualità di social media manager con modalità
+                    concordate.
+                </li>
+            </ul>
+            Non vediamo l’ora di lavorare insieme!<br>
+            Scrivici a: <a class="nilo-mail" href="mailto:info@studionilo.it">info@studionilo.it</a><br>
+    
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/su_misura.png' %}" alt="Piano su misura">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<button type="button" class="nilo-popup-footer-button w-auto" data-dismiss="modal">Chiudi</button>
+{% endblock modal_footer %}

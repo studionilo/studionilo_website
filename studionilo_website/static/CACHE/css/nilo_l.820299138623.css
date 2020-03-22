@@ -1,0 +1,72 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* line 4, advice/static/advice/scss/nilo_l.scss */
+  .nilo-lead-paragraph {
+    font-size: 36px; }
+  /* line 7, advice/static/advice/scss/nilo_l.scss */
+  .nilo-container {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    max-width: 1140px; }
+  /* line 12, advice/static/advice/scss/nilo_l.scss */
+  table.nilo-table {
+    margin-top: 0%;
+    margin-bottom: 0%; }
+  /* line 16, advice/static/advice/scss/nilo_l.scss */
+  #nilo-reference {
+    width: 40%; }
+  /* line 19, advice/static/advice/scss/nilo_l.scss */
+  #x-large {
+    display: none; }
+  /* line 22, advice/static/advice/scss/nilo_l.scss */
+  #large {
+    display: block; }
+  /* line 25, advice/static/advice/scss/nilo_l.scss */
+  #medium {
+    display: none; }
+  /* line 28, advice/static/advice/scss/nilo_l.scss */
+  #small {
+    display: none; }
+  /* line 31, advice/static/advice/scss/nilo_l.scss */
+  #x-small {
+    display: none; }
+  /* line 34, advice/static/advice/scss/nilo_l.scss */
+  .nilo-test-size {
+    background-color: #ffae00; }
+  /* line 37, advice/static/advice/scss/nilo_l.scss */
+  .nilo-popup-footer button {
+    width: 30%; }
+  /* line 40, advice/static/advice/scss/nilo_l.scss */
+  .nilo-popup-monkey {
+    display: flex; }
+  /* line 43, advice/static/advice/scss/nilo_l.scss */
+  .nilo-card-2 {
+    width: 50%; }
+  /* line 46, advice/static/advice/scss/nilo_l.scss */
+  .nilo-button-pay-method > img {
+    width: 70%; }
+  /* line 49, advice/static/advice/scss/nilo_l.scss */
+  table.nilo-table td {
+    /* padding-bottom: 0%; */ }
+  /* line 52, advice/static/advice/scss/nilo_l.scss */
+  .nilo-pt-spacer {
+    padding-top: 7em; }
+  /* line 55, advice/static/advice/scss/nilo_l.scss */
+  .nilo-pt-spacer-bottom {
+    padding-bottom: 7em; }
+  /* line 58, advice/static/advice/scss/nilo_l.scss */
+  .nilo-flex-footer-order {
+    flex-direction: row;
+    justify-content: flex-end; }
+  /* line 62, advice/static/advice/scss/nilo_l.scss */
+  .nilo-more-services {
+    width: auto; }
+  /* line 65, advice/static/advice/scss/nilo_l.scss */
+  .nilo-popup {
+    margin-bottom: 0vh; }
+  /* line 68, advice/static/advice/scss/nilo_l.scss */
+  tr.nilo-table-btn > td {
+    padding-bottom: 3%; }
+  /* line 71, advice/static/advice/scss/nilo_l.scss */
+  .nilo-home-monkey {
+    width: 34%; } }

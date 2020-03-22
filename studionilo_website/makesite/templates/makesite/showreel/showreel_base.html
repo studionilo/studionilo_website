@@ -1,0 +1,9 @@
+<div class="nilo-jumbo-container min-vh-100">
+    <div class="nilo-container w-100">
+        <h3>
+        {% block showreel_title %}{% endblock showreel_title %}
+        </h3>
+        <video title="showreel" class="outline-transparent db w-100"
+            poster="" playsinline="" preload="auto" controls="" src="{% block showreel_url %}{% endblock showreel_url %}"></video>
+    </div>
+</div>

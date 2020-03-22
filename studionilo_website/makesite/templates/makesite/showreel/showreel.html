@@ -1,8 +1,6 @@
-{% block showreel %}
-<div class="nilo-jumbo-container">
-    <div class="nilo-container w-100">
-        <video title="showreel" class="outline-transparent db w-100"
-            poster="" playsinline="" preload="auto" controls="" src="https://media.gettyimages.com/videos/light-strokes-video-id159332531"></video>
-    </div>
-</div>
-{% endblock showreel %}
+{% extends 'makesite\showreel\showreel_base.html' %}
+{% load static %}
+{% block showreel_title %}Perché Studio Nilo?{% endblock showreel_title %}
+
+{% block showreel_url %}{% static 'advice/videos/showreel_temp.mp4' %}{% endblock showreel_url %}
+    

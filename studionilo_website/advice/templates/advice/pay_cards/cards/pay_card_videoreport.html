@@ -1,0 +1,30 @@
+{% extends 'advice/pay_cards/cards/pay_card_base.html' %}
+{% load static %}
+{% block card_title %}Video-report gratuito{% endblock card_title %}
+
+{% block card_body %}
+<div>
+    <img class="w-100" src="{% static 'advice/illustrazioni/video_report.png' %}" alt="Video-report">
+</div>
+<div>
+<h1 class="font-weight-bold">0<span class="nilo-currency">€</span></h1>
+<p class="text-muted">
+    Nessun costo e nessun impegno. <br>
+    Scopri nelle nostre FAQ come è possibile.
+</p>
+</div>
+<div>
+    <ul class="nilo-gains-list mt-3 mb-4">
+        <li>Analisi generale della tua presenza digitale</li>
+        <li>Diagnostica errori gravi</li>
+        <li>Rilevazione punti di forza</li>
+        <li>Proposte di miglioramento</li>
+    </ul>
+</div>
+{% endblock card_body %}
+
+{% block card_footer %}
+<a class="nilo-btn nilo-button-muted" href="#">Cos’è un video-report</a>
+<a class="text-center w-100"></a>
+<button class="w-100" data-toggle="modal" data-target="#modal-videoreport" type="button">Ottieni video-report gratuito</button>
+{% endblock card_footer %}

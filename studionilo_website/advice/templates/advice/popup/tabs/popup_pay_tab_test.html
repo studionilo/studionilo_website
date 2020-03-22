@@ -1,0 +1,32 @@
+{% extends 'advice/popup/components/popup_base.html' %}
+{% load static %}
+
+{% block modal_id %}modal-test{% endblock modal_id %}
+
+{% block modal_labelledby %}modal-test{% endblock modal_labelledby %}
+
+{% block modal_title %}Contattaci{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+    <div class="col pr-2">
+        <div class="">
+            Raccontaci cosa hai in mente.<br>
+            <br>
+            <a class="nilo-mail" href="mailto:info@studionilo.it">info@studionilo.it</a><br>
+            +39 333 5979756<br>
+            <br>
+            Via del Mezzetta 2/D<br>
+            50135 Firenze (FI)<br>
+            Italia
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/contattaci.png' %}" alt="Contattaci">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<button type="button" class="nilo-popup-footer-button w-auto" data-dismiss="modal">Chiudi</button>
+{% endblock modal_footer %}

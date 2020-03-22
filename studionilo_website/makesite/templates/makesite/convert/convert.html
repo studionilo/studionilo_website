@@ -1,1 +1,14 @@
-{% extends 'makesite/convert/convert_base.html' %}
+{% extends 'advice/image_side_txt/image_side_txt.html' %}
+{% load static %}
+
+{% block side_image %}
+<img class="w-100" src="{% static 'advice/illustrazioni/strategia_comunicativa.png' %}">
+{% endblock side_image %}
+
+{% block side_title %}
+Tramutiamo utenti web in clienti reali
+{% endblock side_title %}
+
+{% block side_description %}
+Diamo ai tuoi clienti un’immagine migliore di te, rendendoli più disposti a rivolgersi alla tua attività.
+{% endblock side_description %}

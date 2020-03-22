@@ -1,0 +1,36 @@
+{% block modal_form %}
+<form action="#" class="nilo-form">
+    Qual è il nome della vostra attività? <span class="nilo-error-msg nilo-error-name">Devi inserire il
+        nome della tua attività</span><br>
+    <input type="text" name="name" placeholder="es. Esempio srl">
+
+    {% if videocall and videocall == 'true' %}
+    <br>A quale indirizzo mail desideri essere ricontattato?
+    {% else %}
+    <br>A quale indirizzo mail desideri ricevere il video-report?
+    {% endif %}
+        
+    <span class="nilo-error-msg nilo-error-email">Indirizzo email non valido</span><br>
+
+    <input type="text" name="email" placeholder="es. esempio@mail.com">
+
+    <br>Se avete un sito internet, inseriscine qui il link <span class="nilo-error-msg nilo-error-website">Link non
+        valido</span><br>
+    <input type="text" name="website" placeholder="es. https://www.esempio.it/">
+    
+    {% if videocall and videocall == 'true' %}
+    <input type="hidden" name="plan" value="popup_pay_2">
+    {% else %}
+    <input type="hidden" name="plan" value="popup_pay_1">
+    {% endif %}
+        
+    <br>Su quali social network siete presenti?<br>
+    <div class="nilo-pill" name="sn_facebook">Facebook</div>
+    <div class="nilo-pill" name="sn_instagram">Instagram</div>
+    <div class="nilo-pill" name="sn_twitter">Twitter</div>
+    <div class="nilo-pill" name="sn_tiktok">Tiktok</div>
+    <div class="nilo-pill" name="sn_linkedin">Linkedin</div>
+    <div class="nilo-pill" name="sn_snapchat">Snapchat</div>
+    <div class="nilo-pill" name="sn_pinterest">Pinterest</div>
+</form>
+{% endblock modal_form %}

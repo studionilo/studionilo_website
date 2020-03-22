@@ -1,0 +1,19 @@
+<div class="modal-content border-0 rounded-0 pt-5 pl-5 pr-5 pb-4 vh-80">
+    <div class="modal-header p-0 border-0">
+        <h3 class="modal-title font-weight-bold">
+            {% block modal_title %}
+            {% endblock modal_title %}
+        </h3>
+        {% include 'advice/popup/components/popup_close_btn.html' %}
+    </div>
+    <div class="modal-body p-0 pt-2-3rem">
+        {% block modal_body %}
+        <p>Modal body text goes here.</p>
+        {% endblock modal_body %}
+    </div>
+    <div class="modal-footer p-0 pt-4 border-0">
+        {% block modal_footer %}
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        {% endblock modal_footer %}
+    </div>
+</div>

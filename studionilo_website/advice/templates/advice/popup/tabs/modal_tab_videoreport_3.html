@@ -1,0 +1,35 @@
+{% extends 'advice/popup/components/modal_content_base_awesome.html' %}
+{% load static %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+    <div class="col pr-2 d-flex align-items-center">
+        <h3>
+            <strong>Fantastico!</strong><br>
+            Informazioni inviate con successo.
+            Non vediamo l’ora di parlare con te
+            della tua strategia comunicativa.
+            Ti ricontatteremo presto per fissare
+            il video-colloquio conoscitivo.
+            Parleremo insieme delle modalità
+            di pagamento solo se deciderai
+            di iscriverti al piano.
+            A presto!<br>
+            <br>
+            Il team di Studionilo
+        </h3>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/fantastico.png' %}" alt="Fantastico!">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<ul class="nav" role="tablist">
+    <li class="nav-item">
+        <button type="button" class="nilo-reset-tabs" data-target-tabs="modal_tab_videoreport"
+            data-dismiss="modal">Chiudi</button>
+    </li>
+</ul>
+{% endblock modal_footer %}

@@ -1,0 +1,21 @@
+{% extends 'advice/popup/components/modal_base.html' %}
+{% load static %}
+
+{% block modal_id %}modal-videoreport{% endblock modal_id %}
+
+{% block modal_labelledby %}modal-videoreport{% endblock modal_labelledby %}
+
+
+{% block modal_content %}
+<div class="tab-content" id="modal_tab_videoreport">
+    <div class="tab-pane show active" id="modal_tab_videoreport_1" role="tabpanel">
+        {% include 'advice/popup/tabs/modal_tab_videoreport_1.html' %}
+    </div>
+    <div class="tab-pane" id="modal_tab_videoreport_2" role="tabpanel">
+        {% include 'advice/popup/tabs/modal_tab_videoreport_2.html' %}
+    </div>
+    <div class="tab-pane" id="modal_tab_videoreport_3" role="tabpanel">
+        {% include 'advice/popup/tabs/modal_tab_videoreport_3.html' %}
+    </div>
+</div>
+{% endblock modal_content %}

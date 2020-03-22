@@ -1,0 +1,1425 @@
+/* line 11, advice/static/advice/scss/nilo.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+/* line 18, advice/static/advice/scss/nilo.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* line 26, advice/static/advice/scss/nilo.scss */
+body {
+  font-family: "Karla", sans-serif; }
+
+/* line 30, advice/static/advice/scss/nilo.scss */
+.nilo-red-bg {
+  background-color: #f76054; }
+
+/* line 34, advice/static/advice/scss/nilo.scss */
+.nilo-blue-bg {
+  background-color: #c6e8e9; }
+
+/* line 38, advice/static/advice/scss/nilo.scss */
+.nilo-deep-blue-bg {
+  background-color: #93c5c5; }
+
+/* line 42, advice/static/advice/scss/nilo.scss */
+.nilo-yellow-bg {
+  background-color: #ffdd00; }
+
+/* line 46, advice/static/advice/scss/nilo.scss */
+.nilo-blur-bg {
+  background-color: rgba(207, 207, 207, 0.65); }
+
+/* line 50, advice/static/advice/scss/nilo.scss */
+.nilo-gray-bg {
+  background-color: #f2f2f2; }
+
+/* line 54, advice/static/advice/scss/nilo.scss */
+.nilo-w-25 {
+  width: 2.5em; }
+
+/* line 58, advice/static/advice/scss/nilo.scss */
+.nilo-mr-044 {
+  margin-right: 0.44em; }
+
+/* line 62, advice/static/advice/scss/nilo.scss */
+.nilo-font-size-1-8rem {
+  font-size: 1.8rem; }
+
+/* line 65, advice/static/advice/scss/nilo.scss */
+.nilo-font-size-1-4rem {
+  font-size: 1.4rem; }
+
+/* line 68, advice/static/advice/scss/nilo.scss */
+.nilo-font-size-1rem {
+  font-size: 1rem; }
+
+/* line 71, advice/static/advice/scss/nilo.scss */
+.opacity-0 {
+  opacity: 0; }
+
+/* line 75, advice/static/advice/scss/nilo.scss */
+.overflow-x-hidden {
+  overflow-x: hidden !important; }
+
+/* line 79, advice/static/advice/scss/nilo.scss */
+.pt-2-3rem {
+  padding-top: 2.3rem !important; }
+
+/* line 84, advice/static/advice/scss/nilo.scss */
+.pr-10 {
+  padding-right: 6rem !important; }
+
+/* line 88, advice/static/advice/scss/nilo.scss */
+.py-6 {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important; }
+
+/* line 93, advice/static/advice/scss/nilo.scss */
+.px-6 {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important; }
+
+/* line 98, advice/static/advice/scss/nilo.scss */
+.vh-22 {
+  height: 22vh; }
+
+/* line 102, advice/static/advice/scss/nilo.scss */
+.vh-50 {
+  height: 50vh; }
+
+/* line 106, advice/static/advice/scss/nilo.scss */
+.vh-70 {
+  height: 70vh; }
+
+/* line 110, advice/static/advice/scss/nilo.scss */
+.vh-80 {
+  height: 80vh; }
+
+/* line 114, advice/static/advice/scss/nilo.scss */
+.min-vh-100 {
+  min-height: 100vh; }
+
+/* line 118, advice/static/advice/scss/nilo.scss */
+.w-1-4rem {
+  width: 1.4rem; }
+
+/* line 122, advice/static/advice/scss/nilo.scss */
+.w-100-6rem {
+  width: calc(100% - 6rem); }
+
+/* line 126, advice/static/advice/scss/nilo.scss */
+.mt-2rem {
+  margin-top: 2rem !important; }
+
+/* line 130, advice/static/advice/scss/nilo.scss */
+.mt-6rem {
+  margin-top: 6rem !important; }
+
+/* line 134, advice/static/advice/scss/nilo.scss */
+.max-w-760px {
+  max-width: 760px !important; }
+
+/* line 138, advice/static/advice/scss/nilo.scss */
+.nilo-container-width {
+  width: 70%; }
+
+/* line 142, advice/static/advice/scss/nilo.scss */
+.left-0 {
+  left: 0px; }
+
+/* line 146, advice/static/advice/scss/nilo.scss */
+.top-0 {
+  top: 0px; }
+
+/* line 150, advice/static/advice/scss/nilo.scss */
+.border-dark-gray {
+  border-color: #c6c6c6; }
+
+/* line 154, advice/static/advice/scss/nilo.scss */
+.border-black {
+  border-color: black; }
+
+/* line 158, advice/static/advice/scss/nilo.scss */
+.text-black {
+  color: black; }
+
+/* line 162, advice/static/advice/scss/nilo.scss */
+.nilo-nav {
+  width: 100%;
+  position: fixed;
+  list-style: none;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #c6e8e9;
+  display: flex;
+  flex-direction: column;
+  z-index: 7; }
+
+/* line 176, advice/static/advice/scss/nilo.scss */
+.nilo-nav a {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 181, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item-logo {
+  position: relative;
+  font-size: 22px; }
+
+/* line 185, advice/static/advice/scss/nilo.scss */
+a:focus {
+  opacity: 0.7;
+  outline: 0; }
+
+/* line 190, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item {
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  margin-top: 0.5em; }
+
+/* line 197, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item > div {
+  cursor: pointer;
+  margin-right: 2em;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 206, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item > div:hover {
+  color: black;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 214, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item > div:hover svg {
+  color: black;
+  opacity: 1;
+  animation-name: fade-in-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+/* line 222, advice/static/advice/scss/nilo.scss */
+.nilo-nav-item > div svg {
+  fill: black;
+  opacity: 0;
+  height: 0.5em; }
+
+/* line 228, advice/static/advice/scss/nilo.scss */
+.nilo-more-services {
+  margin-top: 1em;
+  width: 100%;
+  font-size: 22px; }
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0%;
+    transform: translateX(-5px); }
+  to {
+    opacity: 100%;
+    transform: translateX(0px); } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0%; }
+  to {
+    opacity: 100%; } }
+
+/* .nilo-nav-item:hover svg {
+    opacity: 100%;
+    fill: inherit;
+    animation-name: fade-in-right;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+} */
+/* line 262, advice/static/advice/scss/nilo.scss */
+.nilo-jumbo-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  position: relative; }
+
+/* line 272, advice/static/advice/scss/nilo.scss */
+.nilo-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: auto;
+  width: 100%; }
+
+/* line 279, advice/static/advice/scss/nilo.scss */
+.max-width {
+  width: 100%; }
+
+/* line 283, advice/static/advice/scss/nilo.scss */
+.nilo-lead-paragraph {
+  font-size: 23px; }
+
+@keyframes waving-fade {
+  from {
+    opacity: 40%; }
+  to {
+    opacity: 70%; } }
+
+/* line 296, advice/static/advice/scss/nilo.scss */
+.nilo-scroll-down-arrow {
+  position: absolute;
+  top: 92%;
+  width: 2em;
+  height: 2em;
+  /* display: none; */ }
+
+/* line 303, advice/static/advice/scss/nilo.scss */
+.nilo-scroll-down-arrow > a {
+  animation-name: waving-fade;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; }
+
+/* line 311, advice/static/advice/scss/nilo.scss */
+.nilo-scroll-down-arrow > a:hover,
+.nilo-scroll-down-arrow > a:focus {
+  opacity: 0.8;
+  animation: none;
+  outline: 0; }
+
+/* line 318, advice/static/advice/scss/nilo.scss */
+.nilo-card {
+  background-color: white;
+  padding: 1.5%;
+  border-radius: 0px;
+  border-width: 0px; }
+  /* line 323, advice/static/advice/scss/nilo.scss */
+  .nilo-card > .card-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: transparent; }
+  /* line 329, advice/static/advice/scss/nilo.scss */
+  .nilo-card > .card-body {
+    background-color: transparent; }
+  /* line 332, advice/static/advice/scss/nilo.scss */
+  .nilo-card > .card-footer {
+    padding: 0px;
+    background-color: transparent; }
+
+/* line 338, advice/static/advice/scss/nilo.scss */
+.nilo-card-title {
+  margin-bottom: 2.5%;
+  font-size: 18px; }
+
+/* line 343, advice/static/advice/scss/nilo.scss */
+.nilo-card-footer {
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  font-size: 18px; }
+
+/* line 349, advice/static/advice/scss/nilo.scss */
+.nilo-dots {
+  display: inline; }
+
+/* line 353, advice/static/advice/scss/nilo.scss */
+.nilo-more {
+  display: none; }
+
+/* line 357, advice/static/advice/scss/nilo.scss */
+.nilo-read-more-button {
+  color: #a3a5a6;
+  text-decoration: underline;
+  cursor: pointer; }
+
+/* line 363, advice/static/advice/scss/nilo.scss */
+.nilo-payments {
+  margin-top: 7%; }
+
+/* line 367, advice/static/advice/scss/nilo.scss */
+.nilo-payment-title {
+  text-align: center;
+  padding-top: 2%;
+  font-size: 23px; }
+
+/* line 373, advice/static/advice/scss/nilo.scss */
+.nilo-currency {
+  font-size: 24px;
+  font-weight: normal; }
+
+/* line 378, advice/static/advice/scss/nilo.scss */
+ul.nilo-gains-list {
+  list-style: none; }
+
+/* line 382, advice/static/advice/scss/nilo.scss */
+ul.nilo-gains-list > li::before {
+  content: "";
+  height: 1em;
+  width: 1em;
+  display: block;
+  float: left;
+  margin-left: -1.5em;
+  margin-top: 3px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background: url("/static/advice/assets/done.svg");
+  background-position: center; }
+
+/* line 397, advice/static/advice/scss/nilo.scss */
+.nilo-text-muted {
+  color: #bcbec0; }
+
+/* line 401, advice/static/advice/scss/nilo.scss */
+.nilo-btn {
+  display: inline-block; }
+
+/* line 405, advice/static/advice/scss/nilo.scss */
+button,
+.nilo-btn {
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: none;
+  color: white;
+  background-color: #f76054;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer; }
+
+/* line 424, advice/static/advice/scss/nilo.scss */
+button:hover,
+button:focus,
+.nilo-btn:hover,
+.nilo-btn:focus {
+  background-color: #e54c45;
+  outline: 0; }
+
+/* line 432, advice/static/advice/scss/nilo.scss */
+.nilo-btn:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #dd4a43;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 442, advice/static/advice/scss/nilo.scss */
+.nilo-button-border {
+  color: black;
+  font-weight: normal;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #f76054;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 454, advice/static/advice/scss/nilo.scss */
+.nilo-button-border:hover,
+.nilo-button-border:focus {
+  color: white;
+  background-color: #dd4a43;
+  border: 1px solid;
+  border-color: #dd4a43;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 466, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted {
+  color: #bcbec0;
+  font-weight: normal;
+  background-color: transparent;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 476, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted:hover {
+  color: #dd4a43;
+  background-color: transparent;
+  font-weight: normal;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 486, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn {
+  width: 1.5em;
+  height: 1.5em;
+  position: relative; }
+
+/* line 492, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn:before,
+.nilo-button-muted.close-btn:after {
+  position: absolute;
+  top: 0%;
+  /* right: 0; */
+  /* bottom: 0; */
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  content: "";
+  display: block;
+  background-size: 70% !important;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  background-position: center !important; }
+
+/* line 513, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn:before {
+  background: url("/static/advice/assets/close_popup_normal.svg") no-repeat;
+  opacity: 1; }
+
+/* line 518, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn:after {
+  background: url("/static/advice/assets/close_popup_hover.svg") no-repeat;
+  opacity: 0; }
+
+/* line 523, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn:hover:before,
+.nilo-button-muted.close-btn.active:before {
+  opacity: 0; }
+
+/* line 528, advice/static/advice/scss/nilo.scss */
+.nilo-button-muted.close-btn:hover:after,
+.nilo-button-muted.close-btn.active:after {
+  opacity: 1; }
+
+/* line 533, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method {
+  width: 49.5%;
+  color: #b3b3b3;
+  min-height: 70px;
+  font-weight: normal;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: #b3b3b3;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100%;
+  line-height: 1em;
+  position: relative; }
+
+/* line 553, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.paypal:before,
+.nilo-button-pay-method.paypal:after,
+.nilo-button-pay-method.carta:before,
+.nilo-button-pay-method.carta:after {
+  position: absolute;
+  top: 0%;
+  /* right: 0; */
+  /* bottom: 0; */
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  content: "";
+  display: block;
+  background-size: 60% !important;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  background-position: center !important; }
+
+/* line 576, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method:hover,
+.nilo-button-pay-method:focus,
+.nilo-button-pay-method.active {
+  color: #f76054;
+  border-color: #f76054;
+  background-color: transparent; }
+
+/* line 584, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.paypal:before {
+  background: url("/static/advice/assets/paypal_logo_grigio.svg") no-repeat;
+  opacity: 1; }
+
+/* line 589, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.paypal:after {
+  background: url("/static/advice/assets/paypal_logo_arancio.svg") no-repeat;
+  opacity: 0; }
+
+/* line 594, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.paypal:hover:before,
+.nilo-button-pay-method.paypal.active:before {
+  opacity: 0; }
+
+/* line 599, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.paypal:hover:after,
+.nilo-button-pay-method.paypal.active:after {
+  opacity: 1; }
+
+/* line 604, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.carta:before {
+  background: url("/static/advice/assets/logo_card_off.svg") no-repeat;
+  opacity: 1; }
+
+/* line 609, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.carta:after {
+  background: url("/static/advice/assets/logo_card_on.svg") no-repeat;
+  opacity: 0; }
+
+/* line 614, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.carta:hover:before,
+.nilo-button-pay-method.carta.active:before {
+  opacity: 0; }
+
+/* line 619, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.carta:hover:after,
+.nilo-button-pay-method.carta.active:after {
+  opacity: 1; }
+
+/* line 624, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method > img {
+  width: 90%; }
+
+/* line 628, advice/static/advice/scss/nilo.scss */
+.nilo-button-pay-method.margin-right {
+  margin-right: 1%; }
+
+/* line 632, advice/static/advice/scss/nilo.scss */
+footer {
+  background-color: #f2f2f2;
+  margin-bottom: 0;
+  padding: 40px; }
+
+/* line 639, advice/static/advice/scss/nilo.scss */
+.nilo-deck {
+  display: flex;
+  width: 100%; }
+
+/* line 644, advice/static/advice/scss/nilo.scss */
+table.nilo-table {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%; }
+
+/* line 650, advice/static/advice/scss/nilo.scss */
+table.nilo-table-faq {
+  width: 100%;
+  margin-bottom: 5%; }
+
+/* line 655, advice/static/advice/scss/nilo.scss */
+table.nilo-table td,
+table.nilo-table th {
+  background-color: #f2f2f2;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 0%;
+  padding-bottom: 0%; }
+
+/* line 664, advice/static/advice/scss/nilo.scss */
+table.nilo-table.transparent td,
+table.nilo-table.transparent th {
+  background-color: transparent;
+  padding-left: 0%;
+  padding-right: 0%; }
+
+/* line 671, advice/static/advice/scss/nilo.scss */
+table.nilo-table th {
+  padding-top: 2%; }
+
+/* line 675, advice/static/advice/scss/nilo.scss */
+table.nilo-table td {
+  /* padding-bottom: 2%; */
+  /* border-bottom: 15px solid $color-gray; */ }
+
+/* line 680, advice/static/advice/scss/nilo.scss */
+table.nilo-table.transparent td {
+  padding-bottom: 2%;
+  border-bottom: 15px solid transparent; }
+
+/* line 685, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-gains > td {
+  /* Per evitare che rimane lo spazio quando viene effettuato lo slide */
+  padding-bottom: 0%; }
+
+/* line 690, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-gains > td > div.wrapper {
+  display: none;
+  padding-bottom: 1em; }
+
+/* line 695, advice/static/advice/scss/nilo.scss */
+.nilo-border-red > td,
+.nilo-border-red > th {
+  border-color: #f76054; }
+
+/* line 699, advice/static/advice/scss/nilo.scss */
+.nilo-border-white > td,
+.nilo-border-white > th {
+  border-color: white; }
+
+/* line 704, advice/static/advice/scss/nilo.scss */
+.nilo-col-left {
+  border-right-width: 15px;
+  border-right-style: solid; }
+
+/* line 709, advice/static/advice/scss/nilo.scss */
+.nilo-col-right {
+  border-left-width: 15px;
+  border-left-style: solid; }
+
+/* line 714, advice/static/advice/scss/nilo.scss */
+.nilo-col-center {
+  border-right-width: 15px;
+  border-left-width: 15px;
+  border-right-style: solid;
+  border-left-style: solid; }
+
+/* line 721, advice/static/advice/scss/nilo.scss */
+table.nilo-table.top {
+  margin-top: 20%;
+  margin-bottom: 15%; }
+
+/* line 726, advice/static/advice/scss/nilo.scss */
+table.nilo-table.bottom {
+  margin-top: 15%;
+  margin-bottom: 20%; }
+
+/* line 731, advice/static/advice/scss/nilo.scss */
+td.nilo-table-collapse-btn {
+  cursor: pointer; }
+
+/* line 735, advice/static/advice/scss/nilo.scss */
+td.nilo-table-collapse-btn > div {
+  display: flex;
+  align-items: center; }
+
+/* line 740, advice/static/advice/scss/nilo.scss */
+td.nilo-table-collapse-btn img {
+  height: 0.8em;
+  float: right;
+  margin-top: 0.4em;
+  margin-right: 0.5em;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; }
+
+/* line 749, advice/static/advice/scss/nilo.scss */
+td.nilo-table-collapse-btn img.activated {
+  animation-name: rotate-90-clockwise; }
+
+/* line 753, advice/static/advice/scss/nilo.scss */
+td.nilo-table-collapse-btn img.deactivated {
+  animation-name: rotate-90-counterclockwise; }
+
+@keyframes rotate-90-clockwise {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(90deg); } }
+
+@keyframes rotate-90-counterclockwise {
+  0% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+/* line 775, advice/static/advice/scss/nilo.scss */
+.nilo-shrink {
+  margin-top: 0% !important;
+  margin-bottom: 0% !important;
+  padding-top: 0% !important;
+  padding-bottom: 0% !important; }
+
+/* line 782, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-separator td {
+  padding-bottom: 0%;
+  padding-top: 0%;
+  border-bottom: 0px;
+  border-top: 0px; }
+
+/* line 789, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-title > th {
+  /* width: 33%; */
+  /* margin-bottom: 2.5%;
+    margin-top: 2.5%; */
+  /* padding: 5%; */
+  padding-top: 4%;
+  padding-bottom: 4%;
+  font-size: 26px;
+  text-align: center; }
+
+/* line 800, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-body > td {
+  padding-bottom: 7%; }
+
+/* line 804, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-bold > td {
+  padding-top: 7%;
+  padding-bottom: 7%; }
+
+/* line 809, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-btn > td {
+  padding-bottom: 4%; }
+
+/* line 813, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-card-title th {
+  padding-bottom: 2.5%;
+  font-size: 22px;
+  font-weight: normal;
+  padding-bottom: 1em;
+  line-height: 1.4em; }
+
+/* line 821, advice/static/advice/scss/nilo.scss */
+table.nilo-table tbody {
+  font-size: 18px; }
+
+/* line 825, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-trio > th {
+  width: 33%; }
+
+/* line 829, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-body > td > img {
+  width: 100%;
+  margin-bottom: -10%;
+  margin-top: -10%; }
+
+/* line 835, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-images > td > img {
+  width: 100%; }
+
+/* line 839, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-duo > th {
+  width: 50%; }
+
+/* line 843, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-price > td {
+  font-size: 64px;
+  text-align: center;
+  font-weight: bold; }
+
+/* line 849, advice/static/advice/scss/nilo.scss */
+.nilo-currency {
+  font-size: 24px !important;
+  font-weight: normal; }
+
+/* line 854, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-muted > td {
+  color: #bcbec0;
+  font-size: 14px; }
+
+/* line 859, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-bold > td {
+  font-weight: bold;
+  font-size: 18px; }
+
+/* line 864, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-btn > td {
+  margin-bottom: 100px; }
+
+/* line 868, advice/static/advice/scss/nilo.scss */
+.nilo-mobile {
+  display: block; }
+
+/* line 872, advice/static/advice/scss/nilo.scss */
+.nilo-desktop {
+  display: none; }
+
+/* line 876, advice/static/advice/scss/nilo.scss */
+a.nilo-email {
+  color: #f76054;
+  text-decoration: none; }
+
+/* line 881, advice/static/advice/scss/nilo.scss */
+.nilo-popup {
+  background-color: white;
+  width: 100%;
+  height: 85%;
+  overflow: auto;
+  padding: 4%;
+  position: relative;
+  z-index: 9; }
+
+/* line 891, advice/static/advice/scss/nilo.scss */
+.nilo-popup-view {
+  display: none;
+  position: fixed;
+  z-index: 8; }
+
+/* line 897, advice/static/advice/scss/nilo.scss */
+.nilo-popup hr {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  width: 100%; }
+
+/* line 903, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title {
+  font-size: 22px;
+  font-weight: bold;
+  overflow: auto; }
+
+/* line 909, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title p {
+  margin: 0px;
+  float: left; }
+
+/* line 914, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title > div {
+  overflow: auto;
+  margin-bottom: 0.35em; }
+
+/* line 919, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title hr {
+  margin-top: 0px; }
+
+/* line 923, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title button {
+  font-size: 24px;
+  font-weight: bold;
+  float: right;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 937, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title button svg {
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 946, advice/static/advice/scss/nilo.scss */
+.nilo-popup-title button:hover svg {
+  fill: white;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 954, advice/static/advice/scss/nilo.scss */
+.nilo-popup-body {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  overflow: auto; }
+
+/* line 962, advice/static/advice/scss/nilo.scss */
+.nilo-popup-body > p {
+  font-size: 16px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0em; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* line 971, advice/static/advice/scss/nilo.scss */
+.nilo-popup-body::-webkit-scrollbar {
+  display: none; }
+
+/* Hide scrollbar for IE and Edge */
+/* line 977, advice/static/advice/scss/nilo.scss */
+.nilo-popup-body {
+  -ms-overflow-style: none; }
+
+/* line 981, advice/static/advice/scss/nilo.scss */
+.nilo-form {
+  width: 100%;
+  padding-top: 2em;
+  overflow: auto; }
+  /* line 986, advice/static/advice/scss/nilo.scss */
+  .nilo-form > input {
+    width: 100%;
+    font-size: 22px;
+    padding-left: 0.3em;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    border: 2px solid #b3b3b3;
+    border-radius: 0px;
+    -webkit-appearance: none; }
+    /* line 995, advice/static/advice/scss/nilo.scss */
+    .nilo-form > input.error {
+      border: 2px solid #f76054; }
+    /* line 998, advice/static/advice/scss/nilo.scss */
+    .nilo-form > input:focus {
+      border: 2px solid #e54c45;
+      outline: 0; }
+    /* line 1002, advice/static/advice/scss/nilo.scss */
+    .nilo-form > input::-webkit-input-placeholder, .nilo-form > input:-ms-input-placeholder, .nilo-form > input::placeholder {
+      color: #e6e6e6; }
+
+/* line 1010, advice/static/advice/scss/nilo.scss */
+ul.nilo-list {
+  list-style: none;
+  color: #bcbec0; }
+  /* line 1013, advice/static/advice/scss/nilo.scss */
+  ul.nilo-list li {
+    margin-top: 1em; }
+    /* line 1015, advice/static/advice/scss/nilo.scss */
+    ul.nilo-list li::before {
+      content: "\2022";
+      color: #f76054;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em; }
+
+/* line 1026, advice/static/advice/scss/nilo.scss */
+.paypal-section,
+.card-section,
+.bonifico-section {
+  display: none; }
+
+/* line 1032, advice/static/advice/scss/nilo.scss */
+.paypal-section.active,
+.card-section.active,
+.bonifico-section.active {
+  display: contents; }
+
+/* line 1038, advice/static/advice/scss/nilo.scss */
+.nilo-popup-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; }
+
+/* line 1046, advice/static/advice/scss/nilo.scss */
+.nilo-popup-footer button {
+  width: 100%;
+  font-size: 16px;
+  float: right; }
+
+/* line 1052, advice/static/advice/scss/nilo.scss */
+.nilo-popup-footer button.margin-left {
+  margin-left: 1%; }
+
+/* line 1056, advice/static/advice/scss/nilo.scss */
+.nilo-popup-footer-buttons {
+  width: 100%; }
+
+/* line 1060, advice/static/advice/scss/nilo.scss */
+.nilo-test-size {
+  position: fixed;
+  width: 100%;
+  height: 1.5em;
+  left: 0%;
+  bottom: 0%;
+  text-align: right;
+  display: none;
+  opacity: 50%;
+  background-color: #ff0000;
+  padding-right: 1em;
+  font-weight: bold; }
+
+/* line 1074, advice/static/advice/scss/nilo.scss */
+#console {
+  height: auto; }
+
+/* line 1078, advice/static/advice/scss/nilo.scss */
+.nilo-test-up-1 {
+  bottom: 1.5em;
+  display: block; }
+
+/* line 1083, advice/static/advice/scss/nilo.scss */
+.nilo-test-height {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 10px;
+  background-color: yellow;
+  opacity: 0.5;
+  margin-top: 5px;
+  height: 5px;
+  z-index: 10; }
+
+/* line 1095, advice/static/advice/scss/nilo.scss */
+.nilo-card-1 {
+  width: 100%; }
+
+/* line 1099, advice/static/advice/scss/nilo.scss */
+.nilo-home-monkey {
+  position: absolute;
+  width: 40%;
+  max-width: 400px;
+  right: 1%;
+  bottom: 0%;
+  overflow: hidden;
+  display: none; }
+
+/* line 1109, advice/static/advice/scss/nilo.scss */
+.nilo-home-monkey img {
+  width: 100%;
+  margin-bottom: -13%; }
+
+/* line 1114, advice/static/advice/scss/nilo.scss */
+.nilo-popup-monkey {
+  display: none;
+  align-items: center; }
+
+/* line 1119, advice/static/advice/scss/nilo.scss */
+.nilo-popup-monkey img {
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%; }
+
+/* line 1125, advice/static/advice/scss/nilo.scss */
+.nilo-card-2 {
+  width: 100%; }
+
+/* line 1129, advice/static/advice/scss/nilo.scss */
+.nilo-dots {
+  margin-bottom: 0px; }
+
+/* line 1133, advice/static/advice/scss/nilo.scss */
+.nilo-dot {
+  height: 5px;
+  width: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block; }
+
+/* line 1143, advice/static/advice/scss/nilo.scss */
+.nilo-dot.active {
+  background-color: #f76054; }
+
+/* line 1147, advice/static/advice/scss/nilo.scss */
+.nilo-tabs {
+  width: 100%;
+  height: 100%; }
+
+/* line 1152, advice/static/advice/scss/nilo.scss */
+.nilo-tab {
+  display: none; }
+
+/* line 1156, advice/static/advice/scss/nilo.scss */
+.nilo-tab.active {
+  display: block; }
+
+/* line 1160, advice/static/advice/scss/nilo.scss */
+.nilo-big-thanks p {
+  font-size: 18px; }
+
+/* line 1164, advice/static/advice/scss/nilo.scss */
+.nilo-big-thanks {
+  font-size: 14px; }
+
+/* line 1168, advice/static/advice/scss/nilo.scss */
+.nilo-big-thanks div > img {
+  width: 2em;
+  margin-right: 3em;
+  margin-bottom: 1em; }
+
+/* line 1174, advice/static/advice/scss/nilo.scss */
+.nilo-flex-vertical {
+  display: flex;
+  flex-direction: column; }
+
+/* line 1179, advice/static/advice/scss/nilo.scss */
+.nilo-flex-vertical-center {
+  justify-content: center; }
+
+/* line 1183, advice/static/advice/scss/nilo.scss */
+.nilo-flex-horizontal {
+  display: flex;
+  flex-direction: row; }
+
+/* line 1188, advice/static/advice/scss/nilo.scss */
+.nilo-pill {
+  color: #b3b3b3;
+  font-weight: normal;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: #b3b3b3;
+  float: left;
+  margin-right: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.3em;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* line 1207, advice/static/advice/scss/nilo.scss */
+.nilo-pill.active,
+.nilo-pill:hover {
+  color: #f76054;
+  border-color: #f76054;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+
+/* .nilo-tabs .nilo-popup {
+    width: 100%;
+    box-sizing: border-box;
+} */
+/* line 1226, advice/static/advice/scss/nilo.scss */
+.nilo-pt-spacer {
+  padding-top: 3em; }
+
+/* line 1230, advice/static/advice/scss/nilo.scss */
+.nilo-pt-spacer-bottom {
+  padding-bottom: 3em; }
+
+/* line 1234, advice/static/advice/scss/nilo.scss */
+.nilo-checkout-info .nilo-checkout-price {
+  font-weight: bold;
+  font-size: 22px; }
+
+/* line 1239, advice/static/advice/scss/nilo.scss */
+.nilo-checkout-info .nilo-checkout-price-2 {
+  /* font-weight: bold; */
+  font-size: 16px; }
+
+/* line 1244, advice/static/advice/scss/nilo.scss */
+.nilo-checkout-info .nilo-muted {
+  color: #a3a3a3;
+  font-size: 12px;
+  margin-bottom: 1em; }
+
+/* line 1250, advice/static/advice/scss/nilo.scss */
+.nilo-vertical-spacer {
+  height: 3em; }
+
+/* line 1254, advice/static/advice/scss/nilo.scss */
+.nilo-flex-footer-order {
+  display: flex;
+  flex-direction: column; }
+
+/* line 1259, advice/static/advice/scss/nilo.scss */
+.nilo-pb-1 {
+  padding-bottom: 1em !important; }
+
+/* line 1263, advice/static/advice/scss/nilo.scss */
+.nilo-mtb {
+  margin-top: 0.7em;
+  margin-bottom: 0.7em; }
+
+/* line 1268, advice/static/advice/scss/nilo.scss */
+.nilo-error-msg {
+  color: #f76054;
+  display: none; }
+
+/* line 1273, advice/static/advice/scss/nilo.scss */
+a.nilo-mail {
+  color: #f76054;
+  text-decoration: none; }
+
+/* line 1278, advice/static/advice/scss/nilo.scss */
+a.nilo-policy {
+  color: inherit;
+  text-decoration: underline; }
+
+/* line 1283, advice/static/advice/scss/nilo.scss */
+.nilo-karla {
+  font-family: "Karla", sans-serif !important; }
+
+/* .no-scroll {
+    &, & body {
+        overflow: hidden;
+    }
+    em {
+        display: inline;
+    }
+} */
+/* .no-scroll {
+    overflow: hidden;
+} */
+/* line 1300, advice/static/advice/scss/nilo.scss */
+button.nilo-open-popup-button {
+  margin-bottom: 4.5%; }
+
+/* line 1304, advice/static/advice/scss/nilo.scss */
+table.nilo-table-faq td {
+  padding-top: 0%;
+  padding-bottom: 0%; }
+
+/* line 1309, advice/static/advice/scss/nilo.scss */
+tr.nilo-table-read-more > td {
+  padding-bottom: 1.5em; }
+
+/* line 1313, advice/static/advice/scss/nilo.scss */
+.nilo-logo-social {
+  opacity: 1;
+  cursor: pointer; }
+  /* line 1316, advice/static/advice/scss/nilo.scss */
+  .nilo-logo-social :hover {
+    opacity: 0.4; }
+
+/* line 1321, advice/static/advice/scss/nilo.scss */
+.nilo-project-desc {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; }
+
+/* line 1329, advice/static/advice/scss/nilo.scss */
+.slick-current .nilo-project-desc {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; }
+
+/* line 1337, advice/static/advice/scss/nilo.scss */
+.slide.slick-slide:focus {
+  outline: 0; }
+
+/* line 1341, advice/static/advice/scss/nilo.scss */
+.aspect-16-9 {
+  width: 100%;
+  padding-top: 56.25%; }
+
+/* line 1346, advice/static/advice/scss/nilo.scss */
+.nilo-scrolling-background {
+  background-size: 100% auto;
+  background-position-y: -3.6%;
+  background-repeat: no-repeat;
+  -webkit-transition: 2s ease-in-out;
+  -moz-transition: 2s ease-in-out;
+  -o-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  -webkit-box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75); }
+
+@keyframes scroll-down {
+  0% {
+    background-position-y: calc(0% - (100% - 6rem) * 0.039); }
+  10% {
+    background-position-y: 20%; }
+  20% {
+    background-position-y: 20%; }
+  30% {
+    background-position-y: 40%; }
+  40% {
+    background-position-y: 40%; }
+  50% {
+    background-position-y: 60%; }
+  60% {
+    background-position-y: 60%; }
+  70% {
+    background-position-y: 80%; }
+  80% {
+    background-position-y: 80%; }
+  90% {
+    background-position-y: 90%; }
+  100% {
+    background-position-y: 90%; } }
+
+@-webkit-keyframes scroll-down {
+  0% {
+    background-position-y: calc(0% - (100% - 6rem) * 0.039); }
+  10% {
+    background-position-y: 20%; }
+  20% {
+    background-position-y: 20%; }
+  30% {
+    background-position-y: 40%; }
+  40% {
+    background-position-y: 40%; }
+  50% {
+    background-position-y: 60%; }
+  60% {
+    background-position-y: 60%; }
+  70% {
+    background-position-y: 80%; }
+  80% {
+    background-position-y: 80%; }
+  90% {
+    background-position-y: 90%; }
+  100% {
+    background-position-y: 90%; } }
+
+@keyframes scroll-up {
+  0% {
+    background-position-y: calc(0% - (100% - 6rem) * 0.039); }
+  10% {
+    background-position-y: 20%; }
+  20% {
+    background-position-y: 20%; }
+  30% {
+    background-position-y: 40%; }
+  40% {
+    background-position-y: 40%; }
+  50% {
+    background-position-y: 60%; }
+  60% {
+    background-position-y: 60%; }
+  70% {
+    background-position-y: 80%; }
+  80% {
+    background-position-y: 80%; }
+  90% {
+    background-position-y: 90%; }
+  100% {
+    background-position-y: 90%; } }
+
+@-webkit-keyframes scroll-up {
+  0% {
+    background-position-y: calc(0% - (100% - 6rem) * 0.039); }
+  10% {
+    background-position-y: 20%; }
+  20% {
+    background-position-y: 20%; }
+  30% {
+    background-position-y: 40%; }
+  40% {
+    background-position-y: 40%; }
+  50% {
+    background-position-y: 60%; }
+  60% {
+    background-position-y: 60%; }
+  70% {
+    background-position-y: 80%; }
+  80% {
+    background-position-y: 80%; }
+  90% {
+    background-position-y: 90%; }
+  100% {
+    background-position-y: 90%; } }
+
+/* line 1515, advice/static/advice/scss/nilo.scss */
+.nilo-browser-bar {
+  position: absolute;
+  top: 0px;
+  z-index: 1; }

@@ -1,12 +1,23 @@
-
+{% load static %}
 {% block nav_bar %}
 <div class="nilo-nav">
     <div class="nilo-nav-item-logo">
         <a href="#homepage"><span>studio<strong>nilo</strong></span></a>
     </div>
-    <div class="nilo-nav-item">
-        <div id="nilo-contactus">
-            contattaci
+    <div class="nilo-nav-item mt-2rem">
+        <div class="d-flex justify-content-left">
+            <div class="nilo-logo-social w-1-4rem mr-1">
+                <img src="{% static 'advice/assets/logo_fb.svg' %}">
+            </div>
+            <div class="nilo-logo-social w-1-4rem mx-1">
+                <img src="{% static 'advice/assets/logo_ig.svg' %}">
+            </div>
+            <div class="nilo-logo-social w-1-4rem ml-1">
+                <img src="{% static 'advice/assets/logo_yt.svg' %}">
+            </div>
+        </div>
+        <div class="mt-2 nilo-fake-link" data-href="#">
+            consulenze
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
                 <title>freccina_contact_piani_su_misura</title>
                 <g id="Livello_2" data-name="Livello 2">
@@ -17,8 +28,8 @@
                 </g>
             </svg>
         </div>
-        <div id="nilo-tailored">
-            piani su misura
+        <div class="mt-2" data-toggle="modal" data-target="#modal-contactus">
+            contattaci
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
                 <title>freccina_contact_piani_su_misura</title>
                 <g id="Livello_2" data-name="Livello 2">
