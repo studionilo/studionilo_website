@@ -4,8 +4,8 @@
 {% block modal_title %}Check-out{% endblock modal_title %}
 
 {% block modal_body %}
-<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
-    <div class="col pr-2">
+<div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
+    <div class="col pr-2 pb-4">
         <p>Seleziona il metodo di pagamento:</p>
         <div>
             <div class="d-flex flex-row">
@@ -45,13 +45,13 @@
     <input type="hidden" name="custom" value="This value will be override">
     <input type="image" name="submit" id="nilo-paypal-submit">
 </form>
-<ul class="nav" role="tablist">
-    <li class="nav-item">
-        <a class="nilo-btn ml-2 nilo-button-muted nilo-autoremove-active-show" data-toggle="tab"
+<ul class="nav justify-content-end w-100" role="tablist">
+    <li class="nav-item nilo-modal-footer-button">
+        <a class="nilo-btn nilo-button-muted nilo-autoremove-active-show" data-toggle="tab"
             href="#modal_tab_videocall_2" role="tab" id="nilo-videocall-back">Indietro</a>
     </li>
-    <li class="nav-item">
-        <button type="button" class="nilo-popup-footer-button popup_pay_2" onclick="checkout_paypal('videocall')">Ottieni
+    <li class="nav-item nilo-modal-footer-button">
+        <button type="button" class="" onclick="checkout_paypal('videocall')">Ottieni
             colloquio</button>
     </li>
 </ul>

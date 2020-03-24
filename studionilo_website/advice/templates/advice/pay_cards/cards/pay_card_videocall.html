@@ -1,28 +1,27 @@
 {% extends 'advice/pay_cards/cards/pay_card_base.html' %}
 {% load static %}
-{% block card_title %}Video-report gratuito{% endblock card_title %}
+{% block card_title %}Video-colloquio{% endblock card_title %}
 
-
-{% block card_class %}highlighted{% endblock card_class %}
-    
 
 {% block card_body %}
 <div class="d-flex justify-content-center">
-    <img class="w-75" src="{% static 'advice/illustrazioni/card_consulenza_1.png' %}" alt="Video-report">
+    <img class="w-75" src="{% static 'advice/illustrazioni/card_consulenza_2.png' %}" alt="Video-report">
 </div>
 <div>
-<h1 class="font-weight-bold font-size-4-5rem mb-n1">0<span class="nilo-currency">€</span></h1>
-<p class="nilo-text-small-muted mb-4">
-    Nessun costo e nessun impegno. <br>
-    Scopri nelle nostre FAQ come è possibile.
-</p>
+    <h1 class="font-weight-bold font-size-4-5rem mb-n1">79<span class="nilo-currency">€</span></h1>
+    <p class="nilo-text-small-muted mb-4">
+        Pagamento unico per il singolo servizio. <br>
+        Non ripetuto nel tempo.
+    </p>
 </div>
 <div>
     <ul class="nilo-gains-list mt-3 mb-2">
         <li>Analisi generale della tua presenza digitale</li>
         <li>Diagnostica errori gravi</li>
         <li>Rilevazione punti di forza</li>
-        <li>Proposte di miglioramento</li>
+        <li>Dialogo conoscitivo</li>
+        <li>Test della strategia comunicativa attraverso un percorso a domande</li>
+        <li>Proposta di soluzioni e di nuove opportunità.</li>
     </ul>
 </div>
 {% endblock card_body %}
@@ -30,7 +29,7 @@
 {% block card_footer %}
 
 <div class="nilo-arrow-button py-3 mx-4 font-weight-bold">
-    Cos’è un video-report
+    Cos’è un video-colloquio
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
         <title>freccina_contact_piani_su_misura</title>
         <g id="Livello_2" data-name="Livello 2">
@@ -43,5 +42,5 @@
 </div>
 
 <a class="text-center w-100"></a>
-<button class="w-100" data-toggle="modal" data-target="#modal-videoreport" type="button">Ottieni video-report gratuito</button>
+<button class="w-100" data-toggle="modal" data-target="#modal-videocall" type="button">Scopri di più</button>
 {% endblock card_footer %}

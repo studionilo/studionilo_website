@@ -4,9 +4,9 @@
 {% block modal_title %}Raccontaci di voi{% endblock modal_title %}
 
 {% block modal_body %}
-<div class="row row-cols-1 row-cols-md-2 h-100 mr-0">
+<div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
     <div class="col pr-2">
-        <div class="">
+        <div class="pb-4">
             Presentandoti, ci permetterai di ispezionare accuratamente i principali canali con i
             quali ti comunichi su internet.
             {% include 'advice/popup/components/modal_form.html' with videocall='true' %}
@@ -20,12 +20,12 @@
 {% endblock modal_body %}
 
 {% block modal_footer %}
-<ul class="nav" role="tablist">
-    <li class="nav-item">
-        <a class="nilo-btn ml-2 nilo-button-muted nilo-autoremove-active-show" data-toggle="tab" href="#modal_tab_videocall_1" role="tab">Indietro</a>
+<ul class="nav justify-content-end w-100" role="tablist">
+    <li class="nav-item nilo-modal-footer-button">
+        <a class="nilo-btn nilo-button-muted nilo-autoremove-active-show" data-toggle="tab" href="#modal_tab_videocall_1" role="tab">Indietro</a>
     </li>
-    <li class="nav-item">
-        <a class="nilo-btn ml-2 nilo-autoremove-active-show nilo-form-validation" data-toggle="tab" href="#modal_tab_videocall_3" role="tab" data-nilo-stay="#nilo-videocall-back">Invia modulo</a>
+    <li class="nav-item nilo-modal-footer-button">
+        <a class="nilo-btn nilo-autoremove-active-show nilo-form-validation" data-toggle="tab" href="#modal_tab_videocall_3" role="tab" data-nilo-stay="#nilo-videocall-back">Invia modulo</a>
     </li>
 </ul>
 {% endblock modal_footer %}

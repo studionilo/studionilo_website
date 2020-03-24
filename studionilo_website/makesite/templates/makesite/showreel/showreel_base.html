@@ -1,8 +1,12 @@
-<div class="nilo-jumbo-container min-vh-100">
-    <div class="nilo-container w-100">
+<div class="nilo-jumbo-container min-vh-100-or-4rem">
+    <div class="nilo-container w-100 mb-n2">
+        
+        {% comment %}
         <h3>
         {% block showreel_title %}{% endblock showreel_title %}
         </h3>
+        {% endcomment %}
+            
         <video title="showreel" class="outline-transparent db w-100"
             poster="" playsinline="" preload="auto" controls="" src="{% block showreel_url %}{% endblock showreel_url %}"></video>
     </div>

@@ -1,3 +1,4 @@
+@import "../bootstrap/bootstrap";
 $color-red: #f76054;
 $color-red-hover: #dd4a43;
 $color-gray: #f2f2f2;
@@ -59,11 +60,14 @@ body {
   margin-right: 0.44em;
 }
 
-.nilo-font-size-1-8rem {
-  font-size: 1.8rem;
+.nilo-font-size-1-3rem {
+  font-size: 1.3rem;
 }
 .nilo-font-size-1-4rem {
   font-size: 1.4rem;
+}
+.nilo-font-size-1-8rem {
+  font-size: 1.8rem;
 }
 .nilo-font-size-1rem {
   font-size: 1rem;
@@ -80,7 +84,6 @@ body {
   padding-top: 2.3rem !important;
 }
 
-
 .pr-10 {
   padding-right: 6rem !important;
 }
@@ -93,6 +96,13 @@ body {
 .px-6 {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
+}
+
+@include media-breakpoint-up(lg){
+  .px-lg-6 {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
 }
 
 .p-2-5rem {
@@ -115,8 +125,21 @@ body {
   height: 80vh;
 }
 
-.min-vh-100 {
-  min-height: 100vh;
+.vh-96 {
+  height: 96vh;
+}
+
+.min-vh-100-or-4rem {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+@include media-breakpoint-up(md) {
+  .min-vh-100-or-4rem {
+    padding-top: unset;
+    padding-bottom: unset;
+    min-height: 100vh;
+  }
 }
 
 .w-1-4rem {
@@ -127,8 +150,20 @@ body {
   width: calc(100% - 6rem);
 }
 
+@include media-breakpoint-up(md) {
+  .w-md-auto  {
+    width: auto!important;
+  }
+}
+
 .mt-2rem {
   margin-top: 2rem !important;
+}
+
+@include media-breakpoint-up(xl) {
+  .mt-xl-2rem {
+    margin-top: 2rem !important;
+  }
 }
 
 .my-6rem {
@@ -136,8 +171,22 @@ body {
   margin-bottom: 6rem !important;
 }
 
+.my-6rem {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
+.py-4rem {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
 .max-w-760px {
   max-width: 760px !important;
+}
+
+.font-size-4-5rem {
+  font-size: 4.5rem;
 }
 
 .nilo-container-width {
@@ -165,21 +214,36 @@ body {
 }
 
 .text-blue {
-  color: $color-deep-blue
+  color: $color-deep-blue;
 }
 
 .nilo-nav {
   width: 100%;
   position: fixed;
   list-style: none;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 5%;
   background-color: $color-blue;
   display: flex;
   flex-direction: column;
   z-index: 7;
+}
+
+@include media-breakpoint-up(md) {
+  .nilo-nav {
+    padding: 2%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .nilo-nav {
+    position: fixed;
+    background-color: transparent;
+    flex-direction: column;
+    width: 20%;
+    align-items: start;
+  }
 }
 
 .nilo-nav a {
@@ -201,37 +265,46 @@ a:focus {
   font-size: 18px;
   display: flex;
   margin-top: 0.5em;
+  &.flex-options {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
 
-.nilo-nav-item > div {
+.nilo-arrow-button {
   cursor: pointer;
-  margin-right: 2em;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  svg {
+    display: none;
+    fill: black;
+    opacity: 0;
+    height: 0.5em;
+  }
 }
 
-.nilo-nav-item > div:hover {
-  color: black;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-.nilo-nav-item > div:hover svg {
-  color: black;
-  opacity: 1;
-  animation-name: fade-in-right;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.nilo-nav-item > div svg {
-  fill: black;
-  opacity: 0;
-  height: 0.5em;
+@include media-breakpoint-up(xl) {
+  .nilo-arrow-button {
+    svg {
+      display: inline-block;
+    }
+    &:hover {
+      color: black;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      svg {
+        color: black;
+        opacity: 1;
+        animation-name: fade-in-right;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
 }
 
 .nilo-more-services {
@@ -259,14 +332,6 @@ a:focus {
     opacity: 100%;
   }
 }
-
-/* .nilo-nav-item:hover svg {
-    opacity: 100%;
-    fill: inherit;
-    animation-name: fade-in-right;
-    animation-duration: 0.6s;
-    animation-fill-mode: forwards;
-} */
 
 .nilo-jumbo-container {
   width: 100%;
@@ -342,6 +407,9 @@ a:focus {
     padding: 0px;
     background-color: transparent;
   }
+  &.highlighted {
+    border: 3px solid $color-red;
+  }
 }
 
 .nilo-card-title {
@@ -353,6 +421,19 @@ a:focus {
   margin-top: 2.5%;
   margin-bottom: 2.5%;
   font-size: 18px;
+}
+
+.nilo-card-bottom-margin-sm > .card {
+  margin-bottom: 6vw;
+  &:last-child {
+    margin-bottom: unset;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .nilo-card-bottom-margin-sm > .card {
+    margin-bottom: unset;
+  }
 }
 
 .nilo-dots {
@@ -407,12 +488,9 @@ ul.nilo-gains-list > li::before {
   color: #bcbec0;
 }
 
-.nilo-btn {
-  display: inline-block;
-}
-
 button,
 .nilo-btn {
+  display: inline-block;
   width: 100%;
   font-weight: bold;
   font-size: 18px;
@@ -422,6 +500,7 @@ button,
   padding-bottom: 0.5em;
   border: none;
   color: white;
+  text-align: center;
   background-color: $color-red;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -855,11 +934,6 @@ tr.nilo-table-price > td {
   font-weight: bold;
 }
 
-.nilo-currency {
-  font-size: 24px !important;
-  font-weight: normal;
-}
-
 tr.nilo-table-muted > td {
   color: #bcbec0;
   font-size: 14px;
@@ -1016,6 +1090,12 @@ a.nilo-email {
   }
 }
 
+.nilo-text-small-muted {
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+  color: #bcbec0;
+}
+
 ul.nilo-list {
   list-style: none;
   color: #bcbec0;
@@ -1062,8 +1142,24 @@ ul.nilo-list {
   margin-left: 1%;
 }
 
-.nilo-popup-footer-buttons {
+.nilo-modal-footer-button {
   width: 100%;
+  margin-bottom: 0.25rem;
+  &:last-child {
+    margin-bottom: 0rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .nilo-modal-footer-button {
+    width: 33%;
+    margin-bottom: 0rem;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .nilo-modal-footer-button {
+    width: 25%;
+  }
 }
 
 .nilo-test-size {
@@ -1113,22 +1209,32 @@ ul.nilo-list {
   bottom: 0%;
   overflow: hidden;
   display: none;
+  img {
+    width: 100%;
+    margin-bottom: -13%;
+  }
 }
 
-.nilo-home-monkey img {
-  width: 100%;
-  margin-bottom: -13%;
+@include media-breakpoint-up(md) {
+  .nilo-home-monkey {
+    display: block;
+  }
 }
 
 .nilo-popup-monkey {
   display: none;
   align-items: center;
+  img {
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
 
-.nilo-popup-monkey img {
-  width: 100%;
-  padding-left: 15%;
-  padding-right: 15%;
+@include media-breakpoint-up(lg) {
+  .nilo-popup-monkey {
+    display: flex;
+  }
 }
 
 .nilo-card-2 {

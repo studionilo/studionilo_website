@@ -4,14 +4,6 @@
     .nilo-nav-item {
         display: block;
     }
-    .nilo-nav {
-        position: fixed;
-        background-color: transparent;
-        padding-left: 2%;
-        padding-right: 2%;
-        flex-direction: column;
-        width: 15%;
-    }
     .nilo-lead-paragraph {
         font-size: 40px;
     }
@@ -44,9 +36,6 @@
     .nilo-test-size {
         background-color: #ff5100;
     }
-    .nilo-popup-monkey {
-        display: flex;
-    }
     .nilo-card-2 {
         width: 50%;
     }
@@ -55,9 +44,5 @@
     }
     .nilo-nav-item {
         margin-top: 0.5em;
-    }
-    .nilo-nav-item>div {
-        margin-right: 0em;
-        margin-left: 0em;
     }
 }
