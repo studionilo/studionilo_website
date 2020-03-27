@@ -10,9 +10,13 @@
         <p class="nilo-lead-paragraph">
             {% block lead_paragraph %}{% endblock lead_paragraph %}
         </p>
+        
+        {% block hero_btn %}
         <button class="nilo-more-services" onclick="window.location.href = '#payment';" type="button">
             {% block btn_text %}{% endblock btn_text %}    
         </button>
+        {% endblock hero_btn %}
+            
     </div>
     <div class="nilo-scroll-down-arrow">
         <a href="#presenza_digitale">
