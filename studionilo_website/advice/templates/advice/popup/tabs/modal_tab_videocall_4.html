@@ -3,21 +3,27 @@
 
 {% block modal_body %}
 <div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
-    <div class="col pr-2 d-flex align-items-center">
+    <div class="col pr-2 d-flex flex-column justify-content-center">
         <h4>
             <strong>Fantastico!</strong><br>
-            Informazioni inviate con successo.
-            Non vediamo l’ora di parlare con te
-            della tua strategia comunicativa.
-            Ti ricontatteremo presto per fissare
-            il video-colloquio conoscitivo.
-            Parleremo insieme delle modalità
-            di pagamento solo se deciderai
-            di iscriverti al piano.
-            A presto!<br>
+            Pagamento avvenuto con successo.
+            Non vediamo l’ora di parlare insieme
+            della tua presenza digitale.
+            Ti ricontatteremo presto per
+            fissare insieme la data del nostro
+            video-colloquio.<br>
             <br>
             Il team di Studionilo
         </h4>
+        <div class="nilo-gray-bg p-3">
+            <img class="w-2rem mr-2" src="{% static 'advice/assets/loghetto_videocall_skype.svg' %}">
+            <img class="w-2rem mx-2" src="{% static 'advice/assets/loghetto_videocall_hangout.svg' %}">
+            <img class="w-2rem ml-2" src="{% static 'advice/assets/loghetto_videocall_slack.svg' %}"><br>
+            Nota: per le nostre videochiamate ci affidiamo a <u><strong>Skype</strong></u>,
+            <u><strong>Google Hangout</strong></u> e <u><strong>Slack</strong></u>. Assicurati di avere
+            accesso ad almeno
+            uno di essi prima della data del nostro video-colloquio.
+        </div>
     </div>
     <div class="col pl-2 nilo-popup-monkey">
         <img src="{% static 'advice/illustrazioni/fantastico.png' %}" alt="Fantastico!">
