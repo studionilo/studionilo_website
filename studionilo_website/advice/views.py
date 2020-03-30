@@ -50,14 +50,14 @@ def awesome(request):
                 payment.paymentIntent = PaymentIntent.objects.first()
             payment.save()
             
-            if payIntent.plan == PaymentIntent.VIDEOREPORT:
-                context={'awesome':'videoreport'}
-            elif payIntent.plan == PaymentIntent.VIDEOCOLLOQUIO:
+            context={}
+            if payIntent.plan == PaymentIntent.VIDEOCOLLOQUIO:
                 context={'awesome':'videocall'}
 
             NiloEmail(payment.paymentIntent).send()
             return render(request, 'advice/advice.html', context=context)
         except:
+            raise
             return redirect('advice_reject')
     else:
         return redirect('advice_home')
