@@ -1,0 +1,23 @@
+{% extends 'advice/pay_cards/cards/pay_card_base.html' %}
+{% load static %}
+
+{% block card_header_class %}nilo-same-h-01{% endblock card_header_class %}
+
+{% block card_title %}Progettazione web + sviluppo web{% endblock card_title %}
+    
+
+{% block card_body %}
+<div class="d-flex justify-content-center align-items-center">
+    <img class="w-100" src="{% static 'advice/illustrazioni/6.png' %}" alt="Video-report">
+</div>
+<div>
+    Realizzeremo il tuo sito internet attraverso un processo collaudato, mirato sia all’efficacia comunicativa che a quella commerciale.
+</div>
+{% endblock card_body %}
+
+{% block card_footer_class %}border-0{% endblock card_footer_class %}
+
+{% block card_footer %}
+<a class="text-center w-100"></a>
+<button class="w-100 nilo-yellow-btn" data-toggle="modal" data-target="#modal-website" type="button">Richiedi un preventivo</button>
+{% endblock card_footer %}

@@ -1,0 +1,18 @@
+{% extends 'advice/popup/components/modal_base.html' %}
+{% load static %}
+
+{% block modal_id %}modal-managing{% endblock modal_id %}
+
+{% block modal_labelledby %}modal-managing{% endblock modal_labelledby %}
+
+
+{% block modal_content %}
+<div class="tab-content" id="modal_tab_managing">
+    <div class="tab-pane show active" id="modal_tab_managing_2" role="tabpanel">
+        {% include 'makesite/popup/tabs/modal_tab_managing_2.html' %}
+    </div>
+    <div class="tab-pane" id="modal_tab_managing_3" role="tabpanel">
+        {% include 'makesite/popup/tabs/modal_tab_managing_3.html' %}
+    </div>
+</div>
+{% endblock modal_content %}

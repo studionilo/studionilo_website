@@ -1,11 +1,8 @@
 {% extends 'advice/base.html' %}{% block body_contents %}
 <a id="homepage"></a>
 
-<!-- Popup -->
-{% include 'advice/popup/popup.html' %}
-
 <!-- NavBar -->
-{% include 'advice/nav_bar/nav_bar.html' %}
+{% include 'advice/nav_bar/nav_bar.html' with class='nilo-yellow-bg' link='consulenze' %}
 
 <!-- Splash screen -->
 {% include 'makesite/hero/hero.html' %}
@@ -26,7 +23,7 @@
 {% include 'makesite/step_by_step/step_by_step.html' %}
 
 <!-- Our services -->
-{% include 'makesite/ourservices/ourservices.html' %}
+{% include 'makesite/pay_cards/pay_cards.html' %}
 
 <!-- Goto advice -->
 {% include 'makesite/goto_advice/goto_advice.html' %}

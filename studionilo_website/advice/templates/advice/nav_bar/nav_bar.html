@@ -1,34 +1,56 @@
 {% load static %}
 {% block nav_bar %}
-<div class="nilo-nav">
+<div class="nilo-nav {% if class %} {{ class }} {% endif %}">
     <div class="nilo-nav-item-logo">
-        <a href="#homepage"><span>studio<strong>nilo</strong></span></a>
+        <a href="{% url 'makesite_home' %}"><span>studio<strong>nilo</strong></span></a>
     </div>
     <div class="nilo-nav-item flex-options mt-3 mt-md-0 mt-xl-2rem">
         <div class="d-flex justify-content-left">
-            <div class="nilo-logo-social w-1-4rem mr-1">
-                <img src="{% static 'advice/assets/logo_fb.svg' %}">
+            <div class="mr-1">
+                {% include 'advice/nav_bar/components/fb_logo.html' %}
             </div>
-            <div class="nilo-logo-social w-1-4rem mx-1">
-                <img src="{% static 'advice/assets/logo_ig.svg' %}">
+            <div class="mx-1">
+                {% include 'advice/nav_bar/components/ig_logo.html' %}
             </div>
-            <div class="nilo-logo-social w-1-4rem ml-1">
-                <img src="{% static 'advice/assets/logo_yt.svg' %}">
+            <div class="ml-1">
+                {% include 'advice/nav_bar/components/ld_logo.html' %}
             </div>
         </div>
-        <div class="nilo-arrow-button mt-xl-2 mr-xl-4 mr-md-4 mr-xl-0 nilo-fake-link" data-href="#">
-            consulenze
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
-                <title>freccina_contact_piani_su_misura</title>
-                <g id="Livello_2" data-name="Livello 2">
-                    <g id="Livello_2-2" data-name="Livello 2">
-                        <polygon
-                            points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
+
+        {% if link == 'consulenze' %}
+        <div class="mt-xl-2 mr-xl-4 mr-md-4 mr-xl-0">
+            <a class="nilo-arrow-button" href="{% url 'advice_home' %}">
+                consulenze
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
+                    <title>freccina_contact_piani_su_misura</title>
+                    <g id="Livello_2" data-name="Livello 2">
+                        <g id="Livello_2-2" data-name="Livello 2">
+                            <polygon
+                                points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
+                        </g>
                     </g>
-                </g>
-            </svg>
+                </svg>
+            </a>
         </div>
-        <div class="nilo-arrow-button mt-xl-2 mr-xl-4 mr-md-4 mr-xl-0" data-toggle="modal" data-target="#modal-contactus">
+        {% elif link == 'progettazione' %}
+        <div class="mt-xl-2 mr-xl-4 mr-md-4 mr-xl-0">
+            <a class="nilo-arrow-button" href="{% url 'makesite_home' %}">
+                progettazione
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
+                    <title>freccina_contact_piani_su_misura</title>
+                    <g id="Livello_2" data-name="Livello 2">
+                        <g id="Livello_2-2" data-name="Livello 2">
+                            <polygon
+                                points="6.702 0 6.19 0.549 8.495 2.691 0 2.691 0 3.441 8.496 3.441 6.19 5.584 6.702 6.134 10 3.067 6.702 0" />
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        {% endif %}
+
+        <div class="nilo-arrow-button mt-xl-2 mr-xl-4 mr-md-4 mr-xl-0" data-toggle="modal"
+            data-target="#modal-contactus">
             contattaci
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6.1338">
                 <title>freccina_contact_piani_su_misura</title>
@@ -42,5 +64,6 @@
         </div>
     </div>
 </div>
+{% include 'advice/popup/modals/modal_contactus.html' %}
+{% include 'advice/popup/modals/modal_tailored.html' %}
 {% endblock nav_bar %}
-    

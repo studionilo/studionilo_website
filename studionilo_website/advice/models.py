@@ -4,10 +4,12 @@ class PaymentIntent(models.Model):
     VIDEOREPORT = 'Video-report'
     VIDEOCOLLOQUIO = 'Video-colloquio'
     MEDIAMANAGER = 'Social media manager'
+    WEBSITE = 'Website'
     UNKNOWN = 'Unknown'
     PAYMENTS = (
         (VIDEOREPORT, 'Video-report'),
         (VIDEOCOLLOQUIO, 'Video-colloquio'),
+        (WEBSITE, 'Website'),
         (MEDIAMANAGER, 'Social media manager'),
         (UNKNOWN, 'Unknown'),
     )

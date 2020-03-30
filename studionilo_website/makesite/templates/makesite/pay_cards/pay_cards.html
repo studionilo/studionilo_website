@@ -1,0 +1,13 @@
+{% block pay_cards %}
+<div class="nilo-jumbo-container min-vh-100-or-4rem nilo-red-bg">
+    <div class="nilo-container max-w-760px overflow-x-hidden">
+        <a id="payment"></a>
+        <div class="card-deck my-6rem nilo-card-bottom-margin-sm">
+            {% include 'makesite/pay_cards/cards/pay_card_website.html' %}
+            {% include 'makesite/pay_cards/cards/pay_card_managing.html' %}
+        </div>
+    </div>
+</div>
+{% include 'makesite/popup/modals/modal_website.html' %}
+{% include 'makesite/popup/modals/modal_managing.html' %}
+{% endblock pay_cards %}

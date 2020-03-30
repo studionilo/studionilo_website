@@ -10,7 +10,7 @@
     <meta name="author" content="Studionilo">
     <link rel="icon" href="{% static 'advice/favicon-studionilo.ico' %}">
 
-    <title>Studionilo</title>
+    <title>Studio Nilo</title>
 
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
 
@@ -91,13 +91,10 @@
     <script src="{% static 'advice/js/nilo.js' %}"></script>
     <script src="{% static 'advice/js/scroll.js' %}"></script>
 
-    {% if awesome %}
-    <script>show_popup_tab('popup_pay_tab_awesome', '{{ awesome }}');</script>
-    {% endif %}
-
-    {% if reject %}
-    <script>show_popup_tab('popup_pay_tab_reject');</script>
-    {% endif %}
+    
+    {% block script %}
+    {% endblock script %}
+        
 </body>
 
 </html>

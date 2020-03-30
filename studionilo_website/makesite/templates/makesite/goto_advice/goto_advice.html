@@ -7,9 +7,15 @@ Curi un’attività che gestisce da sé la propria comunicazione?
 {% endblock goto_title %}
 
 {% block goto_body %}
-Offriamo servizi di consulenza veloce (ma decisiva)<br>per aiutarti a migliorare la tua presenza
+Offriamo servizi di consulenza veloce (ma decisiva) per aiutarti a migliorare la tua presenza
 digitale
 {% endblock goto_body %}
+
+
+{% block goto_link %}
+{% url 'advice_home' %}
+{% endblock goto_link %}
+    
 
 {% block goto_button %}
 Scopri i nostri piani di consulenza

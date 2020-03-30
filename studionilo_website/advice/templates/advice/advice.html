@@ -1,11 +1,8 @@
 {% extends 'advice/base.html' %}{% block body_contents %}
 <a id="homepage"></a>
 
-<!-- Popup -->
-{% include 'advice/popup/popup.html' %}
-
 <!-- NavBar -->
-{% include 'advice/nav_bar/nav_bar.html' %}
+{% include 'advice/nav_bar/nav_bar.html' with class='nilo-blue-bg' link='progettazione' %}
 
 <!-- Hero -->
 {% include 'advice/hero/hero.html' %}
@@ -29,4 +26,26 @@
 {% include 'advice/goto_makesite/goto_makesite.html' %}
 
 {% endblock body_contents %}
-    
+
+
+{% block script %}
+{% if awesome %}
+<script>
+var modal = '{{ awesome }}'
+if(modal == 'videocall'){
+    $('#modal-videocall').modal('show')
+    $('#nilo-videocall-next').tab('show')
+}
+</script>
+{% endif %}
+
+{% if reject %}
+<script>
+    var modal = '{{ reject }}'
+    if(modal == 'videocall'){
+        $('#modal-videocall').modal('show')
+        $('#nilo-videocall-fail').tab('show')
+    }
+</script>
+{% endif %}
+{% endblock script %}

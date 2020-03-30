@@ -1,11 +1,11 @@
-<div class="col p-2-5rem">
-    <div>
-        <img class="w-75 m-n5" src="{% block step_image %}{% endblock step_image %}">
+<div class="col p-0 mx-0 my-3 row">
+    <div class="col-3 col-md-12 d-flex justify-content-center justify-content-md-start align-items-center p-0 flex-shrink-1">
+        <img class="w-100 w-md-50" src="{% block step_image %}{% endblock step_image %}">
     </div>
-    <div>
-        {% block step_title %}{% endblock step_title %}
-    </div>
-    <div>
+    <div class="col-9 col-md-12 d-flex flex-column justify-content-center justify-content-md-start nilo-same-h-02">
+        <div class="font-weight-bold nilo-font-size-1-2rem">
+            {% block step_title %}{% endblock step_title %}
+        </div>
         <p>
             {% block step_body %}{% endblock step_body %}
         </p>

@@ -1,0 +1,26 @@
+<div class="slide">
+    <div class="px-5">
+        <div class="position-relative nilo-desktop-border">
+            <div class="w-100 border-black nilo-gray-bg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 799.4254 31.3098"><defs><style>.cls-1{fill:#f2f2f2;}.cls-2{fill:#fff;}</style></defs><title>dueRisorsa 1</title><g id="Livello_2" data-name="Livello 2"><g id="Livello_1-2" data-name="Livello 1"><rect class="cls-1" width="799.4254" height="31.3098"/><circle class="cls-2" cx="12.195" cy="15.7281" r="4.2669"/><circle class="cls-2" cx="29.2628" cy="15.7281" r="4.2669"/><circle class="cls-2" cx="46.3306" cy="15.7281" r="4.2669"/><rect class="cls-2" x="59.5021" y="9.3443" width="719.7335" height="12.7677" rx="6.3838" ry="6.3838"/></g></g></svg>
+            </div>
+            <div class="nilo-scoll-on-active nilo-h-aspect-16-9 hide-scrollbar nilo-scroll-top-out">
+                <img class="w-100" src="{% block slide_image %}{% endblock slide_image %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="px-5 pt-4 nilo-project-desc">
+        <div class="pb-3 nilo-font-size-1-4rem d-none">
+            <a class="nilo-mail"
+                href="{% block slide_email_link %}centroodontoiatricomodigliani.it{% endblock slide_email_link %}">
+                {% block slide_email_name %}centroodontoiatricomodigliani.it{% endblock slide_email_name %}
+            </a><br>
+        </div>
+        <div class="max-w-60 nilo-muted-gray-txt">                
+            {% block slide_text %}
+            Diamo ai tuoi clienti un’immagine migliore di te, rendendoli più disposti a rivolgersi alla tua 
+            attività. Questo sito è un po’ un’opera d’arte e questa didascalia sta su due righe.
+            {% endblock slide_text %}
+        </div>
+    </div>
+</div>

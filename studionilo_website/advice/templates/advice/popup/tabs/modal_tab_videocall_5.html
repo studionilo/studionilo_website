@@ -1,0 +1,26 @@
+{% extends 'advice/popup/components/modal_content_base_awesome.html' %}
+{% load static %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
+    <div class="col pr-2 d-flex align-items-center">
+        <h4>
+            <strong>Ops!</strong><br>
+            Qualcosa è andato storto
+            <span class="opacity-0 noselect">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos in veritatis officiis dignissimos iure! Fugiat accusamus quibusdam perspiciatis cumque, dolorem impedit reiciendis vero ratione veniam. Obcaecati distinctio consequatur earum iure!</span>
+        </h4>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey opacity-0">
+        <img src="{% static 'advice/illustrazioni/ops.png' %}" alt="Fantastico!">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<ul class="nav justify-content-end w-100" role="tablist">
+    <li class="nav-item nilo-modal-footer-button">
+        <button type="button" class="nilo-reset-tabs" data-target-tabs="modal_tab_videocall"
+            data-dismiss="modal">Riprova</button>
+    </li>
+</ul>
+{% endblock modal_footer %}

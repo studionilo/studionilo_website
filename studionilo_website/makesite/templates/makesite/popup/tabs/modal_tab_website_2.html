@@ -1,0 +1,38 @@
+{% extends 'advice/popup/components/modal_content_base.html' %}
+{% load static %}
+
+{% block modal_title %}Richiedi un preventivo{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
+    <div class="col pr-2">
+        <div class="pb-4">
+            <span class="nilo-font-size-1-2rem nilo-line-h-1rem">
+                Raccontaci cosa hai in mente.<br>
+                Non vediamo l'ora di parlarne meglio.<br>
+                <br>
+            </span>
+            Scrivici direttamente a:<br>
+            <a class="nilo-mail" href="mailto:info@studionilo.it">info@studionilo.it</a><br>
+            <br>
+            Oppure lasciaci il tuo contatto.<br>
+            Ti ricontatteremo presto:
+            {% include 'advice/popup/components/modal_form.html' with form_hidden_value='website' hide_pills='true' hide_link='true' %}
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/form.png' %}" alt="Inserisci i tuoi dati">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<ul class="nav justify-content-end w-100" id="myTab2" role="tablist">
+    <li class="nav-item nilo-modal-footer-button d-none">
+        <a class="nilo-btn nilo-autoremove-active-show" data-toggle="tab" href="#modal_tab_website_2" role="tab" id="nilo-website-back">stay</a>
+    </li>
+    <li class="nav-item nilo-modal-footer-button">
+        <a class="nilo-btn nilo-autoremove-active-show nilo-form-validation" data-toggle="tab" href="#modal_tab_website_3" role="tab" data-nilo-stay="#nilo-website-back">Invia modulo</a>
+    </li>
+</ul>
+{% endblock modal_footer %}

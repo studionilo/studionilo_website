@@ -17,7 +17,7 @@ function checkout_paypal(item) {
         $('#nilo-paypal-submit').closest('form').find('input[name="custom"]').val(PAYMENT_ID)
         if (item == 'videocall')
             $('#nilo-paypal-submit').closest('form').find('input[name="hosted_button_id"]').val(VIDEO_COLLOQUIO)
-            $('#nilo-paypal-submit').click()
+        $('#nilo-paypal-submit').click()
     }
 }
 
@@ -91,98 +91,123 @@ function out_hover_btn_img() {
 
 // onUpdate()
 $(document).ready(function () {
-    $('.nilo-deck').each(function () {
-        let count = 0
-        $(this).children().filter(".nilo-card").each(function () {
-            count++
-        })
-        let index = 0
-        let margin_perc = 1.5
-        let margins_perc_tot = ((count - 1) * 2) * margin_perc
-        let card_perc_tot = 100.0 - margins_perc_tot
-        let card_perc = card_perc_tot / count
-        $(this).children().filter(".nilo-card").each(function () {
-            $(this).css('width', `${card_perc}%`)
-            if (index != 0) {
-                $(this).css('margin-left', `${margin_perc}%`)
-            }
-            if (index != (count - 1)) {
-                $(this).css('margin-right', `${margin_perc}%`)
-            }
-            index++
-        })
-    });
+    for (let i = 1; i <= 2; i++) {
+        let maxHeight = 0;
+
+        $(`.nilo-same-h-0${i}`).each(function () {
+            if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+        });
+
+        $(`.nilo-same-h-0${i}`).height(maxHeight);
+    }
 })
 
 $(document).ready(function () {
     $('.nilo-projects').slick({
         centerMode: true,
-        centerPadding: 'calc(15% - 3em)',
+        centerPadding: '25%',
         slidesToShow: 1,
         focusOnSelect: true,
         responsive: [
+            {
+                breakpoint: 1960,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '15%',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1680,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '15%',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '15%',
+                    slidesToShow: 1
+                }
+            },
             {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '25%',
                     slidesToShow: 1
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 425,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
+                    centerPadding: '15%',
                     slidesToShow: 1
                 }
-            }
+            },
         ]
     });
 
-    var humanScrollDiv = null
-    var humanInterval = null
-    function humanSmallScroll() {
-        let aniTime = 10
-        if (humanScrollDiv != null) {
-            let bgPos = parseFloat(humanScrollDiv.css('background-position-y'))
-            bgPos += 20
-            if (bgPos < 90) {
-                humanScrollDiv.animate({
-                    backgroundPositionY: `${bgPos}%`,
-                }, aniTime, 'easeOutExpo')
-            } else {
-                humanScrollDiv.animate({
-                    backgroundPositionY: '100%',
-                }, aniTime, 'easeOutExpo')
-            }
-        }
-    }
-    function humanScroll() {
-        if ($(this).closest('.slick-slide').hasClass('slick-current')) {
-            console.log('in')
-            if ($(this).hasClass('nilo-scrolling-background')) {
-                humanScrollDiv = $(this)
-            }
-            humanSmallScroll()
-            humanInterval = setInterval(humanSmallScroll, 2000)
-        }
-    }
-
-    $('.nilo-scrolling-background').mouseover(humanScroll)
-    $('.nilo-scrolling-background').mouseout(function () {
-        if ($(this).closest('.slick-slide').hasClass('slick-current')) {
-            clearTimeout(humanInterval)
-            let bgPos = parseFloat($(this).css('background-position-y'))
-            let bgInterval = bgPos + 3.6
-            let aniTime = (200 * bgInterval) / 103.6
-            $(this).animate({
-                backgroundPositionY: '-3.6%',
-            }, aniTime)
-        }
+    $('.nilo-h-aspect-16-9').each(function () {
+        $(this).height($(this).width() * (9 / 16))
     })
+
+    $('.nilo-scroll-top-out').mouseout(function () {
+        $(this).animate({
+            scrollTop: 0
+        }, 1000);
+    })
+
+    // var humanScrollDiv = null
+    // var humanInterval = null
+    // function humanSmallScroll() {
+    //     let aniTime = 10
+    //     if (humanScrollDiv != null) {
+    //         let bgPos = parseFloat(humanScrollDiv.css('background-position-y'))
+    //         bgPos += 20
+    //         if (bgPos < 90) {
+    //             humanScrollDiv.animate({
+    //                 backgroundPositionY: `${bgPos}%`,
+    //             }, aniTime, 'easeOutExpo')
+    //         } else {
+    //             humanScrollDiv.animate({
+    //                 backgroundPositionY: '100%',
+    //             }, aniTime, 'easeOutExpo')
+    //         }
+    //     }
+    // }
+    // function humanScroll() {
+    //     if ($(this).closest('.slick-slide').hasClass('slick-current')) {
+    //         console.log('in')
+    //         if ($(this).hasClass('nilo-scrolling-background')) {
+    //             humanScrollDiv = $(this)
+    //         }
+    //         humanSmallScroll()
+    //         humanInterval = setInterval(humanSmallScroll, 2000)
+    //     }
+    // }
+
+    // $('.nilo-scrolling-background').mouseover(humanScroll)
+    // $('.nilo-scrolling-background').mouseout(function () {
+    //     if ($(this).closest('.slick-slide').hasClass('slick-current')) {
+    //         clearTimeout(humanInterval)
+    //         let bgPos = parseFloat($(this).css('background-position-y'))
+    //         let bgInterval = bgPos + 3.6
+    //         let aniTime = (200 * bgInterval) / 103.6
+    //         $(this).animate({
+    //             backgroundPositionY: '-3.6%',
+    //         }, aniTime)
+    //     }
+    // })
 });
 
 var allPopupTarget = ['popup_pay_1', 'popup_pay_2', 'popup_pay_3']
@@ -236,7 +261,7 @@ function check_forms(targetForm) {
     return status
 }
 
-function get_from_values(targetForm) {
+function get_form_values(targetForm) {
     let obj = {
         name: targetForm.find('input[name="name"]').val(),
         email: targetForm.find('input[name="email"]').val(),
@@ -258,8 +283,8 @@ function get_from_values(targetForm) {
 }
 
 function create_payment(targetForm) {
-    $.post("api/create-payment-intent",
-        get_from_values(targetForm),
+    $.post("/consulenze/api/create-payment-intent",
+        get_form_values(targetForm),
         function (data, status) {
             console.log(data);
             if (data['payment_intent_id']) {
@@ -274,7 +299,7 @@ $(document).on('click', '.nilo-form-validation', function (e) {
     if (check_forms(targetForm)) {
         create_payment(targetForm)
     } else {
-        if($(this).data('nilo-stay')){
+        if ($(this).data('nilo-stay')) {
             console.log($(this).data('nilo-stay'))
             $($(this).data('nilo-stay')).tab('show')
             $($(this).data('nilo-stay')).removeClass('active show')
@@ -301,12 +326,12 @@ $(document).on('click', '.nilo-autoremove-active-show', function (e) {
 })
 $(document).on('click', '.nilo-reset-tabs', function (e) {
     let btn = $(this)
-    setTimeout(function(){
+    setTimeout(function () {
         if (btn.data('target-tabs')) {
             let tabs = $(`#${btn.data('target-tabs')}`).children('.tab-pane')
             tabs.removeClass("active")
             tabs.removeClass("show")
-            if(tabs.first()){
+            if (tabs.first()) {
                 tabs.first().addClass("active")
                 tabs.first().addClass("show")
             }
@@ -361,7 +386,7 @@ $(document).on('click', '#nilo-contactus', function (e) {
 });
 
 $(document).on('click', '.nilo-fake-link', function (e) {
-    if($(this).data('href')){
+    if ($(this).data('href')) {
         window.location.href = $(this).data('href');
     }
 });

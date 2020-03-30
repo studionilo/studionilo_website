@@ -2,18 +2,12 @@
 <div class="nilo-jumbo-container min-vh-100-or-4rem nilo-blue-bg">
     <div class="nilo-container max-w-760px overflow-x-hidden">
         <a id="payment"></a>
-        {% comment %}
-        <!-- Mobile version -->
-        {% include 'advice/pay_cards/pay_card_mobile.html' %}
-        <!-- Desktop version -->
-        {% include 'advice/pay_cards/pay_card_desktop.html' %}
-        {% endcomment %}
-
         <div class="card-deck my-6rem nilo-card-bottom-margin-sm">
             {% include 'advice/pay_cards/cards/pay_card_videoreport.html' %}
             {% include 'advice/pay_cards/cards/pay_card_videocall.html' %}
         </div>
-
     </div>
 </div>
+{% include 'advice/popup/modals/modal_videoreport.html' %}
+{% include 'advice/popup/modals/modal_videocall.html' %}
 {% endblock pay_cards %}

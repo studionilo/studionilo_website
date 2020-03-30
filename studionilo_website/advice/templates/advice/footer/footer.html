@@ -4,14 +4,14 @@
     <div class="d-flex justify-content-center align-items-center vh-22">
         <div class="d-flex flex-column">
             <div class="pb-4 d-flex justify-content-center">
-                <div class="nilo-logo-social w-1-4rem mr-2">
-                    <img src="{% static 'advice/assets/logo_fb.svg' %}">
+                <div class="mr-2">
+                    {% include 'advice/nav_bar/components/fb_logo.html' %}
                 </div>
-                <div class="nilo-logo-social w-1-4rem mx-2">
-                    <img src="{% static 'advice/assets/logo_ig.svg' %}">
+                <div class="mx-2">
+                    {% include 'advice/nav_bar/components/ig_logo.html' %}
                 </div>
-                <div class="nilo-logo-social w-1-4rem ml-2">
-                    <img src="{% static 'advice/assets/logo_yt.svg' %}">
+                <div class="ml-2">
+                    {% include 'advice/nav_bar/components/ld_logo.html' %}
                 </div>
             </div>
             <div class="border-top pt-4">

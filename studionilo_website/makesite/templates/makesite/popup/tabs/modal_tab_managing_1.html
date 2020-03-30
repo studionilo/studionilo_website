@@ -1,0 +1,43 @@
+{% extends 'advice/popup/components/modal_content_base.html' %}
+{% load static %}
+
+{% block modal_title %}Managing{% endblock modal_title %}
+
+{% block modal_body %}
+<div class="row row-cols-1 row-cols-lg-2 h-100 mr-0">
+    <div class="col pr-2">
+        <div class="pb-4">
+            Il video-report è uno strumento per aiutarti a sfruttare meglio la comunicazione digitale per la tua
+            attività.
+            <ul class="nilo-list">
+                <li>
+                    Uno dei nostri esperti analizzerà il materiale online presente
+                    sulla tua azienda, diagnosticando eventuali problematiche e
+                    individuando opportunità di miglioramento.
+                </li>
+                <li>
+                    Riceverai entro 4 giorni lavorativi un video della durata
+                    di 10-15 minuti, in cui saranno raccolte le nostre proposte per
+                    migliorare la comunicazione online con i tuoi clienti.
+                </li>
+            </ul>
+            Non vediamo l’ora di proporti come ottenere più profitto dalla tua presenza digitale!
+        </div>
+    </div>
+    <div class="col pl-2 nilo-popup-monkey">
+        <img src="{% static 'advice/illustrazioni/video_report.png' %}" alt="Video-report">
+    </div>
+</div>
+{% endblock modal_body %}
+
+{% block modal_footer %}
+<ul class="nav justify-content-end w-100" id="myTab1" role="tablist">
+    <li class="nav-item nilo-modal-footer-button">
+        <button type="button" class="nilo-button-muted" data-dismiss="modal">Torna
+            alla home</button>
+    </li>
+    <li class="nav-item nilo-modal-footer-button">
+        <a class="nilo-btn nilo-autoremove-active-show" data-toggle="tab" href="#modal_tab_managing_2" role="tab" id="nilo-managing-back">Raccontaci di te</a>
+    </li>
+</ul>
+{% endblock modal_footer %}

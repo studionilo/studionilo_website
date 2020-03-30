@@ -7,13 +7,13 @@
         <h1 class="font-weight-bold nilo-font-size-1-3rem">
             {% block goto_title %}{% endblock goto_title %}
         </h1>
-        <p class="pt-2 pb-0 pb-md-3">
+        <p class="pt-2 pb-0 pb-md-3 max-w-md-30em">
             {% block goto_body %}{% endblock goto_body %}
         </p>
         <div class="pt-4">
-            <button type="button" class="w-100 w-md-auto" data-target="popup_pay_tab_form">
+            <a class="nilo-btn text-white w-100 w-md-auto" href="{% block goto_link %}{% endblock goto_link %}">
                 {% block goto_button %}{% endblock goto_button %}
-            </button>
+            </a>
         </div>
     </div>
 </div>

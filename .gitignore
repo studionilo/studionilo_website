@@ -24,3 +24,7 @@ studionilo_website/studionilo_website/__pycache__/urls.cpython-37.pyc
 studionilo_website/studionilo_website/__pycache__/settings.cpython-37.pyc
 studionilo_website/studionilo_website/__pycache__/urls.cpython-37.pyc
 studionilo_website/studionilo_website/__pycache__/settings.cpython-37.pyc
+*.pyc
+studionilo_website\static\CACHE\css
+studionilo_website/studionilo_website/__pycache__/urls.cpython-37.pyc
+studionilo_website/studionilo_website/__pycache__/settings.cpython-37.pyc

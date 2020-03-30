@@ -1,0 +1,23 @@
+<div class="slide">
+    <div class="px-2">
+        <div class="position-relative pt-200p">
+            <div class="h-100 w-100 position-absolute top-0 bg-size-100-auto bg-repeat-y-no"
+            style="background-image: url('{% block slide_image %}{% endblock slide_image %}');"
+            ></div>
+        </div>
+    </div>
+    <div class="px-2 pt-4 nilo-project-desc">
+        <div class="pb-3 nilo-font-size-1-4rem d-none">
+            <a class="nilo-mail"
+                href="{% block slide_email_link %}centroodontoiatricomodigliani.it{% endblock slide_email_link %}">
+                {% block slide_email_name %}centroodontoiatricomodigliani.it{% endblock slide_email_name %}
+            </a><br>
+        </div>
+        <div>                
+            {% block slide_text %}
+            Diamo ai tuoi clienti un’immagine migliore di te, rendendoli più disposti a rivolgersi alla tua 
+            attività. Questo sito è un po’ un’opera d’arte e questa didascalia sta su due righe.
+            {% endblock slide_text %}
+        </div>
+    </div>
+</div>

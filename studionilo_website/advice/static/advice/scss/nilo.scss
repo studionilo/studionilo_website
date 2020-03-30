@@ -4,7 +4,11 @@ $color-red-hover: #dd4a43;
 $color-gray: #f2f2f2;
 $color-unknown-gray: #e6e6e6;
 $color-dark-gray: #c6c6c6;
+$color-light-gray: #b3b3b3;
+$color-deep-gray: #878787;
+$color-muted-gray: #bcbec0;
 $color-orange: #e54c45;
+$color-hover-yellow: #ffc107;
 $color-yellow: rgb(255, 221, 0);
 $color-blue: #c6e8e9;
 $color-deep-blue: #93c5c5;
@@ -25,6 +29,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-family: "Karla", sans-serif;
 }
 
@@ -52,6 +57,10 @@ body {
   background-color: $color-gray;
 }
 
+.nilo-muted-gray-txt {
+  color: $color-muted-gray;
+}
+
 .nilo-w-25 {
   width: 2.5em;
 }
@@ -60,20 +69,48 @@ body {
   margin-right: 0.44em;
 }
 
+.nilo-font-size-1rem {
+  font-size: 1rem;
+}
+.nilo-font-size-1-1rem {
+  font-size: 1.1rem;
+}
+.nilo-font-size-1-2rem {
+  font-size: 1.2rem;
+}
 .nilo-font-size-1-3rem {
   font-size: 1.3rem;
 }
 .nilo-font-size-1-4rem {
   font-size: 1.4rem;
 }
+.nilo-font-size-1-5rem {
+  font-size: 1.5rem;
+}
+.nilo-font-size-1-6rem {
+  font-size: 1.6rem;
+}
+.nilo-font-size-1-7rem {
+  font-size: 1.7rem;
+}
 .nilo-font-size-1-8rem {
   font-size: 1.8rem;
 }
-.nilo-font-size-1rem {
-  font-size: 1rem;
+.nilo-line-h-1rem {
+  line-height: 1rem;
 }
 .opacity-0 {
   opacity: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
 }
 
 .overflow-x-hidden {
@@ -82,6 +119,10 @@ body {
 
 .pt-2-3rem {
   padding-top: 2.3rem !important;
+}
+
+.pt-200p {
+  padding-top: 200%;
 }
 
 .pr-10 {
@@ -98,7 +139,7 @@ body {
   padding-right: 5rem !important;
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .px-lg-6 {
     padding-left: 5rem !important;
     padding-right: 5rem !important;
@@ -151,9 +192,25 @@ body {
 }
 
 @include media-breakpoint-up(md) {
-  .w-md-auto  {
-    width: auto!important;
+  .w-md-auto {
+    width: auto !important;
   }
+  .w-md-25 {
+    width: 25% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
+  }
+  .w-md-75 {
+    width: 75% !important;
+  }
+  .w-md-100 {
+    width: 100% !important;
+  }
+}
+
+.max-w-60 {
+  max-width: 60%;
 }
 
 .mt-2rem {
@@ -176,6 +233,11 @@ body {
   margin-bottom: 6rem !important;
 }
 
+.mx-n2-5rem {
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+}
+
 .py-4rem {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
@@ -183,6 +245,12 @@ body {
 
 .max-w-760px {
   max-width: 760px !important;
+}
+
+@include media-breakpoint-up(md) {
+  .max-w-md-30em {
+    max-width: 30em;
+  }
 }
 
 .font-size-4-5rem {
@@ -199,6 +267,14 @@ body {
 
 .top-0 {
   top: 0px;
+}
+
+.bg-size-100-auto {
+  background-size: 100% auto;
+}
+
+.bg-repeat-y-no {
+  background-repeat-y: no-repeat;
 }
 
 .border-dark-gray {
@@ -222,7 +298,6 @@ body {
   position: fixed;
   list-style: none;
   padding: 5%;
-  background-color: $color-blue;
   display: flex;
   flex-direction: column;
   z-index: 7;
@@ -339,13 +414,12 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1%;
   position: relative;
 }
 
 .nilo-container {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 1rem;
+  margin-right: 1rem;
   overflow: auto;
   width: 100%;
 }
@@ -515,6 +589,7 @@ button:focus,
 .nilo-btn:focus {
   background-color: $color-orange;
   outline: 0;
+  opacity: 1;
 }
 
 .nilo-btn:hover {
@@ -618,14 +693,23 @@ button:focus,
   opacity: 1;
 }
 
+.nilo-yellow-btn {
+  background-color: $color-yellow;
+  color: black;
+  &:hover,
+  &:focus {
+    background-color: $color-hover-yellow;
+  }
+}
+
 .nilo-button-pay-method {
   width: 49.5%;
-  color: #b3b3b3;
+  color: $color-light-gray;
   min-height: 70px;
   font-weight: normal;
   background-color: transparent;
   border: 2px solid;
-  border-color: #b3b3b3;
+  border-color: $color-light-gray;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
@@ -1066,13 +1150,13 @@ a.nilo-email {
   padding-top: 2em;
   overflow: auto;
 
-  & > input {
+  input {
     width: 100%;
     font-size: 22px;
     padding-left: 0.3em;
     margin-top: 0.3em;
     margin-bottom: 1em;
-    border: 2px solid #b3b3b3;
+    border: 2px solid $color-light-gray;
     border-radius: 0px;
     -webkit-appearance: none;
     &.error {
@@ -1082,13 +1166,18 @@ a.nilo-email {
       border: 2px solid $color-orange;
       outline: 0;
     }
-    &::-webkit-input-placeholder,
-    &:-ms-input-placeholder,
-    &::placeholder {
-      color: $color-unknown-gray;
-    }
+  }
+  ::-webkit-input-placeholder {
+    color: $color-light-gray;
+  }
+  :-ms-input-placeholder {
+    color: $color-light-gray;
+  }
+  ::placeholder {
+    color: $color-light-gray;
   }
 }
+
 
 .nilo-text-small-muted {
   line-height: 1.2rem;
@@ -1301,11 +1390,11 @@ ul.nilo-list {
 }
 
 .nilo-pill {
-  color: #b3b3b3;
+  color: $color-light-gray;
   font-weight: normal;
   background-color: transparent;
   border: 2px solid;
-  border-color: #b3b3b3;
+  border-color: $color-light-gray;
   float: left;
   margin-right: 0.5em;
   padding-left: 0.5em;
@@ -1460,28 +1549,31 @@ tr.nilo-table-read-more > td {
 
 .nilo-scrolling-background {
   background-size: 100% auto;
-  background-position-y: -3.6%;
+  background-position-y: 0%;
   background-repeat: no-repeat;
-  -webkit-transition: 2s ease-in-out;
-  -moz-transition: 2s ease-in-out;
-  -o-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
-  -webkit-box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75);
-  box-shadow: 7px 7px 10px -10px rgba(0, 0, 0, 0.75);
-  &:hover {
-    // background-position-y: 100%;
-    // animation-duration: 10s;
-    // animation-name: scroll-down;
-    // animation-fill-mode: forwards;
-    // -webkit-transition: 10s ease-in-out;
-    // -moz-transition: 10s ease-in-out;
-    // -o-transition: 10s ease-in-out;
-    // transition: 10s ease-in-out;
-    // -webkit-animation-duration: 10s;
-    // -webkit-animation-name: scroll-down;
-    // -webkit-animation-fill-mode: forwards;
+}
+
+.slick-current {
+  .nilo-scoll-on-active {
+    overflow: auto;
   }
+  .nilo-desktop-border:hover {
+    border-color: $color-deep-gray;
+  }
+}
+.nilo-scoll-on-active {
+  overflow: hidden;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.nilo-desktop-border {
+  border: 0.1rem solid lightgray;
 }
 
 @keyframes scroll-down {

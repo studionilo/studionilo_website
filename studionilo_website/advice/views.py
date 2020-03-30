@@ -51,11 +51,9 @@ def awesome(request):
             payment.save()
             
             if payIntent.plan == PaymentIntent.VIDEOREPORT:
-                context={'awesome':'popup_pay_1'}
+                context={'awesome':'videoreport'}
             elif payIntent.plan == PaymentIntent.VIDEOCOLLOQUIO:
-                context={'awesome':'popup_pay_2'}
-            else:
-                context={'awesome':'popup_pay_3'}
+                context={'awesome':'videocall'}
 
             NiloEmail(payment.paymentIntent).send()
             return render(request, 'advice/advice.html', context=context)
@@ -65,7 +63,7 @@ def awesome(request):
         return redirect('advice_home')
 
 def reject(request):
-    return render(request, 'advice/advice.html', context={'reject':True})
+    return render(request, 'advice/advice.html', context={'reject':'videocall'})
 
 @csrf_exempt
 def create_payment(request):
@@ -83,12 +81,14 @@ def create_payment(request):
             payIntent.sn_snapchat = request.POST.get('sn_snapchat', '') == 'true'
             payIntent.sn_pinterest = request.POST.get('sn_pinterest', '') == 'true'
 
-            if(request.POST.get('plan', '') == 'popup_pay_1'):
+            if(request.POST.get('plan', '') == 'videoreport'):
                 payIntent.plan = PaymentIntent.VIDEOREPORT
-            elif(request.POST.get('plan', '') == 'popup_pay_2'):
+            elif(request.POST.get('plan', '') == 'videocall'):
                 payIntent.plan = PaymentIntent.VIDEOCOLLOQUIO
-            elif(request.POST.get('plan', '') == 'popup_pay_3'):
+            elif(request.POST.get('plan', '') == 'managing'):
                 payIntent.plan = PaymentIntent.MEDIAMANAGER
+            elif(request.POST.get('plan', '') == 'website'):
+                payIntent.plan = PaymentIntent.WEBSITE
             else:
                 payIntent.plan = PaymentIntent.UNKNOWN
 

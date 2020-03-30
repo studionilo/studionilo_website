@@ -8,7 +8,7 @@
         {% endcomment %}
             
         <video title="showreel" class="outline-transparent db w-100"
-            poster="" playsinline="true" preload="auto" controls="true" src="{% block showreel_url %}{% endblock showreel_url %}">
+            poster="{% block showreel_poster %}{% endblock showreel_poster %}" playsinline="true" preload="metadata" controls="true" src="{% block showreel_url %}{% endblock showreel_url %}">
         </video>
     </div>
 </div>

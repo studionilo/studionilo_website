@@ -1,11 +1,13 @@
 <div class="card p-3 p-sm-2 nilo-card {% block card_class %}{% endblock card_class %}">
-    <div class="card-header">
-        {% block card_title %}{% endblock card_title %}
+    <div class="card-header d-flex justify-content-center align-items-center {% block card_header_class %}{% endblock card_header_class %}">
+        <div>
+            {% block card_title %}{% endblock card_title %}
+        </div>
     </div>
     <div class="card-body">
         {% block card_body %}{% endblock card_body %}
     </div>
-    <div class="card-footer">
+    <div class="card-footer {% block card_footer_class %}{% endblock card_footer_class %}">
         {% block card_footer %}{% endblock card_footer %}
     </div>
 </div>
