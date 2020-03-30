@@ -11,6 +11,7 @@ import hashlib
 from .niloemail import NiloEmail
 import os,binascii
 from django.contrib.admin.views.decorators import staff_member_required
+from django.utils import timezone
 
 def hash(value):
     if not value is None:
@@ -40,7 +41,9 @@ def awesome(request):
             payment.payment_status = request.POST.get('payment_status', '')
             payment.payment_type = request.POST.get('payment_type', '')
             payment.item_name = request.POST.get('item_name', '')
-            payment.payment_date = datetime.strptime(request.POST.get('payment_date', ''), '%Y-%m-%dT%H:%M:%SZ')
+            # payment.payment_date = datetime.strptime(request.POST.get('payment_date', ''), '%Y-%m-%dT%H:%M:%SZ')
+            payment.payment_date = timezone.now()
+
             payment.verify_sign = request.POST.get('verify_sign', '')
 
             payIntent = PaymentIntent.objects.filter(payment_intent_id=request.POST.get('custom', '')).first()
