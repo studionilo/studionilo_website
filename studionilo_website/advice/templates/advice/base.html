@@ -17,7 +17,15 @@
     <!-- Bootstrap core CSS -->
     {% compress css %}
     <link type="text/x-scss" href="{% static 'advice/bootstrap/bootstrap.scss' %}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_xs.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_s.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_m.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_l.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_xl.scss' %}">
     {% endcompress %}
+    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick-theme.css' %}" />
 
     {% if not debug %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,17 +54,6 @@
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-    <!-- Custom styles for this template -->
-    {% compress css %}
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_xs.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_s.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_m.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_l.scss' %}">
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'advice/scss/nilo_xl.scss' %}">
-    {% endcompress %}
-    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'advice/slick/slick-theme.css' %}" />
 </head>
 
 <body>
@@ -91,10 +88,9 @@
     <script src="{% static 'advice/js/nilo.js' %}"></script>
     <script src="{% static 'advice/js/scroll.js' %}"></script>
 
-    
+
     {% block script %}
     {% endblock script %}
-        
 </body>
 
 </html>

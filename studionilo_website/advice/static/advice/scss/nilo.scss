@@ -350,6 +350,7 @@ a:focus {
 }
 
 .nilo-arrow-button {
+  color: black;
   cursor: pointer;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -370,6 +371,7 @@ a:focus {
     }
     &:hover {
       color: black;
+      text-decoration: none;
       -webkit-transition: 0.3s ease-in-out;
       -moz-transition: 0.3s ease-in-out;
       -o-transition: 0.3s ease-in-out;
